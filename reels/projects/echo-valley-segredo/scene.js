@@ -96,30 +96,38 @@
   }
 
   // ---------------- elementos gráficos ----------------
+  let stampC = null;
   function stamp(ctx, text, x, y, size, t0, t, color = '#d4161c', rot = -0.18) {
     if (t < t0) return;
+    // desenhado numa camada própria para as falhas de tinta não furarem a imagem de fundo
+    stampC = stampC || R.canvas(1400, 900);
+    const g = stampC.getContext('2d');
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.globalCompositeOperation = 'source-over';
+    g.clearRect(0, 0, 1400, 900);
+    g.translate(700, 450);
+    g.rotate(rot);
+    g.font = `900 ${size}px "Inter", sans-serif`;
+    g.textAlign = 'center';
+    g.textBaseline = 'middle';
+    const tw = g.measureText(text).width;
+    g.strokeStyle = color;
+    g.lineWidth = size * 0.1;
+    g.strokeRect(-tw / 2 - size * 0.4, -size * 0.75, tw + size * 0.8, size * 1.5);
+    g.fillStyle = color;
+    g.fillText(text, 0, size * 0.05);
+    g.globalCompositeOperation = 'destination-out';
+    for (let i = 0; i < 70; i++) {
+      g.beginPath();
+      g.arc((R.hash(i, 3) - 0.5) * (tw + size), (R.hash(i, 4) - 0.5) * size * 1.6, 2 + R.hash(i, 5) * size * 0.08, 0, Math.PI * 2);
+      g.fill();
+    }
     const p = R.spring(t - t0, 2.2, 7), sc = R.lerp(2.4, 1, Math.min(1, p));
     ctx.save();
     ctx.translate(x, y);
-    ctx.rotate(rot);
     ctx.scale(sc, sc);
     ctx.globalAlpha = R.clamp((t - t0) * 12) * 0.92;
-    ctx.font = `900 ${size}px "Inter", sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    const tw = ctx.measureText(text).width;
-    ctx.strokeStyle = color;
-    ctx.lineWidth = size * 0.1;
-    ctx.strokeRect(-tw / 2 - size * 0.4, -size * 0.75, tw + size * 0.8, size * 1.5);
-    ctx.fillStyle = color;
-    ctx.fillText(text, 0, size * 0.05);
-    // falhas de tinta
-    ctx.globalCompositeOperation = 'destination-out';
-    for (let i = 0; i < 70; i++) {
-      ctx.beginPath();
-      ctx.arc((R.hash(i, 3) - 0.5) * (tw + size), (R.hash(i, 4) - 0.5) * size * 1.6, 2 + R.hash(i, 5) * size * 0.08, 0, Math.PI * 2);
-      ctx.fill();
-    }
+    ctx.drawImage(stampC, -700, -450);
     ctx.restore();
   }
   function redact(ctx, t, bars) {

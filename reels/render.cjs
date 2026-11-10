@@ -87,7 +87,7 @@ async function main() {
       console.log(`Áudio: ${path.relative(ROOT, file)}${info.hasSynth ? ' + efeitos' : ''}`);
       audioArgs.push('-ss', String(t0), '-t', String(fileDur), '-i', file);
       const fileFade = info.audioEnd ? Math.min(0.12, fileDur / 4) : afade;
-      filter = `[1:a]aresample=48000,afade=t=out:st=${(fileDur - fileFade).toFixed(3)}:d=${fileFade},apad[a]`;
+      filter = `[1:a]aresample=48000,aformat=channel_layouts=stereo,afade=t=out:st=${(fileDur - fileFade).toFixed(3)}:d=${fileFade},apad[a]`;
       if (info.hasSynth) {
         audioArgs.push('-ss', String(t0), '-t', String(clipDur), '-i', synthWav);
         filter += `;[2:a]aresample=48000,volume=${info.sfxGain}[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.89[m];[m]`;

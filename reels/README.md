@@ -43,5 +43,10 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   `node projects/echo-valley-segredo/prepare.cjs` (lista de cenas em `shots.json`), e depois
   `node render.cjs projects/echo-valley-segredo`.
 
+- `toca-cookies-agentes`: "Toda mesa de Ordem Paranormal tem esses 5 agentes" (Toca dos Cookies).
+  Locução gerada no CellCog (`assets/voz.wav` + tempos por palavra em `assets/palavras.json`),
+  footage do Mixkit e, por código, D20 em 3D, fichas de agente, carimbos, cartela com botão
+  Seguir, trilha e efeitos. Prepare com `node projects/toca-cookies-agentes/prepare.cjs`.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).
