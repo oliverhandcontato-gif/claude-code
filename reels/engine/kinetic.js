@@ -71,7 +71,7 @@
 
   K.line = (ctx, t, L) => {
     const { style = 'retro', t1, x = 540, y = 1250, size = 84, maxW = 880, rot = 0, words, lineH = 1.18, align = 'center' } = L;
-    if (!words.length || t < words[0].t - 0.05 || t > t1 + 0.4) return;
+    if (!words.length || t < words[0].t - 0.05 || t > t1 + 0.2) return;
     ctx.save();
     ctx.font = K.FONTS[style](size);
     ctx.textBaseline = 'middle';
@@ -80,7 +80,7 @@
     const { lines, space } = layout(ctx, words, maxW, style === 'script' ? size * 0.08 : style === 'whisper' ? 0 : size * 0.36);
     ctx.translate(x, y);
     ctx.rotate(rot);
-    const out = R.clamp((t - t1) / 0.3);
+    const out = R.clamp((t - t1) / 0.2);
     let yy = -((lines.length - 1) * size * lineH) / 2;
     let idx = 0;
     const f = R.frameOf(t);
@@ -179,14 +179,14 @@
   /** Título letra por letra: cada letra cai com mola, gira e assenta. */
   K.title = (ctx, t, o) => {
     const { text, t0, x = 540, y = 600, size = 150, stagger = 0.045, rot = -0.06, fill = '#fff0cf', side = '#b8322a', depth = 14, t1 = 1e9, wave = 0.6 } = o;
-    if (t < t0 || t > t1 + 0.4) return;
+    if (t < t0 || t > t1 + 0.2) return;
     ctx.save();
     ctx.font = K.FONTS.retro(size);
     ctx.textBaseline = 'middle';
     const chars = [...text];
     const widths = chars.map((c) => ctx.measureText(c).width);
     const total = widths.reduce((a, b) => a + b, 0);
-    const out = R.clamp((t - t1) / 0.3);
+    const out = R.clamp((t - t1) / 0.2);
     ctx.translate(x, y);
     ctx.rotate(rot);
     let xx = -total / 2;
