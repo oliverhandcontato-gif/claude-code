@@ -3,7 +3,7 @@
  * Renderiza um projeto em MP4 (1080x1920, H.264 + AAC).
  *
  *   node render.cjs [projects/echo-valley] [--out out/arquivo.mp4] [--from 0] [--to 42]
- *                   [--workers 3] [--stills 1,12.5,30]
+ *                   [--workers 3] [--crf 24] [--stills 1,12.5,30]
  *
  * Abre a página no Chromium headless (Playwright), pede cada frame como JPEG,
  * renderiza a trilha com OfflineAudioContext e junta tudo no ffmpeg.
@@ -83,7 +83,7 @@ async function main() {
       '-f', 'image2pipe', '-framerate', String(info.fps), '-c:v', 'mjpeg', '-i', '-',
       '-ss', String(from / info.fps), '-t', String((to - from) / info.fps), '-i', wav,
       '-map', '0:v', '-map', '1:a',
-      '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
+      '-c:v', 'libx264', '-preset', 'medium', '-crf', String(args.crf || 24), '-pix_fmt', 'yuv420p', '-profile:v', 'high',
       '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
       '-movflags', '+faststart', '-shortest', out,
     ], { stdio: ['pipe', 'inherit', 'inherit'] });
