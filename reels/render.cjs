@@ -48,10 +48,10 @@ async function main() {
 
   const { server, port } = await serve(ROOT);
   const url = `http://127.0.0.1:${port}/${path.relative(ROOT, projectDir).split(path.sep).join('/')}/index.html?render=1`;
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   try {
     const first = await openPage(browser, url);
-    const info = await first.evaluate(() => ({ duration: Reel.project.duration, fps: Reel.FPS, total: Reel.totalFrames }));
+    const info = await first.evaluate(() => ({ duration: Reel.project.duration, fps: Reel.FPS, total: Reel.totalFrames, audioFile: Reel.project.audioFile || null }));
 
     if (args.stills) {
       const dir = path.join(outDir, 'stills');
@@ -69,10 +69,17 @@ async function main() {
     const from = Math.round((Number(args.from) || 0) * info.fps);
     const to = Math.min(info.total, args.to !== undefined ? Math.round(Number(args.to) * info.fps) : info.total);
     const out = path.resolve(args.out || path.join(outDir, `${name}.mp4`));
-    const wav = path.join(outDir, `${name}.wav`);
-
-    console.log(`Áudio: sintetizando ${info.duration}s…`);
-    fs.writeFileSync(wav, Buffer.from(await first.evaluate(() => Reel.audioWAVBase64()), 'base64'));
+    // Trilha: arquivo do projeto (voz/música prontas) ou som sintetizado pelo código.
+    let audioIn = path.join(outDir, `${name}.wav`);
+    if (info.audioFile) {
+      audioIn = path.join(projectDir, info.audioFile);
+      console.log(`Áudio: ${path.relative(ROOT, audioIn)}`);
+    } else {
+      console.log(`Áudio: sintetizando ${info.duration}s…`);
+      fs.writeFileSync(audioIn, Buffer.from(await first.evaluate(() => Reel.audioWAVBase64()), 'base64'));
+    }
+    const clipDur = (to - from) / info.fps;
+    const afade = Math.min(0.3, clipDur / 4);
 
     const nWorkers = Math.max(1, Number(args.workers) || Math.min(3, os.cpus().length - 1));
     const pages = [first];
@@ -81,8 +88,8 @@ async function main() {
     const ff = spawn('ffmpeg', [
       '-y', '-loglevel', 'error',
       '-f', 'image2pipe', '-framerate', String(info.fps), '-c:v', 'mjpeg', '-i', '-',
-      '-ss', String(from / info.fps), '-t', String((to - from) / info.fps), '-i', wav,
-      '-map', '0:v', '-map', '1:a',
+      '-ss', String(from / info.fps), '-t', String(clipDur), '-i', audioIn,
+      '-map', '0:v', '-map', '1:a', '-af', `afade=t=out:st=${(clipDur - afade).toFixed(3)}:d=${afade}`,
       '-c:v', 'libx264', '-preset', 'medium', '-crf', String(args.crf || 24), '-pix_fmt', 'yuv420p', '-profile:v', 'high',
       '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
       '-movflags', '+faststart', '-shortest', out,

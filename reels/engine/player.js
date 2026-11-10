@@ -9,12 +9,20 @@
     R.project = project;
     const renderMode = new URLSearchParams(location.search).has('render');
     const app = document.getElementById('app') || document.body;
-    const canvas = R.canvas(R.W, R.H);
-    canvas.id = 'stage';
-    app.appendChild(canvas);
-    const ctx = canvas.getContext('2d', { alpha: false });
+    // scene: onde o projeto desenha (2D). Com `post`, passa pelo shader WebGL.
+    // Com `overlay`, uma camada 2D nítida é desenhada por cima do resultado.
+    const scene = R.canvas(R.W, R.H);
+    const ctx = scene.getContext('2d', { alpha: false });
+    const post = project.post ? new R.Post(R.W, R.H) : null;
+    const final = project.overlay ? R.canvas(R.W, R.H) : null;
+    const fctx = final && final.getContext('2d', { alpha: false });
+    const stage = final || (post && post.canvas) || scene;
+    stage.id = 'stage';
+    app.appendChild(stage);
 
-    await Promise.all([document.fonts.load(R.text.font(80)), document.fonts.load(R.text.mono(40))]).catch(() => {});
+    const fonts = [R.text.font(80), R.text.mono(40), ...(project.fonts || [])];
+    await Promise.all(fonts.map((f) => document.fonts.load(f))).catch(() => {});
+    if (project.signal) await R.sig.load(project.signal);
     const assets = {};
     await Promise.all(Object.entries(project.assets || {}).map(async ([k, src]) => (assets[k] = await R.loadImage(src))));
     R.fx.init();
@@ -22,18 +30,26 @@
 
     R.totalFrames = Math.round(project.duration * R.FPS);
     R.renderFrame = (i) => {
+      const t = i / R.FPS;
       R.resetCtx(ctx);
       ctx.fillStyle = '#000';
       ctx.fillRect(0, 0, R.W, R.H);
-      project.render(ctx, i / R.FPS, assets);
+      project.render(ctx, t, assets);
+      let out = scene;
+      if (post) out = post.render(scene, t, project.post(t));
+      if (final) {
+        R.resetCtx(fctx);
+        fctx.drawImage(out, 0, 0);
+        project.overlay(fctx, t, assets);
+      }
     };
     R.frameJPEG = (i, q = 0.92) => {
       R.renderFrame(i);
-      return canvas.toDataURL('image/jpeg', q).split(',')[1];
+      return stage.toDataURL('image/jpeg', q).split(',')[1];
     };
     R.framePNG = (i) => {
       R.renderFrame(i);
-      return canvas.toDataURL('image/png').split(',')[1];
+      return stage.toDataURL('image/png').split(',')[1];
     };
     R.audioWAVBase64 = async () => R.audio.base64(R.audio.wav(await R.audio.render(project)));
     R.ready = true;
@@ -71,7 +87,10 @@
       if (!buffer) {
         btn.textContent = 'gerando áudio…';
         btn.disabled = true;
-        buffer = await R.audio.render(project);
+        ac = ac || new AudioContext();
+        buffer = project.audioFile
+          ? await ac.decodeAudioData(await (await fetch(project.audioFile)).arrayBuffer())
+          : await R.audio.render(project);
         btn.disabled = false;
       }
       ac = ac || new AudioContext();

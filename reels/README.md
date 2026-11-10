@@ -21,4 +21,21 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
 - `engine/text.js`: legenda palavra por palavra (`*ênfase*` em vermelho) e máquina de escrever.
 - `engine/audio.js`: sons sintetizados (impacto, coração, drone, vento, chuva, trovão, whoosh,
   caixinha de música, cliques, chiado de fita, glitch, estática, sussurro, susto).
+- `engine/kinetic.js`: tipografia cinética sincronizada palavra a palavra (retrô 3D com mola,
+  script escrito à mão, horror com glitch, sussurro de máquina de escrever) e títulos letra por letra.
+- `engine/gl.js`: pós-produção em WebGL2 (motion blur, aberração cromática, CRT, glitch, smear,
+  bloom, meio-tom de impressão, papel, grading, light leak, película, scanlines, vinheta, grão).
+- `engine/signal.js` + `scripts/analyze-audio.cjs`: curvas de volume, graves e batidas do áudio
+  para animar no ritmo (ex.: a boca do mascote mexe com a voz).
 - `projects/<nome>/scene.js`: o vídeo em si (cenas, legendas e trilha).
+
+## Projetos
+
+- `echo-valley`: reel de terror de 30 s com as imagens enviadas e som 100% sintetizado.
+- `echo-valley-ad`: comercial anos 50 que vai sendo corrompido. Usa a voz e a música originais
+  (`assets/voice-music.m4a`), e todo o visual é desenhado por código (`art.js`).
+  Para trocar o áudio: substitua o arquivo e rode
+  `node scripts/analyze-audio.cjs projects/echo-valley-ad/assets/voice-music.m4a projects/echo-valley-ad/assets/audio-analysis.json`.
+
+Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
+Special Elite (Apache 2.0).
