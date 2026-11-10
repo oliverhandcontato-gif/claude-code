@@ -96,7 +96,7 @@
           const cx = xx + w.w / 2;
           if (style === 'retro') drawRetro(ctx, t, w, cx, yy, lt, next, out, i, size);
           else if (style === 'script') drawScript(ctx, w, cx, yy, lt, out, size);
-          else if (style === 'horror') drawHorror(ctx, t, f, w, cx, yy, lt, out, i, size);
+          else if (style === 'horror') drawHorror(ctx, t, f, w, cx, yy, lt, out, i, size, L.jitter ?? 1);
           else drawWhisper(ctx, t, w, cx, yy, lt, out, i, size);
           ctx.restore();
         }
@@ -137,7 +137,8 @@
   }
 
   const GLITCH = '#@$%&?!/\\<>*01';
-  function drawHorror(ctx, t, f, w, cx, cy, lt, out, i, size) {
+  function drawHorror(ctx, t, f, w, cx, cy, lt, out, i, size, jit = 1) {
+    const J = w.em ? 1 : jit;
     const pop = 1 + 0.35 * Math.exp(-lt * 16);
     ctx.translate(cx, cy);
     ctx.scale(pop, pop);
@@ -147,17 +148,17 @@
     chars.forEach((c, k) => {
       const cw = ctx.measureText(c).width;
       const h1 = R.hash(f * 31 + k, i), h2 = R.hash(f * 17 + k, i + 9), h3 = R.hash(f * 7 + k, i + 3);
-      const jx = (h1 - 0.5) * size * 0.12, jy = (h2 - 0.5) * size * 0.14;
-      const ch = h3 < 0.035 ? GLITCH[Math.floor(R.hash(f, k) * GLITCH.length)] : c;
+      const jx = (h1 - 0.5) * size * 0.12 * J, jy = (h2 - 0.5) * size * 0.14 * J;
+      const ch = h3 < 0.012 * J ? GLITCH[Math.floor(R.hash(f, k) * GLITCH.length)] : c;
       ctx.lineJoin = 'round';
       ctx.lineWidth = size * 0.14;
       ctx.strokeStyle = '#000';
       ctx.strokeText(ch, x + jx, jy);
       ctx.globalCompositeOperation = 'lighter';
       ctx.fillStyle = 'rgba(255,0,40,0.9)';
-      ctx.fillText(ch, x + jx - size * 0.06, jy);
+      ctx.fillText(ch, x + jx - size * 0.06 * J, jy);
       ctx.fillStyle = 'rgba(0,230,255,0.75)';
-      ctx.fillText(ch, x + jx + size * 0.06, jy);
+      ctx.fillText(ch, x + jx + size * 0.06 * J, jy);
       ctx.globalCompositeOperation = 'source-over';
       ctx.fillStyle = w.em ? '#ff2a2a' : '#f4f4f4';
       ctx.fillText(ch, x + jx, jy);

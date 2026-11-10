@@ -51,14 +51,15 @@ async function main() {
   const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   try {
     const first = await openPage(browser, url);
-    const info = await first.evaluate(() => ({ duration: Reel.project.duration, fps: Reel.FPS, total: Reel.totalFrames, audioFile: Reel.project.audioFile || null }));
+    const info = await first.evaluate(() => ({ duration: Reel.project.duration, fps: Reel.FPS, total: Reel.totalFrames, audioFile: Reel.project.audioFile || null,
+      audioEnd: Reel.project.audioEnd || null, sfxGain: Reel.project.sfxGain ?? 0.5, hasSynth: typeof Reel.project.audio === 'function' }));
 
     if (args.stills) {
       const dir = path.join(outDir, 'stills');
       fs.mkdirSync(dir, { recursive: true });
       for (const s of String(args.stills).split(',').map(Number)) {
         const i = Math.min(info.total - 1, Math.round(s * info.fps));
-        const b64 = await first.evaluate((i) => Reel.framePNG(i), i);
+        const b64 = await first.evaluate(async (i) => Reel.framePNG(i), i);
         const file = path.join(dir, `${name}-${s.toFixed(2)}s.png`);
         fs.writeFileSync(file, Buffer.from(b64, 'base64'));
         console.log('still:', path.relative(process.cwd(), file));
@@ -69,17 +70,33 @@ async function main() {
     const from = Math.round((Number(args.from) || 0) * info.fps);
     const to = Math.min(info.total, args.to !== undefined ? Math.round(Number(args.to) * info.fps) : info.total);
     const out = path.resolve(args.out || path.join(outDir, `${name}.mp4`));
-    // Trilha: arquivo do projeto (voz/música prontas) ou som sintetizado pelo código.
-    let audioIn = path.join(outDir, `${name}.wav`);
-    if (info.audioFile) {
-      audioIn = path.join(projectDir, info.audioFile);
-      console.log(`Áudio: ${path.relative(ROOT, audioIn)}`);
-    } else {
-      console.log(`Áudio: sintetizando ${info.duration}s…`);
-      fs.writeFileSync(audioIn, Buffer.from(await first.evaluate(() => Reel.audioWAVBase64()), 'base64'));
-    }
+    // Trilha: arquivo do projeto (voz/música prontas), som sintetizado pelo código, ou os dois mixados.
     const clipDur = (to - from) / info.fps;
+    const t0 = from / info.fps;
     const afade = Math.min(0.3, clipDur / 4);
+    const synthWav = path.join(outDir, `${name}.wav`);
+    if (info.hasSynth) {
+      console.log(`Áudio: sintetizando efeitos (${info.duration}s)…`);
+      fs.writeFileSync(synthWav, Buffer.from(await first.evaluate(() => Reel.audioWAVBase64()), 'base64'));
+    }
+    const audioArgs = [];
+    let filter;
+    if (info.audioFile) {
+      const file = path.join(projectDir, info.audioFile);
+      const fileDur = Math.max(0.1, Math.min(clipDur, (info.audioEnd ?? info.duration) - t0));
+      console.log(`Áudio: ${path.relative(ROOT, file)}${info.hasSynth ? ' + efeitos' : ''}`);
+      audioArgs.push('-ss', String(t0), '-t', String(fileDur), '-i', file);
+      const fileFade = info.audioEnd ? Math.min(0.12, fileDur / 4) : afade;
+      filter = `[1:a]aresample=48000,afade=t=out:st=${(fileDur - fileFade).toFixed(3)}:d=${fileFade},apad[a]`;
+      if (info.hasSynth) {
+        audioArgs.push('-ss', String(t0), '-t', String(clipDur), '-i', synthWav);
+        filter += `;[2:a]aresample=48000,volume=${info.sfxGain}[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.95[m];[m]`;
+      } else filter += ';[a]';
+    } else {
+      audioArgs.push('-ss', String(t0), '-t', String(clipDur), '-i', synthWav);
+      filter = '[1:a]';
+    }
+    filter += `atrim=0:${clipDur.toFixed(3)},afade=t=out:st=${(clipDur - afade).toFixed(3)}:d=${afade}[aout]`;
 
     const nWorkers = Math.max(1, Number(args.workers) || Math.min(3, os.cpus().length - 1));
     const pages = [first];
@@ -88,8 +105,8 @@ async function main() {
     const ff = spawn('ffmpeg', [
       '-y', '-loglevel', 'error',
       '-f', 'image2pipe', '-framerate', String(info.fps), '-c:v', 'mjpeg', '-i', '-',
-      '-ss', String(from / info.fps), '-t', String(clipDur), '-i', audioIn,
-      '-map', '0:v', '-map', '1:a', '-af', `afade=t=out:st=${(clipDur - afade).toFixed(3)}:d=${afade}`,
+      ...audioArgs,
+      '-filter_complex', filter, '-map', '0:v', '-map', '[aout]',
       '-c:v', 'libx264', '-preset', 'medium', '-crf', String(args.crf || 24), '-pix_fmt', 'yuv420p', '-profile:v', 'high',
       '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
       '-movflags', '+faststart', '-shortest', out,
@@ -98,7 +115,7 @@ async function main() {
 
     let next = from, writeIdx = from;
     const pending = new Map();
-    const t0 = Date.now();
+    const tStart = Date.now();
     const flush = async () => {
       while (pending.has(writeIdx)) {
         const buf = pending.get(writeIdx);
@@ -107,7 +124,7 @@ async function main() {
         if (!ff.stdin.write(buf)) await once(ff.stdin, 'drain');
         const done = writeIdx - from;
         if (done % 30 === 0 || writeIdx === to) {
-          const el = (Date.now() - t0) / 1000, fps = done / el;
+          const el = (Date.now() - tStart) / 1000, fps = done / el;
           process.stdout.write(`\rFrames ${done}/${to - from}  ${fps.toFixed(1)} fps  ETA ${Math.max(0, (to - writeIdx) / fps).toFixed(0)}s   `);
         }
       }
@@ -116,7 +133,7 @@ async function main() {
       for (;;) {
         const i = next++;
         if (i >= to) break;
-        const b64 = await page.evaluate((i) => Reel.frameJPEG(i, 0.93), i);
+        const b64 = await page.evaluate(async (i) => Reel.frameJPEG(i, 0.93), i);
         pending.set(i, Buffer.from(b64, 'base64'));
         await flush();
       }

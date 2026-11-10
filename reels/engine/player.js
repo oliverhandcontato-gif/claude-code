@@ -43,11 +43,17 @@
         project.overlay(fctx, t, assets);
       }
     };
-    R.frameJPEG = (i, q = 0.92) => {
+    // Projetos com footage carregam os quadros antes de desenhar (project.prepare é assíncrono).
+    R.prepareFrame = async (i) => {
+      if (project.prepare) await project.prepare(i / R.FPS);
+    };
+    R.frameJPEG = async (i, q = 0.92) => {
+      await R.prepareFrame(i);
       R.renderFrame(i);
       return stage.toDataURL('image/jpeg', q).split(',')[1];
     };
-    R.framePNG = (i) => {
+    R.framePNG = async (i) => {
+      await R.prepareFrame(i);
       R.renderFrame(i);
       return stage.toDataURL('image/png').split(',')[1];
     };
@@ -55,6 +61,21 @@
     R.ready = true;
     if (!renderMode) ui(app, project);
   };
+
+  /** Áudio da prévia: arquivo do projeto (cortado em audioEnd) somado aos efeitos sintetizados. */
+  async function previewAudio(ac, project) {
+    const synth = project.audio ? await R.audio.render(project, ac.sampleRate) : null;
+    if (!project.audioFile) return synth;
+    const file = await ac.decodeAudioData(await (await fetch(project.audioFile)).arrayBuffer());
+    const len = Math.ceil(project.duration * ac.sampleRate), out = ac.createBuffer(2, len, ac.sampleRate);
+    const endS = Math.min(file.length, Math.floor((project.audioEnd ?? project.duration) * ac.sampleRate));
+    for (let ch = 0; ch < 2; ch++) {
+      const d = out.getChannelData(ch), f = file.getChannelData(Math.min(ch, file.numberOfChannels - 1));
+      const s = synth && synth.getChannelData(ch), g = project.sfxGain ?? 0.5;
+      for (let i = 0; i < len; i++) d[i] = (i < endS ? f[i] : 0) + (s ? s[i] * g : 0);
+    }
+    return out;
+  }
 
   function ui(app, project) {
     document.body.classList.add('preview');
@@ -69,7 +90,7 @@
 
     const draw = (t) => {
       const i = Math.max(0, Math.min(R.totalFrames - 1, Math.floor(t * R.FPS)));
-      R.renderFrame(i);
+      R.prepareFrame(i).then(() => R.renderFrame(i));
       seek.value = i;
       time.textContent = `${fmt(t)} / ${fmt(project.duration)}`;
     };
@@ -88,9 +109,7 @@
         btn.textContent = 'gerando áudio…';
         btn.disabled = true;
         ac = ac || new AudioContext();
-        buffer = project.audioFile
-          ? await ac.decodeAudioData(await (await fetch(project.audioFile)).arrayBuffer())
-          : await R.audio.render(project);
+        buffer = await previewAudio(ac, project);
         btn.disabled = false;
       }
       ac = ac || new AudioContext();

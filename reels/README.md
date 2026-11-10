@@ -37,5 +37,11 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   Para trocar o áudio: substitua o arquivo e rode
   `node scripts/analyze-audio.cjs projects/echo-valley-ad/assets/voice-music.m4a projects/echo-valley-ad/assets/audio-analysis.json`.
 
+- `echo-valley-segredo`: edição acelerada com footage do Mixkit (licença grátis, uso comercial
+  sem crédito obrigatório) sobre a voz e a música originais, com efeitos sonoros por baixo.
+  O footage não fica no git; para baixar os clipes e extrair os quadros:
+  `node projects/echo-valley-segredo/prepare.cjs` (lista de cenas em `shots.json`), e depois
+  `node render.cjs projects/echo-valley-segredo`.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).
