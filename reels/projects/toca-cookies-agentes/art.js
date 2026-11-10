@@ -369,14 +369,44 @@
   };
 
   /** Cartela final: cookie + nome + botão Seguir sendo tocado. */
-  Art.brand = (ctx, t, t0, tap) => {
+  /** Logo da página recortado em círculo (estilo avatar), com aro e brilho. */
+  Art.logo = (ctx, img, x, y, r, t) => {
+    // recorte centrado no cookie de chapéu (coordenadas do arquivo 1600x1600)
+    const cx = 935, cy = 760, cr = 700;
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(Math.sin(t * 1.5) * 0.06);
+    ctx.shadowColor = 'rgba(255,170,90,0.6)';
+    ctx.shadowBlur = 40;
+    ctx.beginPath();
+    ctx.arc(0, 0, r + 10, 0, Math.PI * 2);
+    ctx.fillStyle = '#fff3e0';
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(0, 0, r, 0, Math.PI * 2);
+    ctx.clip();
+    ctx.drawImage(img, cx - cr, cy - cr, cr * 2, cr * 2, -r, -r, r * 2, r * 2);
+    ctx.restore();
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.lineWidth = 12;
+    ctx.strokeStyle = '#8a2be2';
+    ctx.beginPath();
+    ctx.arc(0, 0, r + 10, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.restore();
+  };
+
+  Art.brand = (ctx, t, t0, tap, logo) => {
     if (t < t0) return;
     const p = R.spring(t - t0, 1.6, 6);
     ctx.save();
     ctx.translate(540, 760);
     ctx.scale(Math.max(0.01, p), Math.max(0.01, p));
-    Art.sigil(ctx, 0, 0, 300, t, 3, 'rgba(255,170,90,0.35)');
-    Art.cookie(ctx, 0, 0, 200, Math.sin(t * 1.5) * 0.12);
+    Art.sigil(ctx, 0, 0, 320, t, 3, 'rgba(190,120,255,0.45)');
+    if (logo) Art.logo(ctx, logo, 0, 0, 220, t);
+    else Art.cookie(ctx, 0, 0, 200, Math.sin(t * 1.5) * 0.12);
     ctx.restore();
     const tp = R.spring(t - t0 - 0.15, 1.6, 6);
     ctx.save();

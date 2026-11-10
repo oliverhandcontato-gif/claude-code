@@ -88,7 +88,7 @@
     }
     return cache.get(key);
   }
-  let cur = null;
+  let cur = null, LOGO = null;
   const kick = (t) => R.sig.peak(t, 0.2, 0.6);
   const EMPH_T = CAPS.flatMap((c) => c.words.filter((w) => w.em).map((w) => w.t));
 
@@ -215,7 +215,7 @@
     tags(ctx, t);
     if (t > 52.2) {
       fx.tint(ctx, '#000', 0.55 * R.prog(t, 52.2, 52.5));
-      Art.brand(ctx, t, 52.35, 53.74);
+      Art.brand(ctx, t, 52.35, 53.74, LOGO);
     }
     d20Show(ctx, t);
   }
@@ -316,6 +316,10 @@
     sfxGain: 0.5,
     signal: 'assets/audio-analysis.json',
     fonts: ['40px "Shrikhand"', '40px "VT323"'],
+    assets: { logo: 'assets/logo.jpg' },
+    setup(a) {
+      LOGO = a.logo;
+    },
     async prepare(t) {
       const k = shotAt(t);
       cur = { k, img: await getFrame(k, srcIndex(k, t - SHOTS[k].t)) };
