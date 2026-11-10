@@ -398,6 +398,43 @@
     ctx.restore();
   };
 
+  /**
+   * Marca d'água anti-roubo: logo pequeno + nome, semi-transparente, mudando de lugar
+   * suavemente a cada `period` segundos (fica fora das legendas e da interface do TikTok).
+   */
+  const WM_SPOTS = [[300, 300], [760, 560], [290, 1180], [770, 330], [300, 760]];
+  Art.watermark = (ctx, t, logo, o = {}) => {
+    const { alpha = 0.3, period = 7, name = 'Toca dos Cookies' } = o;
+    const k = Math.floor(t / period), ph = (t % period) / period;
+    const [x0, y0] = WM_SPOTS[k % WM_SPOTS.length], [x1, y1] = WM_SPOTS[(k + 1) % WM_SPOTS.length];
+    const m = R.ease.inOutCubic(R.clamp((ph - 0.85) / 0.15));
+    const x = R.lerp(x0, x1, m), y = R.lerp(y0, y1, m);
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.translate(x, y);
+    if (logo) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(-150, 0, 34, 0, Math.PI * 2);
+      ctx.clip();
+      ctx.drawImage(logo, 935 - 700, 760 - 700, 1400, 1400, -184, -34, 68, 68);
+      ctx.restore();
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#fff';
+      ctx.beginPath();
+      ctx.arc(-150, 0, 34, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.font = '40px "Shrikhand", "Inter", sans-serif';
+    ctx.textBaseline = 'middle';
+    ctx.lineWidth = 6;
+    ctx.strokeStyle = 'rgba(0,0,0,0.6)';
+    ctx.strokeText(name, -104, 2);
+    ctx.fillStyle = '#fff';
+    ctx.fillText(name, -104, 2);
+    ctx.restore();
+  };
+
   Art.brand = (ctx, t, t0, tap, logo) => {
     if (t < t0) return;
     const p = R.spring(t - t0, 1.6, 6);

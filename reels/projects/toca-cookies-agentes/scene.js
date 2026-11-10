@@ -218,6 +218,7 @@
       Art.brand(ctx, t, 52.35, 53.74, LOGO);
     }
     d20Show(ctx, t);
+    if (t < 52.2) Art.watermark(ctx, t, LOGO);
   }
 
   // ---------------- pós-produção ----------------
