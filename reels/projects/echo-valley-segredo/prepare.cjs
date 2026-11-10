@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Prepara o footage: baixa cada clipe do Mixkit (1080p, ou 720p quando o 1080p não é público)
+ * Prepara o footage: baixa cada clipe (Mixkit ou Pixabay — ver scripts/stock.cjs)
  * e extrai os quadros do trecho usado, num recorte vertical com folga para movimentos de câmera.
  *   node projects/echo-valley-segredo/prepare.cjs
  * Saída (fora do git): out/cache/clips/*.mp4 e out/cache/echo-valley-segredo/NN/*.jpg + manifest.json
@@ -19,23 +19,13 @@ const FPS = 30, MAX_SPEED = 1.6;
 const probe = (f, entries) => spawnSync('ffprobe', ['-v', 'error', ...entries, '-of', 'csv=p=0', f]).stdout.toString().trim();
 const valid = (f) => fs.existsSync(f) && probe(f, ['-show_entries', 'format=duration']) !== '';
 
-function download(id) {
-  const file = path.join(CLIPS, `${id}.mp4`);
-  if (valid(file)) return file;
-  for (const q of ['1080', '720']) {
-    for (let k = 0; k < 3; k++) {
-      spawnSync('curl', ['-s', '-f', '-m', '400', '-o', file, `https://assets.mixkit.co/videos/${id}/${id}-${q}.mp4`]);
-      if (valid(file)) return file;
-    }
-  }
-  throw new Error(`não consegui baixar o clipe ${id}`);
-}
+const { fetchClip } = require('../../scripts/stock.cjs');
 
 fs.mkdirSync(CLIPS, { recursive: true });
 fs.mkdirSync(OUT, { recursive: true });
 const manifest = [];
 shots.forEach((s, i) => {
-  const file = download(s.id);
+  const file = fetchClip(s, CLIPS);
   const dur = Number(probe(file, ['-show_entries', 'format=duration']));
   const [w, h] = probe(file, ['-select_streams', 'v:0', '-show_entries', 'stream=width,height']).split(',').map(Number);
   const shotDur = (shots[i + 1] ? shots[i + 1].t : end) - s.t;

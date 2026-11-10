@@ -48,5 +48,11 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   footage do Mixkit e, por código, D20 em 3D, fichas de agente, carimbos, cartela com botão
   Seguir, trilha e efeitos. Prepare com `node projects/toca-cookies-agentes/prepare.cjs`.
 
+## Footage
+
+`scripts/stock.cjs` baixa clipes do Mixkit (sem chave) e do Pixabay (chave na variável de
+ambiente `PIXABAY_API_KEY`, nunca em arquivo). No `shots.json`: `{ "id": 123 }` para Mixkit e
+`{ "src": "pixabay", "id": 123 }` para Pixabay.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).

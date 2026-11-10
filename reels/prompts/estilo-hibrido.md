@@ -44,7 +44,8 @@ Quero um vídeo vertical para [TIKTOK / REELS / SHORTS] do canal **[NOME DO CANA
    - **Se for CellCog:** voz isolada, sem música, com legendas por palavra. Avise o custo em créditos antes.
    - **Se eu regravar depois:** use as palavras em comum como âncoras de um mapa de tempo, para ressincronizar tudo sem refazer a edição.
 3. **Footage:**
-   - Fontes, nesta ordem: Pexels ou Pixabay (se a chave estiver configurada), depois Mixkit, Internet Archive e NASA. Só material com licença livre para uso comercial.
+   - Fontes, nesta ordem: Pixabay (chave na variável de ambiente `PIXABAY_API_KEY`) e Mixkit (sem chave), depois Internet Archive e NASA. O Pexels está com a emissão de chaves de API pausada; se eu quiser algo de lá, baixo à mão e te mando. Só material com licença livre para uso comercial.
+   - No `shots.json`, clipe do Mixkit é `{ "id": 123 }` e do Pixabay é `{ "src": "pixabay", "id": 123 }`; o download fica em `scripts/stock.cjs`.
    - Baixe em 1080p; se não for público, em 720p.
    - Monte uma folha de contato com o número de cada clipe e um **storyboard** com uma cena para cada trecho da fala. Me mostre e espere eu aprovar.
 4. **Edição (ritmo acelerado):**
