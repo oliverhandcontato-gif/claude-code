@@ -90,7 +90,7 @@ async function main() {
       filter = `[1:a]aresample=48000,afade=t=out:st=${(fileDur - fileFade).toFixed(3)}:d=${fileFade},apad[a]`;
       if (info.hasSynth) {
         audioArgs.push('-ss', String(t0), '-t', String(clipDur), '-i', synthWav);
-        filter += `;[2:a]aresample=48000,volume=${info.sfxGain}[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.95[m];[m]`;
+        filter += `;[2:a]aresample=48000,volume=${info.sfxGain}[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.89[m];[m]`;
       } else filter += ';[a]';
     } else {
       audioArgs.push('-ss', String(t0), '-t', String(clipDur), '-i', synthWav);

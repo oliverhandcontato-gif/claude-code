@@ -71,7 +71,8 @@
 
   K.line = (ctx, t, L) => {
     const { style = 'retro', t1, x = 540, y = 1250, size = 84, maxW = 880, rot = 0, words, lineH = 1.18, align = 'center' } = L;
-    if (!words.length || t < words[0].t - 0.05 || t > t1 + 0.2) return;
+    const outD = L.out ?? 0.2;
+    if (!words.length || t < words[0].t - 0.05 || t > t1 + outD) return;
     ctx.save();
     ctx.font = K.FONTS[style](size);
     ctx.textBaseline = 'middle';
@@ -80,7 +81,7 @@
     const { lines, space } = layout(ctx, words, maxW, style === 'script' ? size * 0.08 : style === 'whisper' ? 0 : size * 0.36);
     ctx.translate(x, y);
     ctx.rotate(rot);
-    const out = R.clamp((t - t1) / 0.2);
+    const out = outD > 0 ? R.clamp((t - t1) / outD) : t > t1 ? 1 : 0;
     let yy = -((lines.length - 1) * size * lineH) / 2;
     let idx = 0;
     const f = R.frameOf(t);

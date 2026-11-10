@@ -47,7 +47,7 @@
     ['UM DIA', [24.0, 24.16]],
     ['*CAUSARÁ*', [24.5]],
     ['O…', [25.58]],
-  ].map(([text, times], i, all) => ({ style: 'horror', y: 1290, size: 92, maxW: 900, jitter: 0.25, words: w(text, times), t1: (all[i + 1] ? all[i + 1][1][0] : 26.3) - 0.04 }));
+  ].map(([text, times], i, all) => ({ style: 'horror', y: 1290, size: 92, maxW: 900, jitter: 0.25, out: 0, words: w(text, times), t1: (all[i + 1] ? all[i + 1][1][0] : 26.3) - 0.01 }));
   CAPS.push({ style: 'horror', y: 1180, size: 150, jitter: 0.6, words: w('*APOCALIPSE*', [WT.apocalipse]), t1: 27.45 });
   const EMPH = Object.values(WT).filter((t) => t > 0.5);
 
