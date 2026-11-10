@@ -1,0 +1,632 @@
+[
+ {
+  "word": "Toda",
+  "start": 0.64,
+  "end": 0.885
+ },
+ {
+  "word": "mesa",
+  "start": 0.885,
+  "end": 1.125
+ },
+ {
+  "word": "de",
+  "start": 1.125,
+  "end": 1.325
+ },
+ {
+  "word": "Ordem",
+  "start": 1.325,
+  "end": 1.485
+ },
+ {
+  "word": "Paranormal",
+  "start": 1.485,
+  "end": 2.025
+ },
+ {
+  "word": "tem",
+  "start": 2.025,
+  "end": 2.425
+ },
+ {
+  "word": "esses",
+  "start": 2.425,
+  "end": 2.685
+ },
+ {
+  "word": "cinco",
+  "start": 2.685,
+  "end": 3.125
+ },
+ {
+  "word": "agentes,",
+  "start": 3.125,
+  "end": 3.665
+ },
+ {
+  "word": "e",
+  "start": 4.165,
+  "end": 4.32
+ },
+ {
+  "word": "um",
+  "start": 4.32,
+  "end": 4.5
+ },
+ {
+  "word": "deles",
+  "start": 4.5,
+  "end": 4.8
+ },
+ {
+  "word": "é",
+  "start": 5.22,
+  "end": 5.365
+ },
+ {
+  "word": "você.",
+  "start": 5.365,
+  "end": 5.685
+ },
+ {
+  "word": "Número",
+  "start": 6.405,
+  "end": 6.83
+ },
+ {
+  "word": "um:",
+  "start": 6.83,
+  "end": 7.07
+ },
+ {
+  "word": "o",
+  "start": 7.36,
+  "end": 7.535
+ },
+ {
+  "word": "Ocultista.",
+  "start": 7.535,
+  "end": 8.095
+ },
+ {
+  "word": "Aprendeu",
+  "start": 8.575,
+  "end": 9.45
+ },
+ {
+  "word": "um",
+  "start": 9.45,
+  "end": 9.53
+ },
+ {
+  "word": "ritual",
+  "start": 9.53,
+  "end": 9.83
+ },
+ {
+  "word": "e",
+  "start": 9.83,
+  "end": 10.265
+ },
+ {
+  "word": "agora",
+  "start": 10.265,
+  "end": 10.685
+ },
+ {
+  "word": "resolve",
+  "start": 10.685,
+  "end": 11.205
+ },
+ {
+  "word": "tudo",
+  "start": 11.5,
+  "end": 11.79
+ },
+ {
+  "word": "com",
+  "start": 11.79,
+  "end": 12.215
+ },
+ {
+  "word": "ele.",
+  "start": 12.215,
+  "end": 12.495
+ },
+ {
+  "word": "Porta",
+  "start": 12.915,
+  "end": 13.2
+ },
+ {
+  "word": "trancada?",
+  "start": 13.2,
+  "end": 13.72
+ },
+ {
+  "word": "Ritual.",
+  "start": 14.105,
+  "end": 14.52
+ },
+ {
+  "word": "Interrogatório?",
+  "start": 15.06,
+  "end": 15.855
+ },
+ {
+  "word": "Ritual.",
+  "start": 16.16,
+  "end": 16.695
+ },
+ {
+  "word": "Sanidade?",
+  "start": 17.62,
+  "end": 18.175
+ },
+ {
+  "word": "Que",
+  "start": 19.195,
+  "end": 19.35
+ },
+ {
+  "word": "sanidade?",
+  "start": 19.35,
+  "end": 19.89
+ },
+ {
+  "word": "Número",
+  "start": 20.65,
+  "end": 21.025
+ },
+ {
+  "word": "dois:",
+  "start": 21.025,
+  "end": 21.205
+ },
+ {
+  "word": "o Combatente.",
+  "start": 21.645,
+  "end": 22.35
+ },
+ {
+  "word": "entra",
+  "start": 22.95,
+  "end": 23.205
+ },
+ {
+  "word": "primeiro",
+  "start": 23.205,
+  "end": 23.585
+ },
+ {
+  "word": "na",
+  "start": 23.585,
+  "end": 23.805
+ },
+ {
+  "word": "sala",
+  "start": 23.805,
+  "end": 24.005
+ },
+ {
+  "word": "escura,",
+  "start": 24.005,
+  "end": 24.445
+ },
+ {
+  "word": "sozinho,",
+  "start": 24.735,
+  "end": 25.48
+ },
+ {
+  "word": "sem",
+  "start": 25.85,
+  "end": 26.265
+ },
+ {
+  "word": "lanterna.",
+  "start": 26.265,
+  "end": 27.045
+ },
+ {
+  "word": "Relaxa,",
+  "start": 27.465,
+  "end": 28.28
+ },
+ {
+  "word": "eu",
+  "start": 28.4,
+  "end": 28.5
+ },
+ {
+  "word": "aguento.",
+  "start": 28.5,
+  "end": 29.12
+ },
+ {
+  "word": "Não",
+  "start": 29.52,
+  "end": 30.04
+ },
+ {
+  "word": "aguentou.",
+  "start": 30.04,
+  "end": 30.68
+ },
+ {
+  "word": "Número",
+  "start": 31.15,
+  "end": 31.535
+ },
+ {
+  "word": "três:",
+  "start": 31.535,
+  "end": 31.875
+ },
+ {
+  "word": "o",
+  "start": 32.175,
+  "end": 32.225
+ },
+ {
+  "word": "Especialista.",
+  "start": 32.215,
+  "end": 33.015
+ },
+ {
+  "word": "quer",
+  "start": 33.455,
+  "end": 33.58
+ },
+ {
+  "word": "revistar",
+  "start": 33.58,
+  "end": 33.98
+ },
+ {
+  "word": "cada",
+  "start": 34.24,
+  "end": 34.615
+ },
+ {
+  "word": "gaveta,",
+  "start": 35.46,
+  "end": 35.495
+ },
+ {
+  "word": "cada",
+  "start": 35.835,
+  "end": 36.24
+ },
+ {
+  "word": "papel,",
+  "start": 36.67,
+  "end": 36.8
+ },
+ {
+  "word": "cada",
+  "start": 37.25,
+  "end": 37.715
+ },
+ {
+  "word": "parede,",
+  "start": 37.96,
+  "end": 39.02
+ },
+ {
+  "word": "com",
+  "start": 39.02,
+  "end": 39.185
+ },
+ {
+  "word": "criatura",
+  "start": 39.185,
+  "end": 39.765
+ },
+ {
+  "word": "parada",
+  "start": 40.0,
+  "end": 40.665
+ },
+ {
+  "word": "ao",
+  "start": 41.11,
+  "end": 41.25
+ },
+ {
+  "word": "lado",
+  "start": 41.25,
+  "end": 41.61
+ },
+ {
+  "word": "dele.",
+  "start": 41.61,
+  "end": 41.95
+ },
+ {
+  "word": "Número",
+  "start": 42.37,
+  "end": 42.665
+ },
+ {
+  "word": "quatro:",
+  "start": 42.665,
+  "end": 43.005
+ },
+ {
+  "word": "o Escritor.",
+  "start": 43.545,
+  "end": 43.945
+ },
+ {
+  "word": "Aquele",
+  "start": 44.485,
+  "end": 44.74
+ },
+ {
+  "word": "que",
+  "start": 44.74,
+  "end": 44.86
+ },
+ {
+  "word": "escreveu",
+  "start": 44.86,
+  "end": 45.32
+ },
+ {
+  "word": "doze",
+  "start": 45.32,
+  "end": 45.78
+ },
+ {
+  "word": "páginas",
+  "start": 45.78,
+  "end": 46.52
+ },
+ {
+  "word": "de",
+  "start": 46.52,
+  "end": 46.66
+ },
+ {
+  "word": "história",
+  "start": 46.66,
+  "end": 47.06
+ },
+ {
+  "word": "do",
+  "start": 47.06,
+  "end": 47.4
+ },
+ {
+  "word": "personagem",
+  "start": 47.4,
+  "end": 48.04
+ },
+ {
+  "word": "e",
+  "start": 48.57,
+  "end": 48.685
+ },
+ {
+  "word": "morreu",
+  "start": 48.685,
+  "end": 49.005
+ },
+ {
+  "word": "na",
+  "start": 49.005,
+  "end": 49.145
+ },
+ {
+  "word": "primeira",
+  "start": 49.145,
+  "end": 49.405
+ },
+ {
+  "word": "cena.",
+  "start": 49.405,
+  "end": 49.845
+ },
+ {
+  "word": "Número",
+  "start": 50.85,
+  "end": 51.225
+ },
+ {
+  "word": "cinco:",
+  "start": 51.225,
+  "end": 51.625
+ },
+ {
+  "word": "o",
+  "start": 52.11,
+  "end": 52.17
+ },
+ {
+  "word": "Curioso.",
+  "start": 52.17,
+  "end": 53.22
+ },
+ {
+  "word": "Aquele",
+  "start": 53.22,
+  "end": 53.635
+ },
+ {
+  "word": "que",
+  "start": 53.635,
+  "end": 53.875
+ },
+ {
+  "word": "olha",
+  "start": 53.875,
+  "end": 54.155
+ },
+ {
+  "word": "pro",
+  "start": 54.29,
+  "end": 54.455
+ },
+ {
+  "word": "mestre",
+  "start": 54.455,
+  "end": 55.155
+ },
+ {
+  "word": "e",
+  "start": 55.155,
+  "end": 55.49
+ },
+ {
+  "word": "diz:",
+  "start": 55.49,
+  "end": 55.95
+ },
+ {
+  "word": "\"Eu",
+  "start": 55.95,
+  "end": 56.31
+ },
+ {
+  "word": "toco",
+  "start": 56.53,
+  "end": 57.14
+ },
+ {
+  "word": "no",
+  "start": 57.14,
+  "end": 57.295
+ },
+ {
+  "word": "objeto",
+  "start": 57.295,
+  "end": 57.675
+ },
+ {
+  "word": "amaldiçoado.\"",
+  "start": 57.675,
+  "end": 59.07
+ },
+ {
+  "word": "Já",
+  "start": 59.125,
+  "end": 59.375
+ },
+ {
+  "word": "marca",
+  "start": 59.375,
+  "end": 59.635
+ },
+ {
+  "word": "o",
+  "start": 59.635,
+  "end": 59.875
+ },
+ {
+  "word": "seu",
+  "start": 59.875,
+  "end": 59.975
+ },
+ {
+  "word": "grupo.",
+  "start": 59.975,
+  "end": 60.315
+ },
+ {
+  "word": "e",
+  "start": 60.315,
+  "end": 60.515
+ },
+ {
+  "word": "descobre",
+  "start": 60.515,
+  "end": 60.995
+ },
+ {
+  "word": "quem",
+  "start": 60.995,
+  "end": 61.255
+ },
+ {
+  "word": "morre",
+  "start": 61.255,
+  "end": 61.595
+ },
+ {
+  "word": "primeiro.",
+  "start": 61.595,
+  "end": 62.015
+ },
+ {
+  "word": "Segue",
+  "start": 62.57,
+  "end": 62.87
+ },
+ {
+  "word": "a",
+  "start": 62.87,
+  "end": 63.01
+ },
+ {
+  "word": "Toca",
+  "start": 63.01,
+  "end": 63.15
+ },
+ {
+  "word": "dos",
+  "start": 63.15,
+  "end": 63.35
+ },
+ {
+  "word": "Cookies…",
+  "start": 63.35,
+  "end": 63.77
+ },
+ {
+  "word": "antes",
+  "start": 64.44,
+  "end": 64.745
+ },
+ {
+  "word": "que",
+  "start": 64.745,
+  "end": 64.965
+ },
+ {
+  "word": "o",
+  "start": 64.965,
+  "end": 65.065
+ },
+ {
+  "word": "mestre",
+  "start": 65.065,
+  "end": 65.445
+ },
+ {
+  "word": "peça",
+  "start": 65.445,
+  "end": 65.685
+ },
+ {
+  "word": "um",
+  "start": 65.685,
+  "end": 65.825
+ },
+ {
+  "word": "teste",
+  "start": 65.825,
+  "end": 66.065
+ },
+ {
+  "word": "de",
+  "start": 66.065,
+  "end": 66.285
+ },
+ {
+  "word": "sanidade.",
+  "start": 66.285,
+  "end": 66.865
+ }
+]

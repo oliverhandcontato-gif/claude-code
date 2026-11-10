@@ -8,13 +8,29 @@
   const R = window.Reel, K = R.kin, E = R.ease, fx = R.fx, Art = window.Art;
   const { W, H } = R;
   const CACHE = '../../out/cache/toca-cookies-agentes/';
-  const { shots: SHOTS, end: DUR } = await (await fetch('shots.json')).json();
+  const { shots: SHOTS } = await (await fetch('shots.json')).json();
+  const DUR = 67.6, TAU_END = 57.4;
   const MAN = await (await fetch(CACHE + 'manifest.json')).json();
-  const WORDS = await (await fetch('assets/palavras.json')).json();
-  const VOICE_END = 57.07;
+  // Voz: gravação do próprio dono da página (limpa e editada), com tempos por palavra.
+  // A edição foi montada na linha do tempo da locução antiga ("tempo do roteiro", τ);
+  // `warp` leva τ -> tempo real da voz nova e `unwarp` faz o caminho inverso.
+  const WORDS = await (await fetch('assets/palavras-voz-propria.json')).json();
+  const ANCHORS = await (await fetch('assets/sincronia-voz-propria.json')).json();
+  const VOICE_END = 67.26;
+  const pw = (pairs, t) => {
+    if (t <= pairs[0][0]) return pairs[0][1] + (t - pairs[0][0]);
+    for (let i = 1; i < pairs.length; i++) {
+      const [a0, b0] = pairs[i - 1], [a1, b1] = pairs[i];
+      if (t <= a1) return b0 + ((t - a0) / (a1 - a0)) * (b1 - b0);
+    }
+    const [a, b] = pairs[pairs.length - 1];
+    return b + (t - a);
+  };
+  const warp = (tau) => pw(ANCHORS, tau);
+  const unwarp = (t) => pw(ANCHORS.map(([a, b]) => [b, a]), t);
 
   // ---------------- legendas (geradas dos tempos da voz) ----------------
-  const EM = new Set(['ordem', 'paranormal', 'você', 'ocultista', 'ritual', 'tudo', 'sanidade', 'combatente', 'sozinho', 'lanterna', 'aguentou', 'especialista', 'criatura', 'doze', 'morreu', 'cinco', 'perigoso', 'amaldiçoado', 'marca', 'morre', 'toca', 'cookies']);
+  const EM = new Set(['ordem', 'paranormal', 'você', 'ocultista', 'ritual', 'tudo', 'sanidade', 'combatente', 'sozinho', 'lanterna', 'aguentou', 'especialista', 'criatura', 'doze', 'morreu', 'cinco', 'perigoso', 'amaldiçoado', 'marca', 'morre', 'escritor', 'curioso']);
   const clean = (s) => s.toLowerCase().replace(/[^\p{L}]/gu, '');
   const CAPS = [];
   let chunk = [];
@@ -77,7 +93,7 @@
     for (let i = 0; i < SHOTS.length; i++) if (t >= SHOTS[i].t) k = i;
     return k;
   };
-  const shotEnd = (k) => (SHOTS[k + 1] ? SHOTS[k + 1].t : DUR);
+  const shotEnd = (k) => (SHOTS[k + 1] ? SHOTS[k + 1].t : TAU_END);
   const srcIndex = (k, lt) => Math.max(0, Math.min(MAN.shots[k].count - 1, Math.floor(lt * (SPEED[k] || 1) * MAN.fps)));
   const cache = new Map();
   async function getFrame(k, idx) {
@@ -89,8 +105,8 @@
     return cache.get(key);
   }
   let cur = null, LOGO = null;
-  const kick = (t) => R.sig.peak(t, 0.2, 0.6);
-  const EMPH_T = CAPS.flatMap((c) => c.words.filter((w) => w.em).map((w) => w.t));
+  const kick = (tau) => R.sig.peak(warp(tau), 0.2, 0.6);
+  const EMPH_T = CAPS.flatMap((c) => c.words.filter((w) => w.em).map((w) => unwarp(w.t)));
 
   function camera(k, t) {
     const lt = t - SHOTS[k].t, d = shotEnd(k) - SHOTS[k].t;
@@ -258,17 +274,23 @@
   }
 
   // ---------------- trilha e efeitos (por baixo da voz) ----------------
-  function audio(S, A) {
-    // pulso tenso de trilha
+  function audio(S, A0) {
+    // Efeitos pontuais são marcados no tempo do roteiro (τ) e levados para o tempo real da voz.
+    const RANGE = new Set(['drone', 'wind', 'rain', 'vhsBed', 'riser']);
+    const A = new Proxy(A0, {
+      get: (o, k) => (typeof o[k] !== 'function' ? o[k] : (S2, t, ...r) =>
+        RANGE.has(k) && typeof r[0] === 'number' ? o[k](S2, warp(t), warp(r[0]), ...r.slice(1)) : o[k](S2, warp(t), ...r)),
+    });
+    // pulso tenso de trilha, em andamento constante no tempo real
     const bpm = 96, beat = 60 / bpm;
-    for (let t = 0.2, i = 0; t < 48.2; t += beat / 2, i++) {
-      if (i % 2 === 0) A.boom(S, t, { gain: 0.22, freq: 62, decay: 0.32, verb: 0.15 });
-      else A.click(S, t, { gain: 0.05, seed: i });
+    for (let t = warp(0.2), i = 0; t < warp(48.2); t += beat / 2, i++) {
+      if (i % 2 === 0) A0.boom(S, t, { gain: 0.22, freq: 62, decay: 0.32, verb: 0.15 });
+      else A0.click(S, t, { gain: 0.05, seed: i });
     }
     A.drone(S, 0, 48.3, { base: 41.2, gain: 0.2, cutoff: 280, fin: 1.5, fout: 0.05 });
-    for (let t = 49.9, i = 0; t < 57.2; t += beat / 2, i++) {
-      if (i % 2 === 0) A.boom(S, t, { gain: 0.2, freq: 70, decay: 0.3, verb: 0.1 });
-      else A.click(S, t, { gain: 0.05, seed: 300 + i });
+    for (let t = warp(49.9), i = 0; t < warp(57.2); t += beat / 2, i++) {
+      if (i % 2 === 0) A0.boom(S, t, { gain: 0.2, freq: 70, decay: 0.3, verb: 0.1 });
+      else A0.click(S, t, { gain: 0.05, seed: 300 + i });
     }
     // cortes
     SHOTS.forEach((s, i) => {
@@ -278,13 +300,14 @@
       else A.whoosh(S, s.t - 0.16, { dur: 0.24, gain: 0.4, from: i % 2 ? 600 : 3200, to: i % 2 ? 3200 : 600, verb: 0.1 });
     });
     // dados rolando
-    const roll = (t0, gain = 0.5) => {
+    const roll = (tau0, gain = 0.5) => {
+      const t0 = warp(tau0);
       let t = t0;
       for (let k = 0; k < 9; k++) {
-        A.click(S, t, { gain: gain * (1 - k / 12), seed: Math.floor(t0 * 10) + k });
+        A0.click(S, t, { gain: gain * (1 - k / 12), seed: Math.floor(t0 * 10) + k });
         t += 0.045 + k * 0.012;
       }
-      A.boom(S, t0 + 0.75, { gain: 0.45, freq: 130, decay: 0.18, verb: 0.05 });
+      A0.boom(S, warp(tau0 + 0.75), { gain: 0.45, freq: 130, decay: 0.18, verb: 0.05 });
     };
     ROLLS.forEach(([t0]) => roll(t0));
     roll(TEST_ROLL);
@@ -296,7 +319,7 @@
     });
     STAMPS.forEach((s) => A.boom(S, s.t, { gain: 0.8, freq: 55, decay: 1.5 }));
     A.static(S, 16.5, 0.6, { gain: 0.35, seed: 3 });
-    for (let t = 32.7; t < 34.9; t += 0.55) A.heartbeat(S, t, { gain: 0.8 });
+    for (let t = warp(32.7); t < warp(34.9); t += 0.55) A0.heartbeat(S, t, { gain: 0.8 });
     A.riser(S, 46.9, 48.3, { gain: 0.45 });
     A.sting(S, 48.32, { gain: 0.9 });
     A.boom(S, 48.32, { gain: 1, freq: 40, decay: 2.5 });
@@ -304,30 +327,31 @@
     A.boom(S, 53.76, { gain: 0.35, freq: 220, decay: 0.12 });
     // "falha" cômica do teste de sanidade
     [[392, 0], [370, 0.28], [349, 0.56], [330, 0.84]].forEach(([f, dt], i) => {
-      const t = TEST_ROLL + 0.9 + dt;
-      A.musicBox(S, t, f / 2, { gain: 0.4, verb: 0.2, detune: i === 3 ? -40 : 0 });
+      const t = warp(TEST_ROLL + 0.9) + dt;
+      A0.musicBox(S, t, f / 2, { gain: 0.4, verb: 0.2, detune: i === 3 ? -40 : 0 });
     });
   }
 
   R.mount({
     duration: DUR,
     poster: 9.5,
-    audioFile: 'assets/voz.wav',
+    audioFile: 'assets/voz-propria.wav',
     audioEnd: VOICE_END,
-    sfxGain: 0.5,
-    signal: 'assets/audio-analysis.json',
+    sfxGain: 0.45,
+    signal: 'assets/audio-analysis-voz-propria.json',
     fonts: ['40px "Shrikhand"', '40px "VT323"'],
     assets: { logo: 'assets/logo.jpg' },
     setup(a) {
       LOGO = a.logo;
     },
     async prepare(t) {
-      const k = shotAt(t);
-      cur = { k, img: await getFrame(k, srcIndex(k, t - SHOTS[k].t)) };
+      const tau = unwarp(t), k = shotAt(tau);
+      cur = { k, tau, img: await getFrame(k, srcIndex(k, tau - SHOTS[k].t)) };
       getFrame(Math.min(SHOTS.length - 1, k + 1), 0);
     },
     render(ctx, t) {
-      const k = cur.k, c = camera(k, t);
+      const k = cur.k, c = camera(k, cur.tau);
+      t = cur.tau;
       ctx.save();
       ctx.translate(c.ox, c.oy);
       R.drawCover(ctx, cur.img, { zoom: c.z, fx: 0.5, fy: 0.5 });
@@ -336,9 +360,9 @@
       const busy = CARDS.some((cd) => t > cd.t0 - 0.6 && t < cd.exit + 0.2);
       fx.tint(ctx, '#000', busy ? 0.35 : 0.12);
     },
-    post,
+    post: (t) => post(unwarp(t)),
     overlay(ctx, t) {
-      overlays(ctx, cur.k, t);
+      overlays(ctx, cur.k, cur.tau);
       for (const L of CAPS) K.line(ctx, t, L);
       fx.tint(ctx, '#000', R.prog(t, DUR - 0.3, DUR));
     },
