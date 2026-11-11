@@ -97,7 +97,7 @@
           const cx = xx + w.w / 2;
           if (style === 'retro') drawRetro(ctx, t, w, cx, yy, lt, next, out, i, size);
           else if (style === 'script') drawScript(ctx, w, cx, yy, lt, out, size);
-          else if (style === 'horror') drawHorror(ctx, t, f, w, cx, yy, lt, out, i, size, L.jitter ?? 1);
+          else if (style === 'horror') drawHorror(ctx, t, f, w, cx, yy, lt, out, i, size, L.jitter ?? 1, L.emJitter ?? 1);
           else drawWhisper(ctx, t, w, cx, yy, lt, out, i, size);
           ctx.restore();
         }
@@ -138,8 +138,8 @@
   }
 
   const GLITCH = '#@$%&?!/\\<>*01';
-  function drawHorror(ctx, t, f, w, cx, cy, lt, out, i, size, jit = 1) {
-    const J = w.em ? 1 : jit;
+  function drawHorror(ctx, t, f, w, cx, cy, lt, out, i, size, jit = 1, emJit = 1) {
+    const J = w.em ? emJit : jit;
     const pop = 1 + 0.35 * Math.exp(-lt * 16);
     ctx.translate(cx, cy);
     ctx.scale(pop, pop);
