@@ -48,5 +48,13 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   footage do Mixkit e, por código, D20 em 3D, fichas de agente, carimbos, cartela com botão
   Seguir, trilha e efeitos. Prepare com `node projects/toca-cookies-agentes/prepare.cjs`.
 
+- `regras-fabrica`: "Você foi contratado como segurança noturno…" (Tio Arle), terror no formato
+  regras de sobrevivência, 1:50. Locução gerada no CellCog (ElevenLabs) em `assets/voz.wav`;
+  todo o visual, a trilha e os efeitos são código (`art.js`, `scene.js`). O texto fica em
+  `roteiro.json`, e a linha do tempo segue os trechos dele: ao trocar a voz, rode
+  `python3 -I projects/regras-fabrica/tools/palavras.py projects/regras-fabrica/assets/voz.wav`
+  (faster-whisper) e `node scripts/analyze-audio.cjs projects/regras-fabrica/assets/voz.wav projects/regras-fabrica/assets/audio-analysis.json`.
+  `tools/voz.py` gera uma voz local com o Piper, como alternativa. Capa: `node render.cjs projects/regras-fabrica/capa --stills 0`.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).
