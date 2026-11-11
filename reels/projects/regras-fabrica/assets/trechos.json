@@ -1,331 +1,331 @@
 {
- "duracao": 99.957,
+ "duracao": 108.474,
  "trechos": [
   {
    "i": 0,
    "cena": "abertura",
    "texto": "Você foi contratado como segurança noturno da Fábrica de Bonecas",
    "ini": 0.35,
-   "fim": 4.05,
+   "fim": 4.406,
    "beep": [
-    4.11,
-    4.86
+    4.466,
+    5.216
    ]
   },
   {
    "i": 1,
    "cena": "abertura",
    "texto": "O último durou três noites.",
-   "ini": 5.17,
-   "fim": 6.883
+   "ini": 5.526,
+   "fim": 7.383
   },
   {
    "i": 2,
    "cena": "abertura",
    "texto": "Se quiser ver o sol de novo...",
-   "ini": 7.263,
-   "fim": 8.788
+   "ini": 7.833,
+   "fim": 9.511
   },
   {
    "i": 3,
    "cena": "abertura",
    "texto": "siga estas regras.",
-   "ini": 9.038,
-   "fim": 10.4
+   "ini": 9.761,
+   "fim": 11.192
   },
   {
    "i": 4,
    "cena": "r1",
    "texto": "Regra um.",
-   "ini": 11.1,
-   "fim": 11.776
+   "ini": 12.092,
+   "fim": 12.836
   },
   {
    "i": 5,
    "cena": "r1",
    "texto": "Tranque a guarita às dez em ponto.",
-   "ini": 12.056,
-   "fim": 13.83
+   "ini": 13.186,
+   "fim": 15.134
   },
   {
    "i": 6,
    "cena": "r1",
    "texto": "Às dez e um, alguém vai tentar abrir.",
-   "ini": 14.07,
-   "fim": 16.502
+   "ini": 15.434,
+   "fim": 17.935
   },
   {
    "i": 7,
    "cena": "r1",
    "texto": "Não responda.",
-   "ini": 16.782,
-   "fim": 17.679
+   "ini": 18.285,
+   "fim": 19.231
   },
   {
    "i": 8,
    "cena": "r1",
    "texto": "Nem se for a sua própria voz.",
-   "ini": 17.919,
-   "fim": 19.647
+   "ini": 19.531,
+   "fim": 21.26
   },
   {
    "i": 9,
    "cena": "r2",
    "texto": "Regra dois.",
-   "ini": 20.347,
-   "fim": 21.24
+   "ini": 22.16,
+   "fim": 23.141
   },
   {
    "i": 10,
    "cena": "r2",
    "texto": "As bonecas da vitrine dormem de olhos fechados.",
-   "ini": 21.52,
-   "fim": 24.433
+   "ini": 23.491,
+   "fim": 26.602
   },
   {
    "i": 11,
    "cena": "r2",
    "texto": "Se uma abrir os olhos, não pisque.",
-   "ini": 24.673,
-   "fim": 26.736
+   "ini": 26.902,
+   "fim": 29.008
   },
   {
    "i": 12,
    "cena": "r2",
    "texto": "Elas só se movem quando você pisca.",
-   "ini": 27.016,
-   "fim": 29.017
+   "ini": 29.358,
+   "fim": 31.491
   },
   {
    "i": 13,
    "cena": "r3",
    "texto": "Regra três.",
-   "ini": 29.717,
-   "fim": 30.622
+   "ini": 32.391,
+   "fim": 33.368
   },
   {
    "i": 14,
    "cena": "r3",
    "texto": "Se a esteira ligar sozinha, não olhe o que ela está montando.",
-   "ini": 30.902,
-   "fim": 34.293
+   "ini": 33.718,
+   "fim": 37.321
   },
   {
    "i": 15,
    "cena": "r3",
    "texto": "O último segurança olhou.",
-   "ini": 34.573,
-   "fim": 35.99
+   "ini": 37.671,
+   "fim": 39.191
   },
   {
    "i": 16,
    "cena": "r3",
    "texto": "A boneca saiu com o rosto dele.",
-   "ini": 36.37,
-   "fim": 38.134
+   "ini": 39.641,
+   "fim": 41.505
   },
   {
    "i": 17,
    "cena": "r4",
    "texto": "Regra quatro.",
-   "ini": 38.834,
-   "fim": 39.79
+   "ini": 42.405,
+   "fim": 43.399
   },
   {
    "i": 18,
    "cena": "r4",
    "texto": "O rádio só toca o jingle da fábrica.",
-   "ini": 40.07,
-   "fim": 42.105
+   "ini": 43.749,
+   "fim": 45.819
   },
   {
    "i": 19,
    "cena": "r4",
    "texto": "Se ele disser o seu nome, arranque o fio.",
-   "ini": 42.345,
-   "fim": 44.805
+   "ini": 46.119,
+   "fim": 48.724
   },
   {
    "i": 20,
    "cena": "r4",
    "texto": "Se continuar falando...",
-   "ini": 45.085,
-   "fim": 46.41
+   "ini": 49.074,
+   "fim": 50.464
   },
   {
    "i": 21,
    "cena": "r4",
    "texto": "corra.",
-   "ini": 46.69,
-   "fim": 47.213
+   "ini": 50.814,
+   "fim": 51.366
   },
   {
    "i": 22,
    "cena": "r5",
    "texto": "Regra cinco.",
-   "ini": 47.913,
-   "fim": 48.85
+   "ini": 52.266,
+   "fim": 53.204
   },
   {
    "i": 23,
    "cena": "r5",
    "texto": "Não existe terceiro andar.",
-   "ini": 49.13,
-   "fim": 50.543
+   "ini": 53.554,
+   "fim": 55.046
   },
   {
    "i": 24,
    "cena": "r5",
    "texto": "Se o elevador abrir no três, não saia.",
-   "ini": 50.783,
-   "fim": 53.213
+   "ini": 55.346,
+   "fim": 57.902
   },
   {
    "i": 25,
    "cena": "r5",
    "texto": "Não respire.",
-   "ini": 53.453,
-   "fim": 54.298
+   "ini": 58.202,
+   "fim": 59.099
   },
   {
    "i": 26,
    "cena": "r5",
    "texto": "Elas sentem o seu cheiro.",
-   "ini": 54.578,
-   "fim": 56.037
+   "ini": 59.449,
+   "fim": 60.973
   },
   {
    "i": 27,
    "cena": "r6",
    "texto": "Regra seis.",
-   "ini": 56.737,
-   "fim": 57.653
+   "ini": 61.873,
+   "fim": 62.873
   },
   {
    "i": 28,
    "cena": "r6",
    "texto": "Às três e dezessete, seu supervisor vai bater na janela, sorrindo.",
-   "ini": 57.933,
-   "fim": 62.418
+   "ini": 63.223,
+   "fim": 67.877
   },
   {
    "i": 29,
    "cena": "r6",
    "texto": "Sorrindo demais.",
-   "ini": 62.658,
-   "fim": 63.828
+   "ini": 68.177,
+   "fim": 69.432
   },
   {
    "i": 30,
    "cena": "r6",
    "texto": "Seu supervisor morreu no incêndio de oitenta e sete.",
-   "ini": 64.208,
-   "fim": 66.961
+   "ini": 69.882,
+   "fim": 72.79
   },
   {
    "i": 31,
    "cena": "r7",
    "texto": "Regra sete.",
-   "ini": 67.661,
-   "fim": 68.532
+   "ini": 73.69,
+   "fim": 74.627
   },
   {
    "i": 32,
    "cena": "r7",
    "texto": "Na caixa doze há quarenta e sete bonecas.",
-   "ini": 68.812,
-   "fim": 71.136
+   "ini": 74.977,
+   "fim": 77.486
   },
   {
    "i": 33,
    "cena": "r7",
    "texto": "Se contar quarenta e oito, não conte de novo.",
-   "ini": 71.376,
-   "fim": 74.11
+   "ini": 77.786,
+   "fim": 80.538
   },
   {
    "i": 34,
    "cena": "r7",
    "texto": "A que sobrou está atrás de você.",
-   "ini": 74.49,
-   "fim": 76.373
+   "ini": 80.988,
+   "fim": 82.9
   },
   {
    "i": 35,
    "cena": "r8",
    "texto": "Regra oito.",
-   "ini": 77.073,
-   "fim": 77.914
+   "ini": 83.8,
+   "fim": 84.742
   },
   {
    "i": 36,
    "cena": "r8",
    "texto": "Se achar um bilhete dizendo: as regras são mentira...",
-   "ini": 78.194,
-   "fim": 81.1
+   "ini": 85.092,
+   "fim": 88.277
   },
   {
    "i": 37,
    "cena": "r8",
    "texto": "queime.",
-   "ini": 81.34,
-   "fim": 81.806
+   "ini": 88.577,
+   "fim": 89.041
   },
   {
    "i": 38,
    "cena": "r8",
    "texto": "Foi o segurança anterior que escreveu.",
-   "ini": 82.086,
-   "fim": 84.011
+   "ini": 89.391,
+   "fim": 91.522
   },
   {
    "i": 39,
    "cena": "r8",
    "texto": "Ele ainda está aqui.",
-   "ini": 84.411,
-   "fim": 85.717
+   "ini": 91.922,
+   "fim": 93.241
   },
   {
    "i": 40,
    "cena": "final",
    "texto": "Às seis, seu turno acaba.",
-   "ini": 86.417,
-   "fim": 88.446
+   "ini": 94.141,
+   "fim": 96.311
   },
   {
    "i": 41,
    "cena": "final",
    "texto": "Se o sol não nascer, não tente sair.",
-   "ini": 88.686,
-   "fim": 90.791
+   "ini": 96.611,
+   "fim": 98.991
   },
   {
    "i": 42,
    "cena": "final",
    "texto": "A fábrica já te escolheu.",
-   "ini": 91.071,
-   "fim": 92.563
+   "ini": 99.341,
+   "fim": 100.91
   },
   {
    "i": 43,
    "cena": "final",
    "texto": "Bem-vindo à coleção.",
-   "ini": 92.943,
-   "fim": 94.182
+   "ini": 101.36,
+   "fim": 102.704
   },
   {
    "i": 44,
    "cena": "cta",
    "texto": "Segue o Tio Arle...",
-   "ini": 95.182,
-   "fim": 96.427
+   "ini": 103.704,
+   "fim": 104.883
   },
   {
    "i": 45,
    "cena": "cta",
    "texto": "antes que ela descubra o seu nome.",
-   "ini": 96.677,
-   "fim": 98.357
+   "ini": 105.133,
+   "fim": 106.874
   }
  ]
 }
