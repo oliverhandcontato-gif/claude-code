@@ -248,6 +248,7 @@
       ctx.stroke();
     }
     const n = Math.floor((TAU * (r - size * 0.8)) / (size * 1.25));
+    ctx.shadowBlur = 0; // o brilho dos glifos vem do bloom da pós-produção (bem mais leve de renderizar)
     ctx.font = glyphFont(size);
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
