@@ -1,0 +1,60 @@
+{
+ "duracao": 110.9,
+ "provisorio": true,
+ "trechos": [
+  {
+   "i": 0,
+   "texto": "Uma cidade se apresenta como a mais segura da América. Outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
+   "ini": 0.6,
+   "fim": 10.305
+  },
+  {
+   "i": 1,
+   "texto": "Os dois fazem parte de Echo Valley. E é essa obra de terror e suspense que eu quero te apresentar.",
+   "ini": 11.305,
+   "fim": 20.17
+  },
+  {
+   "i": 2,
+   "texto": "Eu sou o Tio Arle. Aqui eu vou comentar esse universo como fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
+   "ini": 21.17,
+   "fim": 33.565
+  },
+  {
+   "i": 3,
+   "texto": "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece até um convite pra passar as férias.",
+   "ini": 34.565,
+   "fim": 44.625
+  },
+  {
+   "i": 4,
+   "texto": "Só que, no meio desse convite, aparece um aviso pra ficar longe da parte norte da floresta. Pra mim, é aí que a apresentação fica interessante.",
+   "ini": 45.625,
+   "fim": 58.03
+  },
+  {
+   "i": 5,
+   "texto": "Em outro relato, treze crianças desaparecem em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
+   "ini": 59.03,
+   "fim": 71.26
+  },
+  {
+   "i": 6,
+   "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber mais do que conta. A cidade é só o começo.",
+   "ini": 72.26,
+   "fim": 84.06
+  },
+  {
+   "i": 7,
+   "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do universo.",
+   "ini": 85.06,
+   "fim": 94.54
+  },
+  {
+   "i": 8,
+   "texto": "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite pra conhecer a cidade?",
+   "ini": 95.54,
+   "fim": 109.3
+  }
+ ]
+}

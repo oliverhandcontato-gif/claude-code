@@ -1,0 +1,245 @@
+{
+ "_doc": "Parte 1. blocos = falas do Tio Arle (roteiro do documento, seção 5). planos = cortes: ref/in (s no arquivo original), ancorados no bloco (b) e opcionalmente numa palavra (w, n). tipo: cheio | painel (fontes de 576 px, sem ampliar demais) | dividido | cartao. etiqueta: OBRA | FICCAO | TIO | PROJETO. destaque = texto de gancho. congela = segura o 1º quadro (s).",
+ "titulo": "Echo Valley: a cidade é só o começo",
+ "blocos": [
+  "Uma cidade se apresenta como a mais segura da América. Outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
+  "Os dois fazem parte de Echo Valley. E é essa obra de terror e suspense que eu quero te apresentar.",
+  "Eu sou o Tio Arle. Aqui eu vou comentar esse universo como fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
+  "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece até um convite pra passar as férias.",
+  "Só que, no meio desse convite, aparece um aviso pra ficar longe da parte norte da floresta. Pra mim, é aí que a apresentação fica interessante.",
+  "Em outro relato, treze crianças desaparecem em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
+  "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber mais do que conta. A cidade é só o começo.",
+  "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do universo.",
+  "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite pra conhecer a cidade?"
+ ],
+ "planos": [
+  {
+   "b": 0,
+   "ref": "A",
+   "in": 2.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "CIDADE SEGURA?",
+   "sp": 0.6
+  },
+  {
+   "b": 0,
+   "w": "mais",
+   "ref": "A",
+   "in": 33.0,
+   "sp": 0.65,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 0,
+   "w": "outro",
+   "ref": "B",
+   "in": 0.3,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "13 DESAPARECIDOS"
+  },
+  {
+   "b": 1,
+   "ref": "A+B",
+   "in": 14.0,
+   "in2": 3.0,
+   "tipo": "dividido",
+   "etiqueta": "",
+   "titulo": "ECHO VALLEY",
+   "sub": "UMA OBRA DE TERROR E SUSPENSE"
+  },
+  {
+   "b": 2,
+   "ref": "A",
+   "in": 15.0,
+   "tipo": "cartao",
+   "etiqueta": "TIO",
+   "cartao": "assinatura"
+  },
+  {
+   "b": 2,
+   "w": "página",
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cartao",
+   "etiqueta": "TIO",
+   "cartao": "oficial"
+  },
+  {
+   "b": 3,
+   "ref": "A",
+   "in": 0.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "UM CONVITE PARA MORAR AQUI"
+  },
+  {
+   "b": 3,
+   "w": "trilhas",
+   "ref": "A",
+   "in": 6.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 3,
+   "w": "sorveteria",
+   "ref": "A",
+   "in": 8.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 3,
+   "w": "moradores",
+   "ref": "A",
+   "in": 20.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 3,
+   "w": "parece",
+   "ref": "A",
+   "in": 14.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "ref": "A",
+   "in": 21.2,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "w": "aviso",
+   "ref": "A",
+   "in": 24.6,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "NÃO VÁ À PARTE NORTE",
+   "congela": 0.6,
+   "marca": [
+    0.12,
+    0.44,
+    0.88,
+    0.53
+   ]
+  },
+  {
+   "b": 4,
+   "w": "pra",
+   "n": 1,
+   "ref": "A",
+   "in": 28.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 5,
+   "ref": "B",
+   "in": 0.4,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "2001 / 13 CRIANÇAS"
+  },
+  {
+   "b": 5,
+   "w": "documentos",
+   "ref": "B",
+   "in": 5.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 5,
+   "w": "silêncio",
+   "ref": "B",
+   "in": 12.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 5,
+   "w": "esse",
+   "ref": "B",
+   "in": 24.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "O QUE ACONTECEU?"
+  },
+  {
+   "b": 5,
+   "w": "mistérios",
+   "ref": "B",
+   "in": 20.0,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 6,
+   "w": "entidades",
+   "ref": "F",
+   "in": 27.2,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "destaque": "ENTIDADES • AMEAÇAS • RELATOS"
+  },
+  {
+   "b": 6,
+   "w": "relatos",
+   "ref": "D",
+   "in": 21.5,
+   "tipo": "painel",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 6,
+   "w": "a",
+   "n": 1,
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "A CIDADE É SÓ O COMEÇO"
+  },
+  {
+   "b": 7,
+   "ref": "A",
+   "in": 0.3,
+   "tipo": "trio",
+   "trio": [
+    [
+     "A",
+     0.3,
+     "APRESENTAÇÕES"
+    ],
+    [
+     "B",
+     0.5,
+     "RELATOS"
+    ],
+    [
+     "C",
+     72.0,
+     "TRANSMISSÕES"
+    ]
+   ],
+   "etiqueta": ""
+  },
+  {
+   "b": 8,
+   "ref": "A",
+   "in": 2.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "VOCÊ CONFIARIA NESSE CONVITE?",
+   "fim": "PARTE 2: COMO COMEÇAR",
+   "sp": 0.12
+  }
+ ]
+}
