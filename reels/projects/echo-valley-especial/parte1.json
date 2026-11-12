@@ -114,7 +114,7 @@
    "w": "parece",
    "ref": "A",
    "in": 10.0,
-   "sp": 0.6,
+   "sp": 0.45,
    "tipo": "cheio",
    "etiqueta": "OBRA"
   },
@@ -124,7 +124,7 @@
    "in": 21.2,
    "tipo": "cheio",
    "etiqueta": "OBRA",
-   "w": "só"
+   "w": "meio"
   },
   {
    "b": 5,
