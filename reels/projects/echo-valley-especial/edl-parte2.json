@@ -35,11 +35,14 @@
   {
    "texto": "Quando um personagem acusa alguém de esconder a verdade, eu normalmente escuto aquilo como a versão dele. A acusação faz parte da história, mas ainda dá espaço pra dúvida, sabe?",
    "faixas": [
-    [
-     95,
-     123
-    ]
-   ]
+    {
+     "t": [
+      40.2,
+      54.1
+     ]
+    }
+   ],
+   "_nota": "Só a 2ª tomada de 'Quando um personagem' (a 1ª, 38.4–39.9 s, tinha erro)."
   },
   {
    "texto": "Para mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
@@ -71,10 +74,17 @@
     {
      "t": [
       88.4,
-      99.6
+      94.06
+     ]
+    },
+    {
+     "t": [
+      96.55,
+      99.9
      ]
     }
-   ]
+   ],
+   "_nota": "'…vai além' (1ª tomada, corte antes do 'de') + 'de decorar o nome de uma entidade…' (2ª); a 1ª tropeça em 'de um ed…'."
   },
   {
    "texto": "Você também encontra conteúdos que saem da ficção e falando do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",

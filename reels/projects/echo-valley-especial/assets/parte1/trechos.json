@@ -1,5 +1,5 @@
 {
- "duracao": 112.2,
+ "duracao": 109.02,
  "guia": false,
  "trechos": [
   {
@@ -30,8 +30,8 @@
   {
    "i": 4,
    "texto": "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece que é até um convite para passar as férias. Só que, no meio desse convite, aparece um aviso:",
-   "ini": 27.665,
-   "fim": 40.645
+   "ini": 27.545,
+   "fim": 40.625
   },
   {
    "i": 5,
@@ -55,26 +55,26 @@
   {
    "i": 8,
    "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber muito mais do que conta. A cidade é só o começo.",
-   "ini": 62.405,
-   "fim": 75.625
+   "ini": 62.47,
+   "fim": 72.39
   },
   {
    "i": 9,
    "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do que o universo traz consigo.",
-   "ini": 76.385,
-   "fim": 87.305
+   "ini": 73.38,
+   "fim": 84.12
   },
   {
    "i": 10,
    "texto": "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite para conhecer a cidade?",
-   "ini": 88.395,
-   "fim": 99.795
+   "ini": 85.215,
+   "fim": 96.615
   },
   {
    "i": 11,
    "texto": "Se sim, segura a minha mão e vamos conhecer junto a cidade de Echo Valley. Eu sou o Tio Arle, e já me segue para mais conteúdo.",
-   "ini": 100.74,
-   "fim": 110.28
+   "ini": 97.56,
+   "fim": 107.1
   }
  ]
 }

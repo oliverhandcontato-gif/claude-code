@@ -1,5 +1,5 @@
 {
- "duracao": 112.51,
+ "duracao": 108.12,
  "guia": false,
  "trechos": [
   {
@@ -24,50 +24,50 @@
    "i": 3,
    "texto": "Quando um personagem acusa alguém de esconder a verdade, eu normalmente escuto aquilo como a versão dele. A acusação faz parte da história, mas ainda dá espaço pra dúvida, sabe?",
    "ini": 27.54,
-   "fim": 42.02
+   "fim": 40.44
   },
   {
    "i": 4,
    "texto": "Para mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
-   "ini": 42.725,
-   "fim": 54.605
+   "ini": 40.92,
+   "fim": 52.28
   },
   {
    "i": 5,
    "texto": "Os vídeos de ameaça também ampliam a escala do terror:",
-   "ini": 55.28,
-   "fim": 59.34
+   "ini": 52.97,
+   "fim": 57.03
   },
   {
    "i": 6,
    "texto": "Nenhuma área é segura quando um Querubim desperta.",
-   "ini": 60.56,
-   "fim": 63.2,
+   "ini": 58.25,
+   "fim": 60.89,
    "cit": "F"
   },
   {
    "i": 7,
    "texto": "Querubim aparece como uma dessas classificações, mas conhecer a obra vai além de decorar o nome de uma entidade ou o seu nível de ameaça.",
-   "ini": 63.4,
-   "fim": 74.0
+   "ini": 61.09,
+   "fim": 69.47
   },
   {
    "i": 8,
    "texto": "Você também encontra conteúdos que saem da ficção e falando do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",
-   "ini": 74.47,
-   "fim": 85.61
+   "ini": 70.08,
+   "fim": 81.22
   },
   {
    "i": 9,
    "texto": "Quer começar? Minha sugestão é ver a apresentação da cidade, depois o relato das treze crianças, então um vídeo sobre as ameaças: uma rota de descoberta, não uma cronologia oficial.",
-   "ini": 86.45,
-   "fim": 98.45
+   "ini": 82.06,
+   "fim": 94.06
   },
   {
    "i": 10,
    "texto": "Procure a página oficial do Anfitrião. Por aqui, no Tio Arle, eu quero continuar explorando a obra e conversando sobre essas pistas. Qual delas você gostaria que eu comentasse a primeira?",
-   "ini": 99.25,
-   "fim": 110.55
+   "ini": 94.86,
+   "fim": 106.16
   }
  ]
 }

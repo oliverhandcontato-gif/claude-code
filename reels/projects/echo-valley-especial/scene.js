@@ -236,14 +236,15 @@
       const t0 = i === 0 ? TS[k] : wordsOf(p.b).some((w) => norm(w.w).startsWith(norm(words[i]))) ? wt(p.b, words[i]) - 0.1 : TS[k] + i * 0.8;
       const a = E.outCubic(R.clamp((t - t0) / 0.35));
       if (a <= 0) return;
-      const y0 = p.destaque ? 500 : 330, y = y0 + i * 300, h = 270;
+      // Abaixo do título (destaque, até ~y 560) e acima da legenda (~y 1330).
+      const y0 = p.destaque ? 590 : 400, y = y0 + i * 245, h = 220;
       ctx.save();
       ctx.globalAlpha = a;
-      ctx.translate((1 - a) * 80, 0);
+      ctx.translate(90 + (1 - a) * 80, y);
       ctx.beginPath();
-      ctx.rect(90, y, 900, h);
+      ctx.rect(0, 0, 900, h);
       ctx.clip();
-      R.drawCover(ctx, imgs[i], { w: 900, h, zoom: 1.0, fy: p.trio[i][3] ?? [0.3, 0.12, 0.66][i] });
+      R.drawCover(ctx, imgs[i], { w: 900, h, zoom: 1.0, fy: p.trio[i][3] ?? [0.7, 0.75, 0.28][i] });
       ctx.restore();
       ctx.save();
       ctx.globalAlpha = a;

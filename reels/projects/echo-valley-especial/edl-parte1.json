@@ -70,11 +70,14 @@
   {
    "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber muito mais do que conta. A cidade é só o começo.",
    "faixas": [
-    [
-     125,
-     151
-    ]
-   ]
+    {
+     "t": [
+      55.75,
+      66.2
+     ]
+    }
+   ],
+   "_nota": "Só a 2ª tomada: a 1ª (52.4–54.9 s) para em 'entida…' e foi repetida."
   },
   {
    "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do que o universo traz consigo.",
