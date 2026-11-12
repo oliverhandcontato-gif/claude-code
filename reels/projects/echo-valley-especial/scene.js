@@ -14,7 +14,7 @@
   const TL = await (await fetch(`${PARTE}.json`)).json();
   const WORDS = await (await fetch(`assets/${PARTE}/palavras.json`)).json();
   const TRJ = await (await fetch(`assets/${PARTE}/trechos.json`)).json();
-  const TR = TRJ.trechos, PROVISORIO = !!TRJ.provisorio;
+  const TR = TRJ.trechos, PROVISORIO = !!TRJ.provisorio, GUIA = !!TRJ.guia;
   const CACHE = `../../out/cache/echo-valley-especial/${PARTE}/`;
   const MAN = await (await fetch(CACHE + 'manifest.json')).json();
   const DUR = Math.ceil((TRJ.duracao + 0.6) * 10) / 10;
@@ -22,7 +22,7 @@
   let VOICE_FILE = null;
   try {
     const r = await fetch(`assets/${PARTE}/voz.wav`, { method: 'HEAD' });
-    if (r.ok && !PROVISORIO) VOICE_FILE = `assets/${PARTE}/voz.wav`;
+    if (r.ok) VOICE_FILE = `assets/${PARTE}/voz.wav`;
   } catch (e) {}
 
   // ---------------- tempos ----------------
@@ -50,8 +50,9 @@
     }
     return cache.get(key);
   };
+  const isCit = (k) => !!TR[P[k].b].cit;
   const srcIdx = (k, t) => {
-    const p = P[k], lt = Math.max(0, t - TS[k] - (p.congela || 0));
+    const p = P[k], t0 = isCit(k) && !p.w ? TR[p.b].ini : TS[k], lt = Math.max(0, t - t0 - (p.congela || 0));
     return Math.floor(lt * (p.sp || 1) * 30);
   };
   let cur = null;
@@ -67,7 +68,15 @@
     ctx.fillStyle = `rgba(10,10,12,${dark})`;
     ctx.fillRect(0, 0, W, H);
   }
-  const zoomOf = (k, t) => 1 + 0.04 * R.clamp((t - TS[k]) / 4);
+  const ENF = new Set((TL.enfase || CFG.enfase || []).map((w) => norm(w)));
+  const ENF_T = WORDS.filter((w) => ENF.has(norm(w.w))).map((w) => w.s);
+  const punch = (t, c, amt, back = 0.22) => (t < c ? 0 : amt * Math.exp(-(t - c) / back) * R.clamp((t - c) / 0.04));
+  const zoomOf = (k, t) => {
+    const lt = t - TS[k], step = Math.floor(lt / 2.2);
+    let z = 1 + 0.04 * R.clamp(lt / 4) + (step % 2 ? 0.1 : 0) * E.outCubic(R.clamp((lt - step * 2.2) / 0.12));
+    for (const c of ENF_T) z += punch(t, c, 0.07);
+    return z + punch(t, TS[k], 0.06, 0.15);
+  };
   function cheio(ctx, k, t, img) {
     const m = R.drawCover(ctx, img, { zoom: zoomOf(k, t) });
     const p = P[k];
@@ -196,6 +205,9 @@
       ctx.font = `700 80px ${FONT}`;
       ctx.fillStyle = C.papel;
       ctx.fillText(CFG.assinatura, 540, 1130);
+      ctx.font = `400 46px ${FONT}`;
+      ctx.fillStyle = C.cinza;
+      ctx.fillText(CFG.arroba_canal || '', 540, 1200);
     } else {
       ctx.font = `400 46px ${FONT}`;
       ctx.fillStyle = C.cinza;
@@ -221,7 +233,7 @@
     ctx.fillRect(0, 0, W, H);
     const p = P[k], words = p.palavras || ['apresentações', 'relatos', 'transmissões'];
     p.trio.forEach(([ref, , label], i) => {
-      const t0 = wordsOf(p.b).some((w) => norm(w.w).startsWith(norm(words[i]))) ? wt(p.b, words[i]) - 0.1 : TS[k] + i * 0.8;
+      const t0 = i === 0 ? TS[k] : wordsOf(p.b).some((w) => norm(w.w).startsWith(norm(words[i]))) ? wt(p.b, words[i]) - 0.1 : TS[k] + i * 0.8;
       const a = E.outCubic(R.clamp((t - t0) / 0.35));
       if (a <= 0) return;
       const y0 = p.destaque ? 500 : 330, y = y0 + i * 300, h = 270;
@@ -279,9 +291,13 @@
     if (j < 0) return;
     const lt = t - TS[j];
     if (lt > 4.5) return;
-    const s = P[j].destaque, a = Math.min(R.clamp(lt / 0.3), R.clamp((4.5 - lt) / 0.4));
+    const s = P[j].destaque, a = Math.min(R.clamp(lt / 0.15), R.clamp((4.5 - lt) / 0.3)), sp = 0.7 + 0.3 * R.spring(lt, 2.2, 7);
     ctx.save();
     ctx.globalAlpha = a;
+    ctx.translate(540, CFG.destaque.y + 90);
+    ctx.rotate(-0.025);
+    ctx.scale(sp, sp);
+    ctx.translate(-540, -(CFG.destaque.y + 90));
     ctx.font = `700 ${CFG.destaque.tamanho}px ${FONT}`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -331,14 +347,26 @@
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     const lines = splitTwo(ctx, L.c.map((w) => w.w).join(' '), CFG.legenda.larguraMax);
+    let wi = 0, act = -1;
+    L.c.forEach((w, i) => {
+      if (t >= w.s - 0.03) act = i;
+    });
+    ctx.textAlign = 'left';
+    const sp = ctx.measureText(' ').width;
     lines.forEach((ln, i) => {
       const y = CFG.legenda.y + (i - (lines.length - 1) / 2) * sz * 1.22;
-      ctx.lineJoin = 'round';
-      ctx.lineWidth = sz * 0.2;
-      ctx.strokeStyle = 'rgba(10,10,12,0.92)';
-      ctx.strokeText(ln, 540, y);
-      ctx.fillStyle = '#ffffff';
-      ctx.fillText(ln, 540, y);
+      let x = 540 - ctx.measureText(ln).width / 2;
+      for (const txt of ln.split(' ')) {
+        const on = wi === act && t < L.c[act].e + 0.25, ww = ctx.measureText(txt).width;
+        wi++;
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = sz * 0.2;
+        ctx.strokeStyle = 'rgba(10,10,12,0.92)';
+        ctx.strokeText(txt, x, y);
+        ctx.fillStyle = on ? '#ff5a52' : '#ffffff';
+        ctx.fillText(txt, x, y);
+        x += ww + sp;
+      }
     });
     ctx.restore();
   }
@@ -351,31 +379,37 @@
     ctx.save();
     ctx.globalAlpha = a;
     ctx.fillStyle = 'rgba(14,14,16,0.85)';
-    ctx.fillRect(90, 1060, 900, 110);
+    ctx.fillRect(90, 1180, 900, 100);
     ctx.font = `700 50px ${FONT}`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = C.papel;
-    ctx.fillText(p.fim, 540, 1117);
+    ctx.fillText(p.fim, 540, 1232);
     ctx.restore();
   }
   function previa(ctx) {
-    if (!PROVISORIO) return;
+    if (!PROVISORIO && !GUIA) return;
     ctx.save();
     ctx.font = `700 28px ${FONT}`;
     ctx.fillStyle = 'rgba(200,30,40,0.95)';
-    ctx.fillText('PRÉVIA SEM LOCUÇÃO • TEMPOS PROVISÓRIOS', 92, 325);
+    ctx.fillText(GUIA ? 'LOCUÇÃO PROVISÓRIA • VOZ-GUIA' : 'PRÉVIA SEM LOCUÇÃO • TEMPOS PROVISÓRIOS', 92, 325);
     ctx.restore();
   }
 
   // ---------------- som (material próprio, por código) ----------------
   const bump = (t, c, d) => Math.max(0, 1 - Math.abs(t - c) / d);
   function audio(S, A) {
-    // cama discreta: calor no começo, grave a partir do aviso; recua sob a fala (a voz manda)
-    const aviso = TS[P.findIndex((p) => p.marca)] || DUR / 2;
-    A.drone(S, 0, DUR, { gain: 0.05, base: 55, fin: 2, fout: 2, cutoff: 500 });
-    A.drone(S, aviso - 0.5, DUR, { gain: 0.07, base: 41.2, fin: 2.5, fout: 2, cutoff: 260 });
-    A.wind(S, aviso, aviso + 5, { gain: 0.12, center: 500 });
+    // sem trilha (pedido): só efeitos pontuais por baixo da voz
+    const avisoK = P.findIndex((p) => p.marca), aviso = avisoK >= 0 ? TS[avisoK] : DUR / 2;
+    A.wind(S, aviso, aviso + 4, { gain: 0.1, center: 500 });
+    P.forEach((p, i) => {
+      if (i && p.trans === 'glitch') {
+        A.whoosh(S, TS[i] - 0.15, { dur: 0.22, gain: 0.25, from: 800, to: 5000, verb: 0.1 });
+        A.blip(S, TS[i], { gain: 0.12, seed: i });
+      }
+      if (p.destaque && i) A.boom(S, TS[i] + 0.02, { gain: 0.18, freq: 60, decay: 0.5, verb: 0.15 });
+      if (p.carimbo) A.click(S, TS[i] + 0.3, { gain: 0.4, seed: i });
+    });
     const doc = P.findIndex((p) => p.w === 'documentos');
     if (doc > 0) A.whoosh(S, TS[doc], { dur: 0.35, gain: 0.12, from: 1500, to: 4000, verb: 0.1 });
     const trio = P.findIndex((p) => p.tipo === 'trio');
@@ -383,14 +417,21 @@
   }
 
   // ---------------- pós ----------------
-  function post() {
-    return { uGrain: 0.04, uVignette: 0.3, uContrast: 1.03, uSat: 0.98 };
+  function post(t) {
+    const p = { uGrain: 0.04, uVignette: 0.3, uContrast: 1.04, uSat: 1.0, uAberr: 0 };
+    for (let i = 1; i < P.length; i++) if (P[i].trans === 'glitch') {
+      const d = bump(t, TS[i], 0.12);
+      p.uGlitch = (p.uGlitch || 0) + d * 0.45;
+      p.uAberr += d * 6;
+    }
+    p.uSeed = R.frameOf(t) % 97;
+    return p;
   }
 
   R.mount({
     duration: DUR,
     poster: TS[1] + 0.5,
-    ...(VOICE_FILE ? { audioFile: VOICE_FILE, audioEnd: TRJ.duracao, sfxGain: 0.3 } : {}),
+    ...(VOICE_FILE ? { audioFile: VOICE_FILE, audioEnd: TRJ.duracao, sfxGain: 0.35 } : {}),
     assets: { icon: 'assets/tio-arle-icone.png' },
     fonts: [`700 40px ${FONT}`],
     setup(a) {

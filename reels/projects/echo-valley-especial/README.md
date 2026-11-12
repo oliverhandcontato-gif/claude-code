@@ -5,37 +5,44 @@ Tio Arle é a página de fã/comentário; a página oficial da obra é a do Anfi
 
 ## Estado atual
 
-- **Parte 1 e Parte 2: PRÉVIA SEM LOCUÇÃO.** Os tempos vêm de `tools/tempos-provisorios.cjs` (≈2,6 palavras/s)
-  e o vídeo mostra a marca "PRÉVIA SEM LOCUÇÃO • TEMPOS PROVISÓRIOS". Não é o vídeo final.
-- Falta: a locução do Tio Arle (por parte), a confirmação do @ oficial atual e, opcionalmente, trilha própria.
-- A versão única (seção 7 do documento) ainda não foi montada.
+- Decisões do Oliver: duas partes **e** versão única; estilo mais dinâmico (degraus de zoom, punch-in nas palavras
+  de `enfase` em config.json, glitch leve só nas viradas marcadas com `"trans": "glitch"`); **sem trilha**
+  (só voz e efeitos pontuais); citações com o **áudio original** da obra; página oficial **@o.anfitriao_oficial**
+  (TikTok) e canal **@tioarle**.
+- Narração atual: **voz-guia provisória** (Piper), marcada na tela como "LOCUÇÃO PROVISÓRIA • VOZ-GUIA".
+  Será trocada pela locução do Tio Arle.
+- Citações com áudio original (conferidas com a legenda na tela):
+  A 31,6–35,0 s "…Echo Valley é a cidade mais segura da—" (o original corta antes de "América");
+  A 24,3–27,75 s "Apenas lembre-se de ficar longe da parte norte da floresta.";
+  F 36,2–38,8 s "Nenhuma área é segura quando um Querubim desperta.".
 
 ## Arquivos
 
-- `config.json` — @ oficial, assinatura, cores, fonte, posição/tamanho da legenda e do texto de destaque, e o mapa
+- `config.json` — @ oficial e do canal, assinatura, cores, fonte, legenda, destaque, palavras de ênfase e o mapa
   das letras A–H do documento para os arquivos recebidos.
-- `parte1.json`, `parte2.json` — falas do Tio Arle em blocos (texto do documento) e a timeline: cada plano tem
-  bloco/palavra de entrada, arquivo, ponto de entrada no original, velocidade, tipo de enquadramento, etiqueta
-  (TRECHO DA OBRA / RELATO DA FICÇÃO / COMENTÁRIO DO TIO ARLE / SOBRE O PROJETO) e texto de destaque.
-- `prepare.cjs` — extrai só os trechos usados (os originais ficam intactos e fora do git).
-- `scene.js` — desenho dos planos, textos, legenda e som. `?parte=parte2` escolhe a parte.
-- `tools/palavras.py` — quando a voz chegar: alinha a gravação às falas (faster-whisper) e substitui os tempos provisórios.
-- `tools/srt.cjs` — gera o SRT da fala (os mesmos blocos da legenda gravada no vídeo).
+- `parte1.json`, `parte2.json` — blocos (falas do Tio Arle; objetos `{cit}` = citação com áudio original) e a timeline.
+- `completo.json` — versão única, **gerada** por `tools/completo.cjs` (seção 7 do documento). Não editar à mão.
+- `prepare.cjs` — extrai só os trechos usados (originais intactos e fora do git).
+- `tools/voz.py` — monta a faixa de voz (falas + citações), com tempos por palavra.
+- `scene.js` — planos, textos, legenda (palavra falada em destaque), efeitos. `?parte=` escolhe a versão.
+- `tools/srt.cjs` — SRT da fala; `tools/finalizar.cjs` — volume (-14,5 LUFS, pico < -1 dBTP), nomes finais e SRT.
 
-## Renderizar de novo
+## Trocar pela locução do Tio Arle
+
+Grave **cada parte numa tomada**, lendo as falas de `parte1.json`/`parte2.json` na ordem, **sem** as citações
+(elas entram sozinhas). Depois:
 
 ```bash
-# 1. trechos (pasta com os vídeos originais)
-node projects/echo-valley-especial/prepare.cjs <pasta-dos-videos> parte1
-# 2. com a locução: tempos reais (copia a voz para assets/parte1/voz.wav)
-python3 -I projects/echo-valley-especial/tools/palavras.py <voz-parte1.wav> parte1
-node projects/echo-valley-especial/prepare.cjs <pasta-dos-videos> parte1   # os cortes mudam com a voz
-# 3. vídeo e SRT
-node render.cjs projects/echo-valley-especial --query parte=parte1 --out out/Tio_Arle_Echo_Valley_Parte_1.mp4
-node projects/echo-valley-especial/tools/srt.cjs parte1 > out/Tio_Arle_Echo_Valley_Parte_1.srt
+P=projects/echo-valley-especial
+python3 -I $P/tools/voz.py parte1 <pasta-dos-videos> --gravacao parte1.wav
+python3 -I $P/tools/voz.py parte2 <pasta-dos-videos> --gravacao parte2.wav
+python3 -I $P/tools/voz.py completo <pasta-dos-videos> --gravacao completo.wav   # ou grave a ponte e reaproveite
+for v in parte1 parte2 completo; do node $P/prepare.cjs <pasta-dos-videos> $v; done
+for v in parte1 parte2 completo; do node render.cjs $P --query parte=$v --out out/ev-$v.mp4; done
+node $P/tools/finalizar.cjs parte1 parte2 completo     # out/final/Tio_Arle_Echo_Valley_*.mp4 + .srt
 ```
 
-Repetir com `parte2`. Sem voz, rode antes `node projects/echo-valley-especial/tools/tempos-provisorios.cjs parteN`.
+Voz-guia (sem gravação): `--modelo pt_BR-cadu-medium.onnx` no lugar de `--gravacao`.
 
 ## Mapa dos arquivos (letras do documento)
 

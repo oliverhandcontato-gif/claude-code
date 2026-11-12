@@ -1,5 +1,5 @@
 {
- "_doc": "Parte 2 (documento, seção 6). Mesmo formato da parte1.json. trio.palavras = palavra da fala que revela cada cartão. carimbo = selo editorial sobre o plano.",
+ "_doc": "Parte 2 (seção 6 do documento, com citações do áudio original). Blocos: texto = fala do Tio Arle; {cit} = trecho de áudio da obra (ref/in/out em s no original). Planos ancorados no bloco (b) e opcionalmente numa palavra (w, n). trans: glitch = transição pontual.",
  "titulo": "Echo Valley: quem conta a história também importa",
  "blocos": [
   "Em Echo Valley, eu prestaria atenção em duas coisas: no que está sendo contado e em quem está contando.",
@@ -7,7 +7,14 @@
   "Um vídeo vende a imagem de uma cidade tranquila. Outro traz um relato de desaparecimento. E há personagens falando de segredos, agentes e anomalias.",
   "Quando um personagem acusa alguém de esconder a verdade, eu escuto aquilo como a versão dele. A acusação faz parte da história; ainda dá espaço pra dúvida.",
   "Pra mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
-  "Os vídeos de ameaça também ampliam a escala do terror. Querubim aparece como uma dessas classificações. Mas conhecer a obra vai além de decorar o nome de uma entidade.",
+  "Os vídeos de ameaça também ampliam a escala do terror:",
+  {
+   "cit": "F",
+   "in": 36.2,
+   "out": 38.8,
+   "texto": "Nenhuma área é segura quando um Querubim desperta."
+  },
+  "Querubim aparece como uma dessas classificações. Mas conhecer a obra vai além de decorar o nome de uma entidade.",
   "Você também encontra conteúdos que saem da ficção e falam do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",
   "Quer começar? Minha sugestão é ver a apresentação da cidade, depois o relato das treze crianças e então um vídeo sobre as ameaças. É uma rota de descoberta, não uma cronologia oficial.",
   "Procure a página oficial do Anfitrião. Por aqui, no Tio Arle, eu quero continuar explorando a obra e conversando sobre essas pistas. Qual delas você gostaria que eu comentasse primeiro?"
@@ -72,9 +79,9 @@
    "sp": 0.5,
    "tipo": "painel",
    "etiqueta": "FICCAO",
-   "congela": 0.6,
    "carimbo": "FALA DE PERSONAGEM",
-   "destaque": "UMA VERSÃO DENTRO DA HISTÓRIA"
+   "destaque": "UMA VERSÃO DENTRO DA HISTÓRIA",
+   "trans": "glitch"
   },
   {
    "b": 3,
@@ -117,16 +124,16 @@
    "destaque": "A ESCALA DO TERROR AUMENTA"
   },
   {
-   "b": 5,
-   "w": "querubim",
+   "b": 6,
    "ref": "F",
-   "in": 35.0,
-   "sp": 0.8,
+   "in": 36.2,
    "tipo": "painel",
-   "etiqueta": "OBRA"
+   "etiqueta": "OBRA",
+   "trans": "glitch",
+   "destaque": "NENHUMA ÁREA É SEGURA"
   },
   {
-   "b": 5,
+   "b": 7,
    "w": "mas",
    "ref": "A",
    "in": 18.0,
@@ -134,7 +141,7 @@
    "etiqueta": "OBRA"
   },
   {
-   "b": 6,
+   "b": 8,
    "ref": "E",
    "in": 145.5,
    "sp": 0.25,
@@ -143,7 +150,7 @@
    "destaque": "DENTRO DA FICÇÃO / SOBRE A OBRA"
   },
   {
-   "b": 6,
+   "b": 8,
    "w": "personagem",
    "ref": "D",
    "in": 0.3,
@@ -151,7 +158,7 @@
    "etiqueta": "FICCAO"
   },
   {
-   "b": 6,
+   "b": 8,
    "w": "criação",
    "ref": "E",
    "in": 160.0,
@@ -160,7 +167,7 @@
    "etiqueta": "PROJETO"
   },
   {
-   "b": 7,
+   "b": 9,
    "ref": "A",
    "in": 0.3,
    "tipo": "trio",
@@ -192,7 +199,7 @@
    "sp": 0.2
   },
   {
-   "b": 8,
+   "b": 10,
    "ref": "A",
    "in": 2.0,
    "sp": 0.2,

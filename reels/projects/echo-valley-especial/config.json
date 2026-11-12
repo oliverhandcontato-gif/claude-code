@@ -1,11 +1,25 @@
 {
-  "_doc": "Configuração do especial 'Tio Arle apresenta Echo Valley'. Troque aqui o @ oficial, cores, fontes e a pasta dos vídeos de referência. Timelines: parte1.json / parte2.json.",
-  "arroba_oficial": "@oanfitriao",
+  "_doc": "Configuração do especial 'Tio Arle apresenta Echo Valley'. Troque aqui o @ oficial, cores, fontes e a pasta dos vídeos de referência. Timelines: parte1.json / parte2.json. arroba_oficial = página oficial da obra (TikTok); arroba_canal = Tio Arle.",
+  "arroba_oficial": "@o.anfitriao_oficial",
   "assinatura": "TIO ARLE",
-  "cores": { "carvao": "#141416", "papel": "#ece6d6", "vermelho": "#8e1b1f", "cinza": "#9a9590", "obra": "#e9c046" },
+  "cores": {
+    "carvao": "#141416",
+    "papel": "#ece6d6",
+    "vermelho": "#8e1b1f",
+    "cinza": "#9a9590",
+    "obra": "#e9c046"
+  },
   "fonte": "\"DejaVu Sans\", \"Liberation Sans\", Arial, sans-serif",
-  "legenda": { "y": 1395, "tamanho": 52, "maxLinhas": 2, "larguraMax": 860 },
-  "destaque": { "y": 330, "tamanho": 76 },
+  "legenda": {
+    "y": 1395,
+    "tamanho": 52,
+    "maxLinhas": 2,
+    "larguraMax": 860
+  },
+  "destaque": {
+    "y": 330,
+    "tamanho": 76
+  },
   "referencias": {
     "A": "VID_20261112_000325_444.mp4",
     "B": "VID_20261112_000306_079.mp4",
@@ -15,5 +29,39 @@
     "F": "252361124810c9c3817281deab5de690.mp4",
     "G": "VID_20261112_001124_922.mp4",
     "H": "VID_20261112_000235_233.mp4"
-  }
+  },
+  "arroba_canal": "@tioarle",
+  "enfase": [
+    "segura",
+    "treze",
+    "desaparecidas",
+    "terror",
+    "suspense",
+    "convite",
+    "aviso",
+    "norte",
+    "interessante",
+    "2001",
+    "documentos",
+    "silêncio",
+    "mistérios",
+    "entidades",
+    "ameaça",
+    "começo",
+    "transmissões",
+    "confiaria",
+    "quem",
+    "versão",
+    "dúvida",
+    "mostrado",
+    "dito",
+    "interpretando",
+    "Querubim",
+    "projeto",
+    "criação",
+    "começar",
+    "oficial",
+    "pistas",
+    "primeiro"
+  ]
 }
