@@ -3,7 +3,7 @@
  * Renderiza um projeto em MP4 (1080x1920, H.264 + AAC).
  *
  *   node render.cjs [projects/echo-valley] [--out out/arquivo.mp4] [--from 0] [--to 42]
- *                   [--workers 3] [--crf 24] [--stills 1,12.5,30]
+ *                   [--workers 3] [--crf 24] [--stills 1,12.5,30] [--query parte=parte2]
  *
  * Abre a página no Chromium headless (Playwright), pede cada frame como JPEG,
  * renderiza a trilha com OfflineAudioContext e junta tudo no ffmpeg.
@@ -47,7 +47,7 @@ async function main() {
   fs.mkdirSync(outDir, { recursive: true });
 
   const { server, port } = await serve(ROOT);
-  const url = `http://127.0.0.1:${port}/${path.relative(ROOT, projectDir).split(path.sep).join('/')}/index.html?render=1`;
+  const url = `http://127.0.0.1:${port}/${path.relative(ROOT, projectDir).split(path.sep).join('/')}/index.html?render=1${args.query ? '&' + args.query : ''}`;
   const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   try {
     const first = await openPage(browser, url);

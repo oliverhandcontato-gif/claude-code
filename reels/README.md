@@ -63,5 +63,11 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   render: `node render.cjs projects/regras-fabrica-footage`; mixagens finais (completa e sem trilha,
   -14,5 LUFS): `node projects/regras-fabrica-footage/audio.cjs`. Capa: `node render.cjs projects/regras-fabrica-footage/capa --stills 0`.
 
+- `echo-valley-especial`: especial do Tio Arle apresentando a obra Echo Valley (2 partes de ~90–120 s), montado a
+  partir do documento de direção e dos vídeos da página oficial. Ver `projects/echo-valley-especial/README.md`.
+  Por enquanto em PRÉVIA SEM LOCUÇÃO; `render.cjs --query parte=parte2` escolhe a parte.
+- `mini-kraken` e `a-ordem`: vídeos do Tio Arle (propaganda espontânea da Mini Kraken e teaser "A Ordem") com
+  voz-guia provisória para o criador dublar; `audio.cjs` gera as mixagens completa e sem trilha.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).

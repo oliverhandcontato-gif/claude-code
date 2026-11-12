@@ -86,6 +86,27 @@
       ctx.restore();
     }
   }
+  function carimbo(ctx, k, t) {
+    const p = P[k];
+    if (!p.carimbo) return;
+    const a = E.outCubic(R.clamp((t - TS[k] - 0.3) / 0.3));
+    ctx.save();
+    ctx.globalAlpha = a;
+    ctx.translate(540, 1200);
+    ctx.rotate(-0.06);
+    ctx.font = `700 54px ${FONT}`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const w = ctx.measureText(p.carimbo).width;
+    ctx.strokeStyle = C.vermelho;
+    ctx.lineWidth = 7;
+    ctx.strokeRect(-w / 2 - 28, -48, w + 56, 96);
+    ctx.fillStyle = 'rgba(20,10,10,0.6)';
+    ctx.fillRect(-w / 2 - 28, -48, w + 56, 96);
+    ctx.fillStyle = C.papel;
+    ctx.fillText(p.carimbo, 0, 3);
+    ctx.restore();
+  }
   function painel(ctx, k, t, img) {
     blurred(ctx, img, 0.6);
     const s = Math.min(1.42, 1500 / img.height), w = img.width * s, h = img.height * s, z = zoomOf(k, t);
@@ -150,6 +171,31 @@
       ctx.font = `400 48px ${FONT}`;
       ctx.fillStyle = C.cinza;
       ctx.fillText('COMENTÁRIO DE FÃ', 540, 990);
+    } else if (p.cartao === 'perguntas') {
+      p.perguntas.forEach(([w, label], i) => {
+        const t0 = wt(p.b, w) - 0.1, q = E.outCubic(R.clamp((t - t0) / 0.35));
+        if (q <= 0) return;
+        ctx.globalAlpha = a * q;
+        ctx.font = `700 92px ${FONT}`;
+        ctx.fillStyle = i === 2 ? C.vermelho : C.papel;
+        ctx.fillText(label + (i < 2 ? '?' : '?'), 540, 640 + i * 190 + (1 - q) * 30);
+      });
+    } else if (p.cartao === 'final') {
+      ctx.font = `400 42px ${FONT}`;
+      ctx.fillStyle = C.cinza;
+      ctx.fillText('OFICIAL', 540, 600);
+      ctx.font = `700 92px ${FONT}`;
+      ctx.fillStyle = C.papel;
+      ctx.fillText(CFG.arroba_oficial, 540, 690);
+      ctx.fillStyle = C.vermelho;
+      ctx.fillRect(340, 760, 400, 6);
+      ctx.font = `400 42px ${FONT}`;
+      ctx.fillStyle = C.cinza;
+      ctx.fillText('COMENTÁRIOS E TEORIAS', 540, 860);
+      if (icon) ctx.drawImage(icon, 540 - 110, 900, 220, 165);
+      ctx.font = `700 80px ${FONT}`;
+      ctx.fillStyle = C.papel;
+      ctx.fillText(CFG.assinatura, 540, 1130);
     } else {
       ctx.font = `400 46px ${FONT}`;
       ctx.fillStyle = C.cinza;
@@ -173,19 +219,19 @@
   function trio(ctx, k, t, imgs) {
     ctx.fillStyle = C.carvao;
     ctx.fillRect(0, 0, W, H);
-    const p = P[k], words = ['apresentações', 'relatos', 'transmissões'];
+    const p = P[k], words = p.palavras || ['apresentações', 'relatos', 'transmissões'];
     p.trio.forEach(([ref, , label], i) => {
       const t0 = wordsOf(p.b).some((w) => norm(w.w).startsWith(norm(words[i]))) ? wt(p.b, words[i]) - 0.1 : TS[k] + i * 0.8;
       const a = E.outCubic(R.clamp((t - t0) / 0.35));
       if (a <= 0) return;
-      const y = 330 + i * 320, h = 290;
+      const y0 = p.destaque ? 500 : 330, y = y0 + i * 300, h = 270;
       ctx.save();
       ctx.globalAlpha = a;
       ctx.translate((1 - a) * 80, 0);
       ctx.beginPath();
       ctx.rect(90, y, 900, h);
       ctx.clip();
-      R.drawCover(ctx, imgs[i], { w: 900, h, zoom: 1.0, fy: [0.3, 0.12, 0.66][i] });
+      R.drawCover(ctx, imgs[i], { w: 900, h, zoom: 1.0, fy: p.trio[i][3] ?? [0.3, 0.12, 0.66][i] });
       ctx.restore();
       ctx.save();
       ctx.globalAlpha = a;
@@ -384,6 +430,7 @@
     overlay(ctx, t) {
       const k = shotAt(t);
       etiqueta(ctx, k);
+      carimbo(ctx, k, t);
       destaque(ctx, t, k);
       fim(ctx, t);
       legenda(ctx, t);
