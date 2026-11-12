@@ -1,0 +1,416 @@
+{
+ "source": "Mixkit (mixkit.co) — Mixkit Stock Video Free License (uso comercial, sem crédito obrigatório)",
+ "_doc": "Cada corte é ancorado na fala: tr = trecho do roteiro (../regras-fabrica/roteiro.json), w = palavra dentro do trecho (início), end = fim do trecho, d = deslocamento em s. ssp = ponto de entrada no clipe (fração da duração). fx = foco horizontal (0..1).",
+ "shots": [
+  {
+   "id": 4421,
+   "tr": 0,
+   "fx": 0.5,
+   "ssp": 0.35,
+   "label": "Você foi contratado (abertura de filme)"
+  },
+  {
+   "id": 36208,
+   "tr": 0,
+   "w": "segurança",
+   "fx": 0.55,
+   "label": "segurança noturno (caixinha de música)"
+  },
+  {
+   "id": 34612,
+   "tr": 0,
+   "w": "fábrica",
+   "fx": 0.5,
+   "label": "Fábrica de Bonecas"
+  },
+  {
+   "id": 4135,
+   "tr": 0,
+   "end": true,
+   "d": 0.08,
+   "fx": 0.5,
+   "label": "bipe + estática"
+  },
+  {
+   "id": 1674,
+   "tr": 1,
+   "d": -0.15,
+   "fx": 0.5,
+   "label": "O último durou três noites"
+  },
+  {
+   "id": 30605,
+   "tr": 2,
+   "d": -0.1,
+   "fx": 0.55,
+   "label": "ver o sol de novo"
+  },
+  {
+   "id": 17438,
+   "tr": 3,
+   "d": -0.1,
+   "fx": 0.45,
+   "label": "siga estas regras"
+  },
+  {
+   "id": 17430,
+   "tr": 4,
+   "d": -0.3,
+   "fx": 0.55,
+   "label": "REGRA 1"
+  },
+  {
+   "id": 23106,
+   "tr": 5,
+   "d": -0.1,
+   "fx": 0.45,
+   "label": "tranque a guarita (CCTV)"
+  },
+  {
+   "id": 4478,
+   "tr": 5,
+   "w": "dez",
+   "fx": 0.55,
+   "label": "às dez em ponto"
+  },
+  {
+   "id": 2501,
+   "tr": 6,
+   "w": "alguém",
+   "fx": 0.6,
+   "label": "alguém vai tentar abrir"
+  },
+  {
+   "id": 32298,
+   "tr": 7,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "não responda"
+  },
+  {
+   "id": 41420,
+   "tr": 8,
+   "d": -0.1,
+   "fx": 0.42,
+   "label": "nem se for a sua própria voz"
+  },
+  {
+   "id": 34608,
+   "tr": 9,
+   "d": -0.3,
+   "fx": 0.6,
+   "label": "REGRA 2 / bonecas da vitrine"
+  },
+  {
+   "id": 12714,
+   "tr": 10,
+   "w": "olhos",
+   "fx": 0.4,
+   "label": "de olhos fechados"
+  },
+  {
+   "id": 45195,
+   "tr": 11,
+   "d": -0.1,
+   "fx": 0.68,
+   "ssp": 0.3,
+   "label": "se uma abrir os olhos"
+  },
+  {
+   "id": 32325,
+   "tr": 11,
+   "w": "não",
+   "fx": 0.4,
+   "label": "não pisque"
+  },
+  {
+   "id": 9387,
+   "tr": 12,
+   "d": -0.1,
+   "fx": 0.55,
+   "label": "quando você pisca"
+  },
+  {
+   "id": 45195,
+   "tr": 12,
+   "w": "pisca",
+   "d": 0.15,
+   "fx": 0.7,
+   "ssp": 0.75,
+   "label": "ela se moveu (susto)"
+  },
+  {
+   "id": 4741,
+   "tr": 13,
+   "d": -0.3,
+   "fx": 0.5,
+   "label": "REGRA 3 / esteira liga sozinha"
+  },
+  {
+   "id": 14785,
+   "tr": 14,
+   "w": "não",
+   "fx": 0.5,
+   "label": "não olhe o que monta"
+  },
+  {
+   "id": 48779,
+   "tr": 14,
+   "w": "montando",
+   "fx": 0.5,
+   "label": "montando"
+  },
+  {
+   "id": 23378,
+   "tr": 15,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "o último segurança olhou"
+  },
+  {
+   "id": 47951,
+   "tr": 16,
+   "d": -0.1,
+   "fx": 0.5,
+   "ssp": 0.3,
+   "label": "a boneca saiu..."
+  },
+  {
+   "id": 41760,
+   "tr": 16,
+   "w": "rosto",
+   "fx": 0.4,
+   "label": "...com o rosto dele (susto)"
+  },
+  {
+   "id": 4143,
+   "tr": 17,
+   "d": -0.3,
+   "fx": 0.5,
+   "label": "REGRA 4 / rádio"
+  },
+  {
+   "id": 4307,
+   "tr": 19,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "disser o seu nome"
+  },
+  {
+   "id": 4111,
+   "tr": 19,
+   "w": "arranque",
+   "fx": 0.5,
+   "label": "arranque o fio"
+  },
+  {
+   "id": 33234,
+   "tr": 20,
+   "d": -0.1,
+   "fx": 0.62,
+   "label": "se continuar falando"
+  },
+  {
+   "id": 41786,
+   "tr": 21,
+   "d": -0.12,
+   "fx": 0.45,
+   "label": "corra"
+  },
+  {
+   "id": 3093,
+   "tr": 22,
+   "d": -0.3,
+   "fx": 0.5,
+   "label": "REGRA 5 / terceiro andar"
+  },
+  {
+   "id": 20827,
+   "tr": 24,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "elevador"
+  },
+  {
+   "id": 12854,
+   "tr": 24,
+   "w": "três",
+   "fx": 0.5,
+   "label": "abrir no três / não saia"
+  },
+  {
+   "id": 2000,
+   "tr": 25,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "não respire"
+  },
+  {
+   "id": 1546,
+   "tr": 26,
+   "d": -0.1,
+   "fx": 0.63,
+   "label": "sentem o seu cheiro"
+  },
+  {
+   "id": 3650,
+   "tr": 27,
+   "d": -0.3,
+   "fx": 0.5,
+   "label": "REGRA 6"
+  },
+  {
+   "id": 4326,
+   "tr": 28,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "três e dezessete"
+  },
+  {
+   "id": 1987,
+   "tr": 28,
+   "w": "supervisor",
+   "fx": 0.6,
+   "label": "bater na janela"
+  },
+  {
+   "id": 13108,
+   "tr": 29,
+   "d": -0.1,
+   "fx": 0.62,
+   "label": "sorrindo demais (susto)"
+  },
+  {
+   "id": 3758,
+   "tr": 30,
+   "w": "incêndio",
+   "fx": 0.5,
+   "label": "morreu no incêndio"
+  },
+  {
+   "id": 31998,
+   "tr": 31,
+   "d": -0.3,
+   "fx": 0.6,
+   "label": "REGRA 7 / caixa doze"
+  },
+  {
+   "id": 4327,
+   "tr": 32,
+   "w": "quarenta",
+   "fx": 0.5,
+   "label": "contando 47"
+  },
+  {
+   "id": 47951,
+   "tr": 33,
+   "d": -0.1,
+   "fx": 0.5,
+   "ssp": 0.7,
+   "label": "quarenta e oito"
+  },
+  {
+   "id": 33554,
+   "tr": 33,
+   "w": "não",
+   "fx": 0.5,
+   "label": "não conte de novo"
+  },
+  {
+   "id": 41759,
+   "tr": 34,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "atrás de você (susto)"
+  },
+  {
+   "id": 34154,
+   "tr": 35,
+   "d": -0.3,
+   "fx": 0.5,
+   "label": "REGRA 8 / bilhete"
+  },
+  {
+   "id": 22855,
+   "tr": 36,
+   "w": "as",
+   "fx": 0.5,
+   "label": "as regras são mentira"
+  },
+  {
+   "id": 7809,
+   "tr": 37,
+   "d": -0.15,
+   "fx": 0.5,
+   "label": "queime (fósforo)"
+  },
+  {
+   "id": 12540,
+   "tr": 37,
+   "end": true,
+   "d": 0.1,
+   "fx": 0.5,
+   "label": "queimando"
+  },
+  {
+   "id": 44293,
+   "tr": 38,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "o segurança anterior"
+  },
+  {
+   "id": 402,
+   "tr": 39,
+   "d": -0.1,
+   "fx": 0.62,
+   "label": "ele ainda está aqui"
+  },
+  {
+   "id": 4758,
+   "tr": 40,
+   "d": -0.2,
+   "fx": 0.62,
+   "label": "às seis o turno acaba"
+  },
+  {
+   "id": 4080,
+   "tr": 41,
+   "d": -0.1,
+   "fx": 0.42,
+   "label": "se o sol não nascer",
+   "ssp": 0.05
+  },
+  {
+   "id": 2489,
+   "tr": 41,
+   "w": "não",
+   "n": 1,
+   "fx": 0.5,
+   "label": "não tente sair"
+  },
+  {
+   "id": 1675,
+   "tr": 42,
+   "d": -0.1,
+   "fx": 0.5,
+   "label": "a fábrica te escolheu"
+  },
+  {
+   "id": 12714,
+   "tr": 43,
+   "d": -0.1,
+   "fx": 0.4,
+   "ssp": 0.75,
+   "label": "bem-vindo à coleção"
+  },
+  {
+   "id": 4307,
+   "tr": 44,
+   "d": -0.4,
+   "fx": 0.5,
+   "ssp": 0.6,
+   "label": "cartela: Segue o Tio Arle"
+  }
+ ]
+}
