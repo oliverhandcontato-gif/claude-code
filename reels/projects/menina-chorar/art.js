@@ -867,7 +867,7 @@
         const p = R.clamp((blood - d) / (1 - d));
         if (p <= 0) continue;
         const sx = u * r, sy = h * 0.95 * (1 - u * u) + 4;
-        const len = R.ease.outCubic(p) * r * 1.9 + 8 * Math.sin(t * 2 + u * 9);
+        const len = Math.max(2, R.ease.outCubic(p) * r * 1.9 + 8 * Math.sin(t * 2 + u * 9) * R.clamp(p * 4));
         const wd = r * 0.07 * wk;
         const g = ctx.createLinearGradient(0, sy, 0, sy + len);
         g.addColorStop(0, '#5a0008');
