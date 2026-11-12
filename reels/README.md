@@ -69,5 +69,12 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
 - `mini-kraken` e `a-ordem`: vídeos do Tio Arle (propaganda espontânea da Mini Kraken e teaser "A Ordem") com
   voz-guia provisória para o criador dublar; `audio.cjs` gera as mixagens completa e sem trilha.
 
+- `menina-chorar`: "Não faça a menina chorar" (Tio Arle), enigma de terror com humor macabro, ~48 s, 100% código.
+  Voz-guia Piper (`tools/voz.py`, texto em `roteiro.json`, com bipe de censura) para o criador dublar; ao dublar, rode
+  `python3 -I projects/menina-chorar/tools/palavras.py projects/menina-chorar/assets/voz.wav` e o `analyze-audio.cjs`.
+  Gritos e risadas (`tools/efeitos.py` → `assets/gritos.wav`, `assets/risada.wav`) ficam na trilha de efeitos.
+  Sem música: `node projects/menina-chorar/audio.cjs` gera `out/final/menina-chorar-sem-trilha.mp4`.
+  Capa: `node render.cjs projects/menina-chorar/capa --stills 0`.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).
