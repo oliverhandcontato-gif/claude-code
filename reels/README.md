@@ -56,5 +56,12 @@ Precisa de Node 18+, `ffmpeg` e Playwright (`npm i -D playwright && npx playwrig
   (faster-whisper) e `node scripts/analyze-audio.cjs projects/regras-fabrica/assets/voz.wav projects/regras-fabrica/assets/audio-analysis.json`.
   `tools/voz.py` gera uma voz local com o Piper, como alternativa. Capa: `node render.cjs projects/regras-fabrica/capa --stills 0`.
 
+- `regras-fabrica-footage`: a mesma história em versão híbrida: footage do Mixkit (licença grátis,
+  uso comercial) com VFX por código (HUD de CCTV, cartões das regras, olhos da boneca, contador,
+  bilhete queimando, logo do Tio Arle). Usa a voz e os tempos de `regras-fabrica`. Cortes em
+  `shots.json`, ancorados nas palavras da fala. Preparar: `node projects/regras-fabrica-footage/prepare.cjs`;
+  render: `node render.cjs projects/regras-fabrica-footage`; mixagens finais (completa e sem trilha,
+  -14,5 LUFS): `node projects/regras-fabrica-footage/audio.cjs`. Capa: `node render.cjs projects/regras-fabrica-footage/capa --stills 0`.
+
 Fontes em `fonts/` (Google Fonts): Shrikhand, Monoton e VT323 (SIL OFL); Yellowtail e
 Special Elite (Apache 2.0).
