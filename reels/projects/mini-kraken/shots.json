@@ -1,0 +1,205 @@
+{
+ "fonte": "Gravação de tela do app Mini Kraken feita pelo Tio Arle (não vai para o git). prepare.cjs recebe o caminho do arquivo.",
+ "_doc": "src = segundo da gravação; tr/w/n/d/end = âncora na fala (como no regras-fabrica-footage); sp = velocidade; fy = foco vertical; z = zoom extra.",
+ "shots": [
+  {
+   "src": 252.0,
+   "tr": 0,
+   "sp": 1.0,
+   "fy": 0.45,
+   "label": "gancho: jornal em zoom"
+  },
+  {
+   "src": 1.0,
+   "tr": 1,
+   "d": -0.25,
+   "sp": 1.0,
+   "fy": 0.4,
+   "label": "isso aqui foi feito pra mesa (início do app)"
+  },
+  {
+   "src": 237.0,
+   "tr": 1,
+   "w": "olha",
+   "sp": 1.2,
+   "fy": 0.3,
+   "label": "Forja de Documentos"
+  },
+  {
+   "src": 268.8,
+   "tr": 2,
+   "w": "carta",
+   "sp": 1.0,
+   "fy": 0.45,
+   "label": "carta"
+  },
+  {
+   "src": 257.0,
+   "tr": 2,
+   "w": "jornal",
+   "sp": 1.0,
+   "fy": 0.45,
+   "label": "jornal"
+  },
+  {
+   "src": 285.6,
+   "tr": 2,
+   "w": "diário",
+   "sp": 1.0,
+   "fy": 0.45,
+   "label": "diário / ficha de operação"
+  },
+  {
+   "src": 278.3,
+   "tr": 2,
+   "w": "cartaz",
+   "sp": 1.0,
+   "fy": 0.45,
+   "label": "cartaz de procurado"
+  },
+  {
+   "src": 239.0,
+   "tr": 3,
+   "w": "noventa",
+   "sp": 1.0,
+   "fy": 0.3,
+   "z": 1.15,
+   "label": "mais de 90 modelos"
+  },
+  {
+   "src": 301.5,
+   "tr": 3,
+   "w": "arrastar",
+   "sp": 1.4,
+   "fy": 0.35,
+   "label": "arrastar (editor)"
+  },
+  {
+   "src": 326.0,
+   "tr": 3,
+   "w": "editar",
+   "sp": 1.5,
+   "fy": 0.08,
+   "z": 1.5,
+   "label": "editar texto"
+  },
+  {
+   "src": 259.6,
+   "tr": 4,
+   "d": -0.2,
+   "sp": 1.2,
+   "fy": 0.4,
+   "label": "seus jogadores vão surtar"
+  },
+  {
+   "src": 352.0,
+   "tr": 5,
+   "d": -0.25,
+   "sp": 1.4,
+   "fy": 0.45,
+   "label": "fichas: D&D, Ordem, Tormenta"
+  },
+  {
+   "src": 421.6,
+   "tr": 6,
+   "d": -0.1,
+   "sp": 1.6,
+   "fy": 0.25,
+   "z": 1.2,
+   "label": "calcula tudo sozinha"
+  },
+  {
+   "src": 382.2,
+   "tr": 7,
+   "d": -0.25,
+   "sp": 1.0,
+   "fy": 0.3,
+   "label": "seu próprio sistema: criar em branco"
+  },
+  {
+   "src": 393.0,
+   "tr": 7,
+   "w": "nunca",
+   "sp": 1.6,
+   "fy": 0.4,
+   "label": "catálogo de blocos"
+  },
+  {
+   "src": 399.0,
+   "tr": 8,
+   "d": -0.2,
+   "sp": 2.2,
+   "fy": 0.45,
+   "label": "blocos sendo escolhidos"
+  },
+  {
+   "src": 437.0,
+   "tr": 8,
+   "w": "bloco",
+   "n": 1,
+   "sp": 1.0,
+   "fy": 0.35,
+   "label": "ficha montada"
+  },
+  {
+   "src": 63.0,
+   "tr": 9,
+   "w": "dados",
+   "sp": 1.3,
+   "fy": 0.35,
+   "label": "dados 3D",
+   "z": 1.3
+  },
+  {
+   "src": 176.0,
+   "tr": 9,
+   "w": "masmorra",
+   "sp": 1.5,
+   "fy": 0.62,
+   "z": 1.7,
+   "label": "gerador de masmorra",
+   "fx": 0.55
+  },
+  {
+   "src": 128.0,
+   "tr": 9,
+   "w": "nomes",
+   "sp": 1.5,
+   "fy": 0.35,
+   "label": "gerador de nomes"
+  },
+  {
+   "src": 203.3,
+   "tr": 9,
+   "w": "encontros",
+   "sp": 1.2,
+   "fy": 0.3,
+   "label": "gerador de encontros"
+  },
+  {
+   "src": 108.0,
+   "tr": 9,
+   "end": true,
+   "d": 0.05,
+   "sp": 1.0,
+   "fy": 0.32,
+   "label": "roda da sorte"
+  },
+  {
+   "src": 2.0,
+   "tr": 10,
+   "d": -0.15,
+   "sp": 0.6,
+   "fy": 0.4,
+   "label": "de graça + planos (fundo)"
+  },
+  {
+   "src": 239.5,
+   "tr": 12,
+   "d": -0.25,
+   "sp": 0.5,
+   "fy": 0.3,
+   "label": "cartela final (fundo)"
+  }
+ ]
+}

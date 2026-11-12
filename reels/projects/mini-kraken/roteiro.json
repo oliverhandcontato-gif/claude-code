@@ -1,0 +1,18 @@
+{
+  "_doc": "Narração da propaganda da Mini Kraken (vídeo espontâneo, não pago). pausa = silêncio depois do trecho (s). cena = id usado em scene.js. Ao trocar pela voz do criador, rode tools/palavras.py com o novo arquivo.",
+  "trechos": [
+    {"cena": "gancho", "texto": "Mestre de RPG: você ainda faz handout no Canva?", "pausa": 0.25},
+    {"cena": "gancho", "texto": "Isso aqui foi feito pra mesa de RPG. Olha o que ele faz.", "pausa": 0.3},
+    {"cena": "docs", "texto": "Um: cria carta, jornal, diário, cartaz de procurado...", "pausa": 0.15},
+    {"cena": "docs", "texto": "são mais de noventa modelos, é só arrastar e editar.", "pausa": 0.15},
+    {"cena": "docs", "texto": "Seus jogadores vão surtar.", "pausa": 0.3},
+    {"cena": "fichas", "texto": "Dois: ficha de D&D, Ordem Paranormal, Tormenta...", "pausa": 0.15},
+    {"cena": "fichas", "texto": "que calcula tudo sozinha.", "pausa": 0.3},
+    {"cena": "custom", "texto": "E se você inventou o seu próprio sistema e nunca achou uma ficha do seu jeito?", "pausa": 0.2},
+    {"cena": "custom", "texto": "Você monta a sua. Bloco por bloco.", "pausa": 0.3},
+    {"cena": "bonus", "texto": "E de bônus: dados em 3D, gerador de masmorra, de nomes, de encontros...", "pausa": 0.3},
+    {"cena": "planos", "texto": "O principal é de graça.", "pausa": 0.15},
+    {"cena": "planos", "texto": "E se quiser apoiar esse projeto brasileiro, no Catarse tem planos a partir de quinze reais, com modelos exclusivos e exportação em alta qualidade.", "pausa": 0.25},
+    {"cena": "cta", "texto": "Procura Mini Kraken. E marca o mestre do seu grupo.", "pausa": 0.8}
+  ]
+}

@@ -1,0 +1,96 @@
+{
+ "duracao": 41.13,
+ "trechos": [
+  {
+   "i": 0,
+   "cena": "gancho",
+   "texto": "Mestre de RPG: você ainda faz handout no Canva?",
+   "ini": 0.0,
+   "fim": 2.84
+  },
+  {
+   "i": 1,
+   "cena": "gancho",
+   "texto": "Isso aqui foi feito pra mesa de RPG. Olha o que ele faz.",
+   "ini": 3.315,
+   "fim": 6.1
+  },
+  {
+   "i": 2,
+   "cena": "docs",
+   "texto": "Um: cria carta, jornal, diário, cartaz de procurado...",
+   "ini": 6.635,
+   "fim": 9.76
+  },
+  {
+   "i": 3,
+   "cena": "docs",
+   "texto": "são mais de noventa modelos, é só arrastar e editar.",
+   "ini": 9.76,
+   "fim": 12.14
+  },
+  {
+   "i": 4,
+   "cena": "docs",
+   "texto": "Seus jogadores vão surtar.",
+   "ini": 12.5,
+   "fim": 13.62
+  },
+  {
+   "i": 5,
+   "cena": "fichas",
+   "texto": "Dois: ficha de D&D, Ordem Paranormal, Tormenta...",
+   "ini": 14.054,
+   "fim": 16.9
+  },
+  {
+   "i": 6,
+   "cena": "fichas",
+   "texto": "que calcula tudo sozinha.",
+   "ini": 16.9,
+   "fim": 18.04
+  },
+  {
+   "i": 7,
+   "cena": "custom",
+   "texto": "E se você inventou o seu próprio sistema e nunca achou uma ficha do seu jeito?",
+   "ini": 18.507,
+   "fim": 21.86
+  },
+  {
+   "i": 8,
+   "cena": "custom",
+   "texto": "Você monta a sua. Bloco por bloco.",
+   "ini": 22.345,
+   "fim": 23.98
+  },
+  {
+   "i": 9,
+   "cena": "bonus",
+   "texto": "E de bônus: dados em 3D, gerador de masmorra, de nomes, de encontros...",
+   "ini": 24.38,
+   "fim": 28.3
+  },
+  {
+   "i": 10,
+   "cena": "planos",
+   "texto": "O principal é de graça.",
+   "ini": 28.708,
+   "fim": 29.78
+  },
+  {
+   "i": 11,
+   "cena": "planos",
+   "texto": "E se quiser apoiar esse projeto brasileiro, no Catarse tem planos a partir de quinze reais, com modelos exclusivos e exportação em alta qualidade.",
+   "ini": 29.78,
+   "fim": 37.4
+  },
+  {
+   "i": 12,
+   "cena": "cta",
+   "texto": "Procura Mini Kraken. E marca o mestre do seu grupo.",
+   "ini": 37.887,
+   "fim": 40.18
+  }
+ ]
+}
