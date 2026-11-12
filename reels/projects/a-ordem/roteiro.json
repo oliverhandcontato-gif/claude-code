@@ -1,0 +1,17 @@
+{
+  "_doc": "A ORDEM (Tio Arle) — teaser de conspiração, ficção misteriosa. pausa = silêncio depois do trecho (s). Ao dublar: grave lendo este texto e rode tools/palavras.py com o seu áudio.",
+  "trechos": [
+    {"cena": "gancho", "texto": "Se esse vídeo apareceu pra você... não foi por acaso.", "pausa": 0.55},
+    {"cena": "segredo", "texto": "Existe uma verdade que os governos escondem há séculos.", "pausa": 0.45},
+    {"cena": "apagaram", "texto": "Eles apagaram os registros. Mudaram os mapas. Silenciaram quem chegou perto.", "pausa": 0.5},
+    {"cena": "simbolos", "texto": "Mas os símbolos ficaram. Nas moedas. Nos prédios. Nas músicas que você escuta.", "pausa": 0.45},
+    {"cena": "olho", "texto": "Repara: o olho que tudo vê. O triângulo. O número que se repete.", "pausa": 0.45},
+    {"cena": "mensagem", "texto": "Isso não é coincidência. É uma mensagem.", "pausa": 0.4},
+    {"cena": "geracao", "texto": "E ela foi escrita pra você. A nova geração.", "pausa": 0.55},
+    {"cena": "alem", "texto": "Existem coisas além do imaginável. Coisas que estão esperando a gente acordar.", "pausa": 0.5},
+    {"cena": "breve", "texto": "Em breve, tudo vai ser revelado.", "pausa": 0.35},
+    {"cena": "coragem", "texto": "Mas só pra quem tiver coragem de saber a verdade.", "pausa": 0.7},
+    {"cena": "comenta", "texto": "Se você está pronto... comenta: pela nova geração.", "pausa": 0.45},
+    {"cena": "ordem", "texto": "Segue o Tio Arle. E faça parte da Ordem.", "pausa": 1.6}
+  ]
+}

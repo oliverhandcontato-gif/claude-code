@@ -1,0 +1,459 @@
+{
+ "_doc": "Gerado por tools/completo.cjs — não editar à mão; edite parte1.json/parte2.json.",
+ "titulo": "O que é Echo Valley? Conheça esse universo de terror",
+ "blocos": [
+  {
+   "cit": "A",
+   "in": 31.6,
+   "out": 35,
+   "texto": "…Echo Valley é a cidade mais segura da—"
+  },
+  "O outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
+  "Os dois fazem parte de Echo Valley. E essa é a obra de terror e suspense que eu quero te apresentar hoje.",
+  "Eu sou o Tio Arle, e aqui eu vou comentar esse universo como um fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
+  "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece que é até um convite para passar as férias. Só que, no meio desse convite, aparece um aviso:",
+  {
+   "cit": "A",
+   "in": 24.3,
+   "out": 27.75,
+   "texto": "Apenas lembre-se de ficar longe da parte norte da floresta."
+  },
+  "Para mim, é aí que a apresentação fica interessante.",
+  "Em outro relato, treze crianças desapareceram em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
+  "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber muito mais do que conta. A cidade é só o começo.",
+  "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do que o universo traz consigo.",
+  "Em Echo Valley, eu prestaria atenção em duas coisas: no que está sendo contado e em quem está contando.",
+  "Um vídeo vende a imagem de uma cidade tranquila, outro traz um relato de desaparecimento, e há personagens falando de segredos, agentes e anomalias.",
+  "Quando um personagem acusa alguém de esconder a verdade, eu normalmente escuto aquilo como a versão dele. A acusação faz parte da história, mas ainda dá espaço pra dúvida, sabe?",
+  "Para mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
+  "Os vídeos de ameaça também ampliam a escala do terror:",
+  {
+   "cit": "F",
+   "in": 36.2,
+   "out": 38.8,
+   "texto": "Nenhuma área é segura quando um Querubim desperta."
+  },
+  "Querubim aparece como uma dessas classificações, mas conhecer a obra vai além de decorar o nome de uma entidade ou o seu nível de ameaça.",
+  "Você também encontra conteúdos que saem da ficção e falando do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",
+  "Quer começar? Minha sugestão é ver a apresentação da cidade, depois o relato das treze crianças, então um vídeo sobre as ameaças: uma rota de descoberta, não uma cronologia oficial.",
+  "Procure a página oficial do Anfitrião. Por aqui, no Tio Arle, eu quero continuar explorando a obra e conversando sobre essas pistas. Qual delas você gostaria que eu comentasse a primeira?"
+ ],
+ "planos": [
+  {
+   "b": 0,
+   "ref": "A",
+   "in": 31.6,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "CIDADE SEGURA?"
+  },
+  {
+   "b": 1,
+   "ref": "B",
+   "in": 0.3,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "13 DESAPARECIDOS",
+   "trans": "glitch"
+  },
+  {
+   "b": 1,
+   "w": "desaparecidas",
+   "ref": "B",
+   "in": 3.1,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 2,
+   "ref": "A+B",
+   "in": 14,
+   "in2": 3,
+   "tipo": "dividido",
+   "etiqueta": "",
+   "sub": "UMA OBRA DE TERROR E SUSPENSE"
+  },
+  {
+   "b": 3,
+   "ref": "A",
+   "in": 15,
+   "tipo": "cartao",
+   "etiqueta": "TIO",
+   "cartao": "assinatura"
+  },
+  {
+   "b": 3,
+   "w": "página",
+   "ref": "A",
+   "in": 18,
+   "tipo": "cartao",
+   "etiqueta": "TIO",
+   "cartao": "oficial"
+  },
+  {
+   "b": 4,
+   "ref": "A",
+   "in": 0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "UM CONVITE PARA MORAR AQUI"
+  },
+  {
+   "b": 4,
+   "w": "trilhas",
+   "ref": "A",
+   "in": 6,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "w": "sorveteria",
+   "ref": "A",
+   "in": 8,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "w": "moradores",
+   "ref": "A",
+   "in": 20,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "w": "parece",
+   "ref": "A",
+   "in": 10,
+   "sp": 0.45,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 4,
+   "ref": "A",
+   "in": 21.2,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "w": "meio"
+  },
+  {
+   "b": 5,
+   "ref": "A",
+   "in": 24.3,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "NÃO VÁ À PARTE NORTE",
+   "marca": [
+    0.12,
+    0.44,
+    0.88,
+    0.53
+   ],
+   "trans": "glitch"
+  },
+  {
+   "b": 6,
+   "ref": "A",
+   "in": 28,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 7,
+   "ref": "B",
+   "in": 0.4,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "2001 / 13 CRIANÇAS",
+   "trans": "glitch"
+  },
+  {
+   "b": 7,
+   "w": "documentos",
+   "ref": "B",
+   "in": 5.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 7,
+   "w": "silêncio",
+   "ref": "B",
+   "in": 12.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 7,
+   "w": "perguntas",
+   "ref": "B",
+   "in": 8,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 7,
+   "w": "esse",
+   "ref": "B",
+   "in": 24.2,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 7,
+   "w": "mistérios",
+   "ref": "B",
+   "in": 20,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "O QUE ACONTECEU?"
+  },
+  {
+   "b": 8,
+   "ref": "H",
+   "in": 21.5,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 8,
+   "w": "entidades",
+   "ref": "F",
+   "in": 27.2,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "destaque": "ENTIDADES • AMEAÇAS • RELATOS",
+   "trans": "glitch"
+  },
+  {
+   "b": 8,
+   "w": "ameaça",
+   "ref": "F",
+   "in": 40.5,
+   "tipo": "painel",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 8,
+   "w": "relatos",
+   "ref": "D",
+   "in": 21.5,
+   "tipo": "painel",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 8,
+   "w": "cidade",
+   "ref": "A",
+   "in": 18,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "A CIDADE É SÓ O COMEÇO"
+  },
+  {
+   "b": 9,
+   "ref": "A",
+   "in": 0.3,
+   "sp": 0.25,
+   "tipo": "trio",
+   "trio": [
+    [
+     "A",
+     0.3,
+     "APRESENTAÇÕES"
+    ],
+    [
+     "B",
+     0.5,
+     "RELATOS"
+    ],
+    [
+     "C",
+     72,
+     "TRANSMISSÕES",
+     0.66
+    ]
+   ],
+   "etiqueta": ""
+  },
+  {
+   "b": 10,
+   "ref": "A",
+   "in": 18,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 10,
+   "w": "quem",
+   "ref": "D",
+   "in": 7.2,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "destaque": "QUEM ESTÁ FALANDO?"
+  },
+  {
+   "b": 11,
+   "ref": "A",
+   "in": 18,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "CONVITE"
+  },
+  {
+   "b": 11,
+   "w": "outro",
+   "ref": "B",
+   "in": 0.4,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "RELATO"
+  },
+  {
+   "b": 11,
+   "w": "personagens",
+   "ref": "D",
+   "in": 57.8,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "destaque": "ACUSAÇÃO"
+  },
+  {
+   "b": 12,
+   "ref": "D",
+   "in": 64.8,
+   "sp": 0.5,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "carimbo": "FALA DE PERSONAGEM",
+   "destaque": "UMA VERSÃO DENTRO DA HISTÓRIA",
+   "trans": "glitch"
+  },
+  {
+   "b": 12,
+   "w": "acusação",
+   "ref": "D",
+   "in": 8,
+   "sp": 0.6,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "carimbo": "FALA DE PERSONAGEM"
+  },
+  {
+   "b": 13,
+   "ref": "A",
+   "in": 18,
+   "tipo": "cartao",
+   "cartao": "perguntas",
+   "etiqueta": "TIO",
+   "perguntas": [
+    [
+     "mostrado",
+     "MOSTRADO"
+    ],
+    [
+     "dito",
+     "DITO"
+    ],
+    [
+     "interpretando",
+     "INTERPRETADO"
+    ]
+   ]
+  },
+  {
+   "b": 14,
+   "ref": "F",
+   "in": 18.5,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "destaque": "A ESCALA DO TERROR AUMENTA"
+  },
+  {
+   "b": 15,
+   "ref": "F",
+   "in": 36.2,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "trans": "glitch",
+   "destaque": "NENHUMA ÁREA É SEGURA"
+  },
+  {
+   "b": 16,
+   "w": "mas",
+   "ref": "A",
+   "in": 18,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 17,
+   "ref": "E",
+   "in": 145.5,
+   "sp": 0.25,
+   "tipo": "cheio",
+   "etiqueta": "PROJETO",
+   "destaque": "DENTRO DA FICÇÃO / SOBRE A OBRA"
+  },
+  {
+   "b": 17,
+   "w": "personagem",
+   "ref": "D",
+   "in": 0.3,
+   "tipo": "painel",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 17,
+   "w": "criação",
+   "ref": "E",
+   "in": 160,
+   "sp": 0.6,
+   "tipo": "cheio",
+   "etiqueta": "PROJETO"
+  },
+  {
+   "b": 18,
+   "ref": "A",
+   "in": 0.3,
+   "tipo": "trio",
+   "etiqueta": "TIO",
+   "destaque": "SUGESTÃO DO TIO ARLE",
+   "trio": [
+    [
+     "A",
+     0.3,
+     "1. A CIDADE"
+    ],
+    [
+     "B",
+     0.5,
+     "2. O CASO"
+    ],
+    [
+     "F",
+     27.2,
+     "3. AS AMEAÇAS"
+    ]
+   ],
+   "palavras": [
+    "apresentação",
+    "relato",
+    "ameaças"
+   ],
+   "sp": 0.2
+  },
+  {
+   "b": 19,
+   "ref": "A",
+   "in": 2,
+   "sp": 0.2,
+   "tipo": "cartao",
+   "cartao": "final",
+   "etiqueta": "TIO"
+  }
+ ]
+}

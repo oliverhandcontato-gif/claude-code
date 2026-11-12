@@ -1,0 +1,79 @@
+{
+ "duracao": 48.395,
+ "trechos": [
+  {
+   "i": 0,
+   "cena": "gancho",
+   "texto": "Você NÃO pode fazer a menina chorar.",
+   "ini": 0.456,
+   "fim": 2.54
+  },
+  {
+   "i": 1,
+   "cena": "amarrados",
+   "texto": "Na sua frente, três pessoas amarradas. A... Bê... e Cê.",
+   "ini": 2.68,
+   "fim": 7.899
+  },
+  {
+   "i": 2,
+   "cena": "escolha",
+   "texto": "Você precisa eliminar uma delas. Quem você escolhe?",
+   "ini": 8.21,
+   "fim": 11.4
+  },
+  {
+   "i": 3,
+   "cena": "avo",
+   "texto": "Escolheu a A? Era o avô dela. Ela ia chorar muito.",
+   "ini": 16.447,
+   "fim": 19.84
+  },
+  {
+   "i": 4,
+   "cena": "irmao",
+   "texto": "A Bê? Era o irmão dela. Choro na certa.",
+   "ini": 20.365,
+   "fim": 23.24
+  },
+  {
+   "i": 5,
+   "cena": "pai",
+   "texto": "Então você escolheu a Cê... Parabéns! Você escolheu...",
+   "ini": 23.68,
+   "fim": 27.717
+  },
+  {
+   "i": 6,
+   "cena": "grito",
+   "texto": "o PAI dela.",
+   "ini": 28.222,
+   "fim": 28.96
+  },
+  {
+   "i": 7,
+   "cena": "revela",
+   "texto": "Não tinha saída. O único jeito... era atirar na pobre",
+   "ini": 33.635,
+   "fim": 37.48,
+   "beep": [
+    37.54,
+    38.34
+   ]
+  },
+  {
+   "i": 8,
+   "cena": "chorou",
+   "texto": "Pelo menos... ela não chorou.",
+   "ini": 40.456,
+   "fim": 42.3
+  },
+  {
+   "i": 9,
+   "cena": "cta",
+   "texto": "Segue o Tio Arle. Se tiver coragem.",
+   "ini": 43.033,
+   "fim": 45.48
+  }
+ ]
+}

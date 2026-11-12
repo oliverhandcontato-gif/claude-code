@@ -1,0 +1,110 @@
+{
+ "_doc": "Edição da locução gravada pelo Tio Arle: faixas = índices de palavras da transcrição (assets/<parte>/gravacao.words.json). Repetições, começos errados e falas soltas ficaram de fora. Citações {cit} entram com o áudio original.",
+ "blocos": [
+  {
+   "cit": "A",
+   "in": 31.6,
+   "out": 35.0,
+   "texto": "…Echo Valley é a cidade mais segura da—"
+  },
+  {
+   "texto": "O outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
+   "faixas": [
+    [
+     0,
+     10
+    ]
+   ]
+  },
+  {
+   "texto": "Os dois fazem parte de Echo Valley. E essa é a obra de terror e suspense que eu quero te apresentar hoje.",
+   "faixas": [
+    [
+     11,
+     32
+    ]
+   ]
+  },
+  {
+   "texto": "Eu sou o Tio Arle, e aqui eu vou comentar esse universo como um fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
+   "faixas": [
+    [
+     33,
+     61
+    ]
+   ]
+  },
+  {
+   "texto": "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece que é até um convite para passar as férias. Só que, no meio desse convite, aparece um aviso:",
+   "faixas": [
+    [
+     62,
+     91
+    ]
+   ]
+  },
+  {
+   "cit": "A",
+   "in": 24.3,
+   "out": 27.75,
+   "texto": "Apenas lembre-se de ficar longe da parte norte da floresta."
+  },
+  {
+   "texto": "Para mim, é aí que a apresentação fica interessante.",
+   "faixas": [
+    [
+     92,
+     100
+    ]
+   ]
+  },
+  {
+   "texto": "Em outro relato, treze crianças desapareceram em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
+   "faixas": [
+    [
+     101,
+     124
+    ]
+   ]
+  },
+  {
+   "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber muito mais do que conta. A cidade é só o começo.",
+   "faixas": [
+    {
+     "t": [
+      55.75,
+      66.2
+     ]
+    }
+   ],
+   "_nota": "Só a 2ª tomada: a 1ª (52.4–54.9 s) para em 'entida…' e foi repetida."
+  },
+  {
+   "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do que o universo traz consigo.",
+   "faixas": [
+    [
+     152,
+     173
+    ]
+   ]
+  },
+  {
+   "texto": "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite para conhecer a cidade?",
+   "faixas": [
+    [
+     174,
+     202
+    ]
+   ]
+  },
+  {
+   "texto": "Se sim, segura a minha mão e vamos conhecer junto a cidade de Echo Valley. Eu sou o Tio Arle, e já me segue para mais conteúdo.",
+   "faixas": [
+    [
+     203,
+     229
+    ]
+   ]
+  }
+ ]
+}

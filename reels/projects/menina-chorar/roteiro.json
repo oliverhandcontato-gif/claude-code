@@ -1,0 +1,56 @@
+{
+  "_doc": "NÃO FAÇA A MENINA CHORAR (Tio Arle) — enigma de terror com humor macabro. pausa = silêncio depois do trecho (s); beep = bipe de censura (s) logo depois do trecho. 'Bê'/'Cê' são escritos assim para a voz sintética ler as letras; na tela viram B e C. Ao dublar: grave lendo este texto (deixe o bipe e as pausas) e rode tools/palavras.py com o seu áudio. Locução atual: gravação enviada pelo criador (assets/original/locucao.wav), montada com tools/montar_locucao.py (pausas extras entre A, B e C, timer, gritos e bipe).",
+  "trechos": [
+    {
+      "cena": "gancho",
+      "texto": "Você NÃO pode fazer a menina chorar.",
+      "pausa": 0.45
+    },
+    {
+      "cena": "amarrados",
+      "texto": "Na sua frente, três pessoas amarradas. A... Bê... e Cê.",
+      "pausa": 0.35
+    },
+    {
+      "cena": "escolha",
+      "texto": "Você precisa eliminar uma delas. Quem você escolhe?",
+      "pausa": 5.0
+    },
+    {
+      "cena": "avo",
+      "texto": "Escolheu a A? Era o avô dela. Ela ia chorar muito.",
+      "pausa": 0.45
+    },
+    {
+      "cena": "irmao",
+      "texto": "A Bê? Era o irmão dela. Choro na certa.",
+      "pausa": 0.45
+    },
+    {
+      "cena": "pai",
+      "texto": "Então você escolheu a Cê... Parabéns! Você escolheu...",
+      "pausa": 0.35
+    },
+    {
+      "cena": "grito",
+      "texto": "o PAI dela.",
+      "pausa": 4.4
+    },
+    {
+      "cena": "revela",
+      "texto": "Não tinha saída. O único jeito... era atirar na pobre",
+      "beep": 0.8,
+      "pausa": 1.5
+    },
+    {
+      "cena": "chorou",
+      "texto": "Pelo menos... ela não chorou.",
+      "pausa": 0.7
+    },
+    {
+      "cena": "cta",
+      "texto": "Segue o Tio Arle. Se tiver coragem.",
+      "pausa": 2.4
+    }
+  ]
+}

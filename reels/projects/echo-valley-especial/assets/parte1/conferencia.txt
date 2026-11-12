@@ -1,0 +1,9 @@
+palavras do roteiro: 230 | diferenças: faltando/trocadas 9, a mais 33
+insert   roteiro: ''                                       ouvido: 'venha morar em eco valley e a cidade mais segura da metr'
+replace  roteiro: 'echo'                                   ouvido: 'eco'
+replace  roteiro: 'arle'                                   ouvido: 'wally'
+replace  roteiro: 'do anfitriao'                           ouvido: 'don fittrion'
+replace  roteiro: 'para'                                   ouvido: 'apenas lembre se de ficar longe da parte norte da floresta pra'
+replace  roteiro: 'aparecem'                               ouvido: 'um aparece'
+replace  roteiro: 'echo valley'                            ouvido: 'a covalha'
+replace  roteiro: 'arle'                                   ouvido: 'wiley'

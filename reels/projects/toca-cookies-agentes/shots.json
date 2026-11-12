@@ -1,0 +1,32 @@
+{
+  "source": "Mixkit (mixkit.co) — Mixkit Stock Video Free License",
+  "end": 57.4,
+  "shots": [
+    { "id": 5333,  "t": 0.0,   "ss": 2,  "fx": 0.5,  "label": "toda mesa" },
+    { "id": 13942, "t": 4.54,  "ss": 6,  "fx": 0.5,  "label": "um deles é você" },
+    { "id": 41739, "t": 6.5,   "ss": 3,  "fx": 0.5,  "label": "nº1 ocultista" },
+    { "id": 35896, "t": 11.92, "ss": 6,  "fx": 0.5,  "label": "porta trancada" },
+    { "id": 41744, "t": 12.84, "ss": 3,  "fx": 0.5,  "label": "ritual" },
+    { "id": 43846, "t": 13.68, "ss": 8,  "fx": 0.5,  "label": "interrogatório" },
+    { "id": 41739, "t": 14.66, "ss": 7,  "fx": 0.5,  "label": "ritual" },
+    { "id": 41746, "t": 15.48, "ss": 2,  "fx": 0.5,  "label": "sanidade" },
+    { "id": 41764, "t": 17.6,  "ss": 5,  "fx": 0.45, "label": "nº2 combatente" },
+    { "id": 1123,  "t": 21.9,  "ss": 6,  "fx": 0.5,  "label": "sozinho" },
+    { "id": 21817, "t": 22.72, "ss": 8,  "fx": 0.5,  "label": "sem lanterna" },
+    { "id": 4760,  "t": 23.92, "ss": 2,  "fx": 0.5,  "label": "relaxa eu aguento" },
+    { "id": 44987, "t": 25.78, "ss": 4,  "fx": 0.5,  "label": "não aguentou" },
+    { "id": 46977, "t": 26.44, "ss": 6,  "fx": 0.5,  "label": "nº3 especialista" },
+    { "id": 45923, "t": 29.72, "ss": 2,  "fx": 0.5,  "label": "gaveta" },
+    { "id": 16139, "t": 30.7,  "ss": 3,  "fx": 0.5,  "label": "papel" },
+    { "id": 3916,  "t": 31.82, "ss": 4,  "fx": 0.5,  "label": "parede" },
+    { "id": 45001, "t": 32.66, "ss": 10, "fx": 0.5,  "label": "criatura do lado" },
+    { "id": 4953,  "t": 35.06, "ss": 2,  "fx": 0.5,  "label": "nº4 doze páginas" },
+    { "id": 44986, "t": 39.3,  "ss": 4,  "fx": 0.5,  "label": "morreu na primeira cena" },
+    { "id": 13942, "t": 40.68, "ss": 14, "fx": 0.5,  "label": "nº5 o mais perigoso" },
+    { "id": 4760,  "t": 44.12, "ss": 4,  "fx": 0.5,  "label": "olha pro mestre e sorri" },
+    { "id": 46762, "t": 46.94, "ss": 4,  "fx": 0.5,  "label": "eu toco no objeto" },
+    { "id": 42583, "t": 49.88, "ss": 4,  "fx": 0.5,  "label": "marca o seu grupo" },
+    { "id": 4794,  "t": 51.02, "ss": 5,  "fx": 0.5,  "label": "quem morre primeiro" },
+    { "id": 3461,  "t": 52.2,  "ss": 4,  "fx": 0.5,  "label": "segue a toca" }
+  ]
+}

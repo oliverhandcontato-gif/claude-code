@@ -1,0 +1,31 @@
+{
+  "source": "Mixkit (mixkit.co) — Mixkit Stock Video Free License",
+  "end": 29.0,
+  "shots": [
+    { "id": 35013, "t": 0.0,   "ss": 2,   "fx": 0.5,  "label": "Imagine uma cidade" },
+    { "id": 9678,  "t": 0.82,  "ss": 10,  "fx": 0.5,  "label": "que não aparece" },
+    { "id": 21612, "t": 1.54,  "ss": 3,   "fx": 0.45, "label": "em nenhum mapa" },
+    { "id": 40700, "t": 3.0,   "ss": 4,   "fx": 0.5,  "label": "que o governo esconde" },
+    { "id": 48357, "t": 3.98,  "ss": 4,   "fx": 0.5,  "label": "pouca gente" },
+    { "id": 1038,  "t": 5.08,  "ss": 6,   "fx": 0.42, "label": "ouviu falar sobre ela" },
+    { "id": 30605, "t": 6.72,  "ss": 5,   "fx": 0.6,  "label": "uma cidade" },
+    { "id": 46575, "t": 7.78,  "ss": 4.5, "fx": 0.32, "label": "cheia de mistérios" },
+    { "id": 21592, "t": 8.76,  "ss": 6,   "fx": 0.4,  "label": "segundo as lendas" },
+    { "id": 44989, "t": 10.7,  "ss": 4,   "fx": 0.45, "label": "monstros vivem" },
+    { "id": 26798, "t": 11.82, "ss": 5,   "fx": 0.5,  "label": "nas florestas" },
+    { "id": 23372, "t": 12.72, "ss": 8,   "fx": 0.6,  "label": "um lugar onde" },
+    { "id": 23018, "t": 13.38, "ss": 12,  "fx": 0.5,  "label": "uma base militar" },
+    { "id": 4786,  "t": 14.16, "ss": 3,   "fx": 0.5,  "label": "fez experimentos" },
+    { "id": 4747,  "t": 15.0,  "ss": 4,   "fx": 0.6,  "label": "secretos" },
+    { "id": 11850, "t": 15.66, "ss": 8,   "fx": 0.6,  "label": "que desafiavam" },
+    { "id": 31562, "t": 16.5,  "ss": 5,   "fx": 0.5,  "label": "a compreensão humana" },
+    { "id": 44291, "t": 18.28, "ss": 2.5, "fx": 0.45, "label": "e essa pequena cidade" },
+    { "id": 2634,  "t": 19.58, "ss": 5,   "fx": 0.45, "label": "que quase ninguém" },
+    { "id": 5291,  "t": 20.9,  "ss": 10,  "fx": 0.3,  "label": "ouviu falar" },
+    { "id": 49967, "t": 21.74, "ss": 4,   "fx": 0.45, "label": "foi o berçário" },
+    { "id": 28901, "t": 23.28, "ss": 3,   "fx": 0.5,  "label": "daquilo que um dia" },
+    { "id": 47947, "t": 24.5,  "ss": 2.0, "fx": 0.5,  "label": "causará" },
+    { "id": 38818, "t": 25.58, "ss": 1.5, "fx": 0.5,  "label": "o" },
+    { "id": 45020, "t": 26.34, "ss": 1.5, "fx": 0.5,  "label": "apocalipse" }
+  ]
+}

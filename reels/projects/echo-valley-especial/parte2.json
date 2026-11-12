@@ -1,0 +1,210 @@
+{
+ "_doc": "Parte 2 (seção 6 do documento, com citações do áudio original). Blocos: texto = fala do Tio Arle; {cit} = trecho de áudio da obra (ref/in/out em s no original). Planos ancorados no bloco (b) e opcionalmente numa palavra (w, n). trans: glitch = transição pontual.",
+ "titulo": "Echo Valley: quem conta a história também importa",
+ "blocos": [
+  "Em Echo Valley, eu prestaria atenção em duas coisas: no que está sendo contado e em quem está contando.",
+  "Esse é um universo fictício de terror e suspense. Eu sou o Tio Arle, e estou te apresentando a obra como um fã.",
+  "Um vídeo vende a imagem de uma cidade tranquila, outro traz um relato de desaparecimento, e há personagens falando de segredos, agentes e anomalias.",
+  "Quando um personagem acusa alguém de esconder a verdade, eu normalmente escuto aquilo como a versão dele. A acusação faz parte da história, mas ainda dá espaço pra dúvida, sabe?",
+  "Para mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
+  "Os vídeos de ameaça também ampliam a escala do terror:",
+  {
+   "cit": "F",
+   "in": 36.2,
+   "out": 38.8,
+   "texto": "Nenhuma área é segura quando um Querubim desperta."
+  },
+  "Querubim aparece como uma dessas classificações, mas conhecer a obra vai além de decorar o nome de uma entidade ou o seu nível de ameaça.",
+  "Você também encontra conteúdos que saem da ficção e falando do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",
+  "Quer começar? Minha sugestão é ver a apresentação da cidade, depois o relato das treze crianças, então um vídeo sobre as ameaças: uma rota de descoberta, não uma cronologia oficial.",
+  "Procure a página oficial do Anfitrião. Por aqui, no Tio Arle, eu quero continuar explorando a obra e conversando sobre essas pistas. Qual delas você gostaria que eu comentasse a primeira?"
+ ],
+ "planos": [
+  {
+   "b": 0,
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "O QUE É DITO?"
+  },
+  {
+   "b": 0,
+   "w": "quem",
+   "ref": "D",
+   "in": 7.2,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "destaque": "QUEM ESTÁ FALANDO?"
+  },
+  {
+   "b": 1,
+   "ref": "A",
+   "in": 15.0,
+   "tipo": "cartao",
+   "cartao": "assinatura",
+   "etiqueta": "TIO",
+   "destaque": "GUIA DE ENTRADA • PARTE 2"
+  },
+  {
+   "b": 2,
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA",
+   "destaque": "CONVITE"
+  },
+  {
+   "b": 2,
+   "w": "outro",
+   "ref": "B",
+   "in": 0.4,
+   "tipo": "cheio",
+   "etiqueta": "FICCAO",
+   "destaque": "RELATO"
+  },
+  {
+   "b": 2,
+   "w": "personagens",
+   "ref": "D",
+   "in": 57.8,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "destaque": "ACUSAÇÃO"
+  },
+  {
+   "b": 3,
+   "ref": "D",
+   "in": 64.8,
+   "sp": 0.5,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "carimbo": "FALA DE PERSONAGEM",
+   "destaque": "UMA VERSÃO DENTRO DA HISTÓRIA",
+   "trans": "glitch"
+  },
+  {
+   "b": 3,
+   "w": "acusação",
+   "ref": "D",
+   "in": 8.0,
+   "sp": 0.6,
+   "tipo": "painel",
+   "etiqueta": "FICCAO",
+   "carimbo": "FALA DE PERSONAGEM"
+  },
+  {
+   "b": 4,
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cartao",
+   "cartao": "perguntas",
+   "etiqueta": "TIO",
+   "perguntas": [
+    [
+     "mostrado",
+     "MOSTRADO"
+    ],
+    [
+     "dito",
+     "DITO"
+    ],
+    [
+     "interpretando",
+     "INTERPRETADO"
+    ]
+   ]
+  },
+  {
+   "b": 5,
+   "ref": "F",
+   "in": 18.5,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "destaque": "A ESCALA DO TERROR AUMENTA"
+  },
+  {
+   "b": 6,
+   "ref": "F",
+   "in": 36.2,
+   "tipo": "painel",
+   "etiqueta": "OBRA",
+   "trans": "glitch",
+   "destaque": "NENHUMA ÁREA É SEGURA"
+  },
+  {
+   "b": 7,
+   "w": "mas",
+   "ref": "A",
+   "in": 18.0,
+   "tipo": "cheio",
+   "etiqueta": "OBRA"
+  },
+  {
+   "b": 8,
+   "ref": "E",
+   "in": 145.5,
+   "sp": 0.25,
+   "tipo": "cheio",
+   "etiqueta": "PROJETO",
+   "destaque": "DENTRO DA FICÇÃO / SOBRE A OBRA"
+  },
+  {
+   "b": 8,
+   "w": "personagem",
+   "ref": "D",
+   "in": 0.3,
+   "tipo": "painel",
+   "etiqueta": "FICCAO"
+  },
+  {
+   "b": 8,
+   "w": "criação",
+   "ref": "E",
+   "in": 160.0,
+   "sp": 0.6,
+   "tipo": "cheio",
+   "etiqueta": "PROJETO"
+  },
+  {
+   "b": 9,
+   "ref": "A",
+   "in": 0.3,
+   "tipo": "trio",
+   "etiqueta": "TIO",
+   "destaque": "SUGESTÃO DO TIO ARLE",
+   "trio": [
+    [
+     "A",
+     0.3,
+     "1. A CIDADE"
+    ],
+    [
+     "B",
+     0.5,
+     "2. O CASO"
+    ],
+    [
+     "F",
+     27.2,
+     "3. AS AMEAÇAS"
+    ]
+   ],
+   "palavras": [
+    "apresentação",
+    "relato",
+    "ameaças"
+   ],
+   "sp": 0.2
+  },
+  {
+   "b": 10,
+   "ref": "A",
+   "in": 2.0,
+   "sp": 0.2,
+   "tipo": "cartao",
+   "cartao": "final",
+   "etiqueta": "TIO"
+  }
+ ]
+}

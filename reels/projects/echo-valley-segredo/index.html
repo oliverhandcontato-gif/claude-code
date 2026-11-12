@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo Valley Segredo</title>
+  <style>
+    @font-face { font-family: "Shrikhand"; src: url(../../fonts/Shrikhand-Regular.ttf); }
+    @font-face { font-family: "Yellowtail"; src: url(../../fonts/Yellowtail-Regular.ttf); }
+    @font-face { font-family: "Special Elite"; src: url(../../fonts/SpecialElite-Regular.ttf); }
+    @font-face { font-family: "VT323"; src: url(../../fonts/VT323-Regular.ttf); }
+    @font-face { font-family: "Monoton"; src: url(../../fonts/Monoton-Regular.ttf); }
+    html, body { margin: 0; background: #0b0b0d; color: #ddd; font: 14px/1.4 Inter, system-ui, sans-serif; }
+    #app { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 16px; }
+    #stage { height: calc(100vh - 100px); width: auto; max-width: 100%; aspect-ratio: 9 / 16; background: #000; border-radius: 10px; }
+    .controls { display: flex; gap: 12px; align-items: center; width: min(560px, 100%); }
+    .controls input { flex: 1; }
+    .controls button { background: #e11; color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 700; cursor: pointer; min-width: 120px; }
+    .controls span { font-variant-numeric: tabular-nums; min-width: 110px; text-align: right; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="../../engine/core.js"></script>
+  <script src="../../engine/fx.js"></script>
+  <script src="../../engine/text.js"></script>
+  <script src="../../engine/kinetic.js"></script>
+  <script src="../../engine/audio.js"></script>
+  <script src="../../engine/signal.js"></script>
+  <script src="../../engine/gl.js"></script>
+  <script src="../../engine/player.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>
