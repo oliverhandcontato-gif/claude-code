@@ -742,8 +742,8 @@
     A.boom(S, Kw.pai, { gain: 0.8, freq: 36, decay: 2.2 });
     A.static(S, Kw.pai, 0.35, { gain: 0.35 });
     A.subDrop(S, SCREAM, { gain: 0.6 });
-    play(S, GRITOS, SCREAM, 1.0, 0.45);
-    play(S, RISADA, LAUGH, 0.95, 0.4);
+    play(S, GRITOS, SCREAM, 2.0, 0.45);
+    play(S, RISADA, LAUGH, 1.3, 0.4);
     // revelação
     for (let t = START[7] + 0.1; t < BEEP[0] - 0.3; t += 0.8) A.heartbeat(S, t, { gain: 0.55 });
     A.riser(S, Kw.unico, BEEP[0], { gain: 0.3 });
