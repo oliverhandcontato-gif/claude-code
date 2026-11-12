@@ -1,96 +1,72 @@
 {
- "duracao": 41.13,
+ "duracao": 79.197,
+ "guia": false,
  "trechos": [
   {
    "i": 0,
-   "cena": "gancho",
-   "texto": "Mestre de RPG: você ainda faz handout no Canva?",
-   "ini": 0.0,
-   "fim": 2.84
+   "texto": "Mestre de RPG: você ainda faz handouts no Canva?",
+   "ini": 0.3,
+   "fim": 3.32
   },
   {
    "i": 1,
-   "cena": "gancho",
-   "texto": "Isso aqui foi feito pra mesa de RPG. Olha o que ele faz.",
-   "ini": 3.315,
-   "fim": 6.1
+   "texto": "Isso aqui foi feito para mesa de RPG. Olha só o que ela faz.",
+   "ini": 3.85,
+   "fim": 7.805
   },
   {
    "i": 2,
-   "cena": "docs",
-   "texto": "Um: cria carta, jornal, diário, cartaz de procurado...",
-   "ini": 6.635,
-   "fim": 9.76
+   "texto": "Um: cria carta, jornal, diário, cartaz de procurado.",
+   "ini": 8.155,
+   "fim": 13.695
   },
   {
    "i": 3,
-   "cena": "docs",
-   "texto": "são mais de noventa modelos, é só arrastar e editar.",
-   "ini": 9.76,
-   "fim": 12.14
+   "texto": "São mais de noventa modelos, é só arrastar e editar, assim como no Canva. Só que feito especificamente para RPG.",
+   "ini": 14.215,
+   "fim": 21.415
   },
   {
    "i": 4,
-   "cena": "docs",
-   "texto": "Seus jogadores vão surtar.",
-   "ini": 12.5,
-   "fim": 13.62
+   "texto": "Seus jogadores vão surtar com a qualidade dessa ferramenta.",
+   "ini": 22.06,
+   "fim": 24.78
   },
   {
    "i": 5,
-   "cena": "fichas",
-   "texto": "Dois: ficha de D&D, Ordem Paranormal, Tormenta...",
-   "ini": 14.054,
-   "fim": 16.9
+   "texto": "Dois: você pode jogar vários RPGs, porque tem ficha de D&D, Ordem Paranormal, Tormenta… que calcula tudo sozinha.",
+   "ini": 25.22,
+   "fim": 34.36
   },
   {
    "i": 6,
-   "cena": "fichas",
-   "texto": "que calcula tudo sozinha.",
-   "ini": 16.9,
-   "fim": 18.04
+   "texto": "Você simplesmente clica, ela rola o dado.",
+   "ini": 34.77,
+   "fim": 37.43
   },
   {
    "i": 7,
-   "cena": "custom",
-   "texto": "E se você inventou o seu próprio sistema e nunca achou uma ficha do seu jeito?",
-   "ini": 18.507,
-   "fim": 21.86
+   "texto": "Ah, e tem outros também, sistemas brasileiros, como Feiticeiros e Maldições, 3DeT… Mas tem o diferencial, que é: você consegue simplesmente montar uma ficha para o seu sistema próprio, criando bloco por bloco.",
+   "ini": 38.08,
+   "fim": 54.3
   },
   {
    "i": 8,
-   "cena": "custom",
-   "texto": "Você monta a sua. Bloco por bloco.",
-   "ini": 22.345,
-   "fim": 23.98
+   "texto": "Você monta a sua ficha personalizada do zero. E de bônus: dados em 3D, gerador de masmorras, de nomes, de encontros… E o principal: é de graça.",
+   "ini": 54.925,
+   "fim": 65.885
   },
   {
    "i": 9,
-   "cena": "bonus",
-   "texto": "E de bônus: dados em 3D, gerador de masmorra, de nomes, de encontros...",
-   "ini": 24.38,
-   "fim": 28.3
+   "texto": "Se quiser apoiar esse projeto brasileiro, no Catarse tem planos a partir de quinze reais, com modelos exclusivos e exportação em alta qualidade.",
+   "ini": 66.42,
+   "fim": 73.92
   },
   {
    "i": 10,
-   "cena": "planos",
-   "texto": "O principal é de graça.",
-   "ini": 28.708,
-   "fim": 29.78
-  },
-  {
-   "i": 11,
-   "cena": "planos",
-   "texto": "E se quiser apoiar esse projeto brasileiro, no Catarse tem planos a partir de quinze reais, com modelos exclusivos e exportação em alta qualidade.",
-   "ini": 29.78,
-   "fim": 37.4
-  },
-  {
-   "i": 12,
-   "cena": "cta",
    "texto": "Procura Mini Kraken. E marca o mestre do seu grupo.",
-   "ini": 37.887,
-   "fim": 40.18
+   "ini": 74.67,
+   "fim": 77.33
   }
  ]
 }

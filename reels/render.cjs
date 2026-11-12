@@ -48,7 +48,8 @@ async function main() {
 
   const { server, port } = await serve(ROOT);
   const url = `http://127.0.0.1:${port}/${path.relative(ROOT, projectDir).split(path.sep).join('/')}/index.html?render=1${args.query ? '&' + args.query : ''}`;
-  const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+  // canvas 2D na CPU de cada aba (em paralelo); só o WebGL da pós-produção usa o SwiftShader: ~3,5x mais rápido
+  const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--disable-accelerated-2d-canvas'] });
   try {
     const first = await openPage(browser, url);
     const info = await first.evaluate(() => ({ duration: Reel.project.duration, fps: Reel.FPS, total: Reel.totalFrames, audioFile: Reel.project.audioFile || null,

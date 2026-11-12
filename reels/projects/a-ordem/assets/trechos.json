@@ -1,89 +1,89 @@
 {
- "duracao": 50.784,
+ "duracao": 52.794,
  "trechos": [
   {
    "i": 0,
    "cena": "gancho",
    "texto": "Se esse vídeo apareceu pra você... não foi por acaso.",
    "ini": 0.0,
-   "fim": 3.12
+   "fim": 3.1
   },
   {
    "i": 1,
    "cena": "segredo",
    "texto": "Existe uma verdade que os governos escondem há séculos.",
-   "ini": 3.72,
-   "fim": 6.64
+   "ini": 3.813,
+   "fim": 6.84
   },
   {
    "i": 2,
    "cena": "apagaram",
    "texto": "Eles apagaram os registros. Mudaram os mapas. Silenciaram quem chegou perto.",
-   "ini": 7.12,
-   "fim": 12.12
+   "ini": 7.58,
+   "fim": 12.64
   },
   {
    "i": 3,
    "cena": "simbolos",
    "texto": "Mas os símbolos ficaram. Nas moedas. Nos prédios. Nas músicas que você escuta.",
-   "ini": 12.62,
-   "fim": 18.26
+   "ini": 13.4,
+   "fim": 19.08
   },
   {
    "i": 4,
    "cena": "olho",
    "texto": "Repara: o olho que tudo vê. O triângulo. O número que se repete.",
-   "ini": 18.903,
-   "fim": 23.72
+   "ini": 19.74,
+   "fim": 24.56
   },
   {
    "i": 5,
    "cena": "mensagem",
    "texto": "Isso não é coincidência. É uma mensagem.",
-   "ini": 24.24,
-   "fim": 27.14
+   "ini": 25.23,
+   "fim": 28.36
   },
   {
    "i": 6,
    "cena": "geracao",
    "texto": "E ela foi escrita pra você. A nova geração.",
-   "ini": 27.14,
-   "fim": 31.04
+   "ini": 29.042,
+   "fim": 32.58
   },
   {
    "i": 7,
    "cena": "alem",
    "texto": "Existem coisas além do imaginável. Coisas que estão esperando a gente acordar.",
-   "ini": 31.763,
-   "fim": 36.1
+   "ini": 33.283,
+   "fim": 37.6
   },
   {
    "i": 8,
    "cena": "breve",
    "texto": "Em breve, tudo vai ser revelado.",
-   "ini": 36.845,
-   "fim": 38.82
+   "ini": 38.125,
+   "fim": 40.12
   },
   {
    "i": 9,
    "cena": "coragem",
    "texto": "Mas só pra quem tiver coragem de saber a verdade.",
-   "ini": 39.18,
-   "fim": 41.76
+   "ini": 40.62,
+   "fim": 43.18
   },
   {
    "i": 10,
    "cena": "comenta",
    "texto": "Se você está pronto... comenta: pela nova geração.",
-   "ini": 42.46,
-   "fim": 45.82
+   "ini": 44.26,
+   "fim": 47.68
   },
   {
    "i": 11,
    "cena": "ordem",
    "texto": "Segue o Tio Arle. E faça parte da Ordem.",
-   "ini": 46.42,
-   "fim": 49.58
+   "ini": 48.4,
+   "fim": 51.6
   }
  ]
 }

@@ -1,0 +1,7 @@
+palavras do roteiro: 178 | diferenças: faltando/trocadas 6, a mais 10
+replace  roteiro: 'noventa'                                ouvido: '90'
+replace  roteiro: 'dd'                                     ouvido: 'd d'
+replace  roteiro: 'feiticeiros'                            ouvido: 'feiticeiras em sonhos 3d'
+replace  roteiro: 'maldicoes 3det'                         ouvido: 'd'
+replace  roteiro: 'masmorras'                              ouvido: 'masmorros'
+insert   roteiro: ''                                       ouvido: 'com'

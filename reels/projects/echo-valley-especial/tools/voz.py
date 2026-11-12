@@ -2,6 +2,7 @@
 
     python3 -I tools/voz.py <parte> <pasta-dos-videos> --modelo voz.onnx          # voz-guia (Piper)
     python3 -I tools/voz.py <parte> <pasta-dos-videos> --gravacao minha-voz.wav   # locução do Tio Arle
+    python3 -I tools/voz.py <parte> <pasta-dos-videos> --gravacao minha-voz.wav --edl edl-<parte>.json
 
 Com --gravacao, a gravação (uma tomada só, com as falas na ordem do roteiro, sem as citações) é
 transcrita, cada bloco é recortado pelas palavras alinhadas e as citações entram entre eles.
@@ -14,7 +15,25 @@ import numpy as np
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PARTE, REFS = sys.argv[1], sys.argv[2]
 arg = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
-GRAV, MODELO = arg("--gravacao"), arg("--modelo")
+GRAV, MODELO, EDL = arg("--gravacao"), arg("--modelo"), arg("--edl")
+if EDL:
+    # Locução gravada + lista de cortes (edl-<parte>.json): tomadas escolhidas, cortes no silêncio real,
+    # citações recortadas no ponto mais silencioso perto das marcas, e conferência final.
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(HERE)), "..", "scripts"))
+    sys.path.insert(0, os.path.abspath(os.path.join(HERE, "..", "..", "scripts")))
+    import locucao as L
+    cfg0 = json.load(open(os.path.join(HERE, "config.json"), encoding="utf-8"))
+    out0 = os.path.join(HERE, "assets", PARTE)
+    os.makedirs(out0, exist_ok=True)
+    def cit(b):
+        a = L.citacao_no_silencio(os.path.join(REFS, cfg0["referencias"][b["cit"]]), b["in"], b["out"])
+        return a / (np.sqrt(np.mean(a ** 2)) + 1e-9) * 10 ** (-19 / 20)
+    edl = json.load(open(EDL, encoding="utf-8"))["blocos"]
+    words = os.path.join(out0, "gravacao.words.json")
+    if not os.path.exists(words):
+        json.dump(L.transcribe(L.load(GRAV)), open(words, "w", encoding="utf-8"), ensure_ascii=False)
+    L.montar_edl(GRAV, words, edl, out0, citacao=cit)
+    sys.exit(0)
 SR = 48000
 cfg = json.load(open(os.path.join(HERE, "config.json"), encoding="utf-8"))
 blocos = json.load(open(os.path.join(HERE, PARTE + ".json"), encoding="utf-8"))["blocos"]

@@ -1,0 +1,107 @@
+{
+ "_doc": "Edição da locução gravada pelo Tio Arle: faixas = índices de palavras da transcrição (assets/<parte>/gravacao.words.json). Repetições, começos errados e falas soltas ficaram de fora. Citações {cit} entram com o áudio original.",
+ "blocos": [
+  {
+   "texto": "Em Echo Valley, eu prestaria atenção em duas coisas: no que está sendo contado e em quem está contando.",
+   "faixas": [
+    [
+     0,
+     17
+    ]
+   ]
+  },
+  {
+   "texto": "Esse é um universo fictício de terror e suspense. Eu sou o Tio Arle, e estou te apresentando a obra como um fã.",
+   "faixas": [
+    [
+     18,
+     26
+    ],
+    [
+     41,
+     54
+    ]
+   ]
+  },
+  {
+   "texto": "Um vídeo vende a imagem de uma cidade tranquila, outro traz um relato de desaparecimento, e há personagens falando de segredos, agentes e anomalias.",
+   "faixas": [
+    [
+     55,
+     78
+    ]
+   ]
+  },
+  {
+   "texto": "Quando um personagem acusa alguém de esconder a verdade, eu normalmente escuto aquilo como a versão dele. A acusação faz parte da história, mas ainda dá espaço pra dúvida, sabe?",
+   "faixas": [
+    [
+     95,
+     123
+    ]
+   ]
+  },
+  {
+   "texto": "Para mim, é aí que nasce uma boa conversa sobre Echo Valley: o que foi mostrado, o que foi apenas dito e o que nós estamos interpretando?",
+   "faixas": [
+    [
+     124,
+     150
+    ]
+   ]
+  },
+  {
+   "texto": "Os vídeos de ameaça também ampliam a escala do terror:",
+   "faixas": [
+    [
+     156,
+     165
+    ]
+   ]
+  },
+  {
+   "cit": "F",
+   "in": 36.2,
+   "out": 38.8,
+   "texto": "Nenhuma área é segura quando um Querubim desperta."
+  },
+  {
+   "texto": "Querubim aparece como uma dessas classificações, mas conhecer a obra vai além de decorar o nome de uma entidade ou o seu nível de ameaça.",
+   "faixas": [
+    {
+     "t": [
+      88.4,
+      99.6
+     ]
+    }
+   ]
+  },
+  {
+   "texto": "Você também encontra conteúdos que saem da ficção e falando do próprio projeto. Vale perceber quando é um personagem falando e quando o assunto é a criação de Echo Valley.",
+   "faixas": [
+    [
+     204,
+     232
+    ]
+   ]
+  },
+  {
+   "texto": "Quer começar? Minha sugestão é ver a apresentação da cidade, depois o relato das treze crianças, então um vídeo sobre as ameaças: uma rota de descoberta, não uma cronologia oficial.",
+   "faixas": [
+    [
+     233,
+     263
+    ]
+   ]
+  },
+  {
+   "texto": "Procure a página oficial do Anfitrião. Por aqui, no Tio Arle, eu quero continuar explorando a obra e conversando sobre essas pistas. Qual delas você gostaria que eu comentasse a primeira?",
+   "faixas": [
+    [
+     281,
+     312
+    ]
+   ]
+  }
+ ]
+}

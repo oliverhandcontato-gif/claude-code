@@ -1,80 +1,80 @@
 {
- "duracao": 79.088,
- "guia": true,
+ "duracao": 112.2,
+ "guia": false,
  "trechos": [
   {
    "i": 0,
    "texto": "…Echo Valley é a cidade mais segura da—",
    "ini": 0.3,
-   "fim": 3.699,
+   "fim": 3.78,
    "cit": "A"
   },
   {
    "i": 1,
-   "texto": "Outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
-   "ini": 3.899,
-   "fim": 7.679
+   "texto": "O outro vídeo fala de treze crianças desaparecidas nesse mesmo lugar.",
+   "ini": 3.98,
+   "fim": 8.74
   },
   {
    "i": 2,
-   "texto": "Os dois fazem parte de Echo Valley. E é essa obra de terror e suspense que eu quero te apresentar.",
-   "ini": 8.303,
-   "fim": 13.923
+   "texto": "Os dois fazem parte de Echo Valley. E essa é a obra de terror e suspense que eu quero te apresentar hoje.",
+   "ini": 9.785,
+   "fim": 16.505
   },
   {
    "i": 3,
-   "texto": "Eu sou o Tio Arle. Aqui eu vou comentar esse universo como fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
-   "ini": 14.366,
-   "fim": 22.526
+   "texto": "Eu sou o Tio Arle, e aqui eu vou comentar esse universo como um fã. A página oficial é a do Anfitrião, que também é um personagem da obra.",
+   "ini": 17.46,
+   "fim": 26.58
   },
   {
    "i": 4,
-   "texto": "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece até um convite pra passar as férias.",
-   "ini": 23.047,
-   "fim": 31.707
+   "texto": "Olha como a cidade é apresentada: trilhas bonitas, sorveteria, moradores amigáveis. Parece que é até um convite para passar as férias. Só que, no meio desse convite, aparece um aviso:",
+   "ini": 27.665,
+   "fim": 40.645
   },
   {
    "i": 5,
-   "texto": "Só que, no meio desse convite, aparece um aviso:",
-   "ini": 32.237,
-   "fim": 35.257
-  },
-  {
-   "i": 6,
    "texto": "Apenas lembre-se de ficar longe da parte norte da floresta.",
-   "ini": 35.535,
-   "fim": 38.984,
+   "ini": 41.33,
+   "fim": 45.08,
    "cit": "A"
   },
   {
+   "i": 6,
+   "texto": "Para mim, é aí que a apresentação fica interessante.",
+   "ini": 46.38,
+   "fim": 50.56
+  },
+  {
    "i": 7,
-   "texto": "Pra mim, é aí que a apresentação fica interessante.",
-   "ini": 39.184,
-   "fim": 41.824
+   "texto": "Em outro relato, treze crianças desapareceram em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
+   "ini": 51.45,
+   "fim": 61.83
   },
   {
    "i": 8,
-   "texto": "Em outro relato, treze crianças desaparecem em 2001. Aparecem documentos, silêncio e perguntas. Esse é um dos mistérios que a obra coloca na mesa.",
-   "ini": 42.477,
-   "fim": 52.457
+   "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber muito mais do que conta. A cidade é só o começo.",
+   "ini": 62.405,
+   "fim": 75.625
   },
   {
    "i": 9,
-   "texto": "E Echo Valley também mostra entidades, níveis de ameaça e relatos de gente que parece saber mais do que conta. A cidade é só o começo.",
-   "ini": 52.985,
-   "fim": 60.825
+   "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do que o universo traz consigo.",
+   "ini": 76.385,
+   "fim": 87.305
   },
   {
    "i": 10,
-   "texto": "Você vai encontrando esse mundo em apresentações, relatos e transmissões. Cada formato mostra um pedaço diferente do universo.",
-   "ini": 61.478,
-   "fim": 68.738
+   "texto": "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite para conhecer a cidade?",
+   "ini": 88.395,
+   "fim": 99.795
   },
   {
    "i": 11,
-   "texto": "Na próxima parte, eu vou te mostrar como esses pontos de vista mudam a experiência e por onde começar. Até aqui, você confiaria nesse convite pra conhecer a cidade?",
-   "ini": 69.464,
-   "fim": 78.364
+   "texto": "Se sim, segura a minha mão e vamos conhecer junto a cidade de Echo Valley. Eu sou o Tio Arle, e já me segue para mais conteúdo.",
+   "ini": 100.74,
+   "fim": 110.28
   }
  ]
 }

@@ -1,0 +1,17 @@
+{
+  "_doc": "Edição da locução do Tio Arle (gravação Mini_kraken.wav). faixas = índices de palavras da transcrição (assets/gravacao.words.json). Repetições e começos errados ficaram de fora.",
+  "pausas": [0.3, 0.35, 0.2, 0.25, 0.35, 0.25, 0.3, 0.3, 0.3, 0.35, 0.8],
+  "blocos": [
+    {"texto": "Mestre de RPG: você ainda faz handouts no Canva?", "faixas": [[0, 8]]},
+    {"texto": "Isso aqui foi feito para mesa de RPG. Olha só o que ela faz.", "faixas": [[21, 34]]},
+    {"texto": "Um: cria carta, jornal, diário, cartaz de procurado.", "faixas": [[35, 42]]},
+    {"texto": "São mais de noventa modelos, é só arrastar e editar, assim como no Canva. Só que feito especificamente para RPG.", "faixas": [[43, 62]]},
+    {"texto": "Seus jogadores vão surtar com a qualidade dessa ferramenta.", "faixas": [[73, 81]]},
+    {"texto": "Dois: você pode jogar vários RPGs, porque tem ficha de D&D, Ordem Paranormal, Tormenta… que calcula tudo sozinha.", "faixas": [[85, 103]]},
+    {"texto": "Você simplesmente clica, ela rola o dado.", "faixas": [[104, 110]]},
+    {"texto": "Ah, e tem outros também, sistemas brasileiros, como Feiticeiros e Maldições, 3DeT… Mas tem o diferencial, que é: você consegue simplesmente montar uma ficha para o seu sistema próprio, criando bloco por bloco.", "faixas": [[111, 144]]},
+    {"texto": "Você monta a sua ficha personalizada do zero. E de bônus: dados em 3D, gerador de masmorras, de nomes, de encontros… E o principal: é de graça.", "faixas": [[145, 171]]},
+    {"texto": "Se quiser apoiar esse projeto brasileiro, no Catarse tem planos a partir de quinze reais, com modelos exclusivos e exportação em alta qualidade.", "faixas": [[172, 195]]},
+    {"texto": "Procura Mini Kraken. E marca o mestre do seu grupo.", "faixas": [[196, 204]]}
+  ]
+}

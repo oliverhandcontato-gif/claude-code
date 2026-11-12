@@ -34,14 +34,14 @@
     return k;
   };
   const shotEnd = (k) => TS[k + 1] ?? DUR;
-  const GRATIS = T(10).ini - 0.05, PLANS = T(11).ini - 0.1, END = TS[23];
+  const GRATIS = wt(8, 'principal') - 0.3, PLANS = T(9).ini - 0.1, END = TS[SH.length - 1];
   const SECTIONS = [
     { n: '1', label: 'DOCUMENTOS', t0: T(2).ini - 0.1, t1: T(5).ini - 0.3 },
-    { n: '2', label: 'FICHAS', t0: T(5).ini - 0.1, t1: T(7).ini - 0.3 },
-    { n: '2', label: 'SEU SISTEMA', t0: T(7).ini - 0.1, t1: T(9).ini - 0.3 },
-    { n: '+', label: 'BÔNUS', t0: T(9).ini - 0.1, t1: GRATIS - 0.1 },
+    { n: '2', label: 'FICHAS', t0: T(5).ini - 0.1, t1: wt(7, 'mas') - 0.3 },
+    { n: '2', label: 'SEU SISTEMA', t0: wt(7, 'mas') - 0.1, t1: wt(8, 'bônus') - 0.4 },
+    { n: '+', label: 'BÔNUS', t0: wt(8, 'bônus') - 0.3, t1: GRATIS - 0.1 },
   ];
-  const WHIPS = [TS[2], TS[11], TS[13], TS[17], GRATIS];
+  const WHIPS = [TS[2], TS[14], TS[22], TS[26], GRATIS];
 
   // ---------------- paleta ----------------
   const C = { bg: '#0d0a17', purple: '#7b3cf0', magenta: '#ff2e7e', pink: '#ff7ab0', yellow: '#ffd23f', white: '#ffffff', ink: '#120b22', lilac: '#c9b6ff' };
@@ -83,7 +83,7 @@
   }
 
   // ---------------- legendas (pop palavra por palavra) ----------------
-  const EM = new Set(['canva', 'rpg', 'carta', 'jornal', 'diário', 'cartaz', 'noventa', 'surtar', 'd&d', 'ordem', 'paranormal', 'tormenta', 'sozinha', 'próprio', 'sistema', 'bloco', 'dados', '3d', 'masmorra', 'nomes', 'encontros', 'graça', 'catarse', 'quinze', 'reais', 'exclusivos', 'mini', 'kraken', 'mestre']);
+  const EM = new Set(['canva', 'rpg', 'carta', 'jornal', 'diário', 'cartaz', 'noventa', 'surtar', 'd&d', 'ordem', 'paranormal', 'tormenta', 'sozinha', 'próprio', 'sistema', 'bloco', 'dados', '3d', 'masmorra', 'nomes', 'encontros', 'graça', 'catarse', 'quinze', 'reais', 'exclusivos', 'mini', 'kraken', 'mestre', 'feiticeiros', 'maldições', '3det', 'masmorras', 'ferramenta', 'especificamente', 'personalizada', 'diferencial', 'rpgs', 'dado']);
   const clean = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}&]/gu, '');
   const CAPS = [];
   TR.forEach((tr) => {
@@ -279,7 +279,7 @@
       if (t < ti) return;
       const q = spring(t - ti, 2, 6);
       const y = -215 + i * 165;
-      const hi = i === 0 && t > wt(11, 'quinze') - 0.05;
+      const hi = i === 0 && t > wt(9, 'quinze') - 0.05;
       ctx.save();
       ctx.translate((1 - q) * 300, y);
       ctx.globalAlpha *= R.clamp(q * 2);
@@ -353,7 +353,7 @@
     ctx.fillStyle = C.ink;
     ctx.fillText('erpg.app', 0, 4);
     ctx.restore();
-    const mt = wt(12, 'marca') - 0.05;
+    const mt = wt(10, 'marca') - 0.05;
     if (t > mt) {
       const s = spring(t - mt, 2, 6);
       ctx.save();
@@ -469,10 +469,10 @@
     for (const c of WHIPS) A.whoosh(S, c - 0.12, { dur: 0.22, gain: 0.45, from: 600, to: 5000, verb: 0.1 });
     A.blip(S, wt(0, 'canva') + 0.35, { gain: 0.25 });
     A.boom(S, GRATIS, { gain: 0.4, freq: 70, decay: 0.6, verb: 0.2 });
-    A.musicBox(S, wt(11, 'quinze'), 1568, { gain: 0.18, verb: 0.3 });
-    A.musicBox(S, wt(11, 'quinze') + 0.09, 2093, { gain: 0.18, verb: 0.3 });
+    A.musicBox(S, wt(9, 'quinze'), 1568, { gain: 0.18, verb: 0.3 });
+    A.musicBox(S, wt(9, 'quinze') + 0.09, 2093, { gain: 0.18, verb: 0.3 });
     A.boom(S, END, { gain: 0.4, freq: 60, decay: 0.8, verb: 0.2 });
-    A.click(S, wt(12, 'marca'), { gain: 0.5, seed: 4 });
+    A.click(S, wt(10, 'marca'), { gain: 0.5, seed: 4 });
   }
 
   R.mount({
