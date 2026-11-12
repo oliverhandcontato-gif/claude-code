@@ -1,0 +1,89 @@
+{
+ "duracao": 54.483,
+ "trechos": [
+  {
+   "i": 0,
+   "cena": "gancho",
+   "texto": "Se esse vídeo apareceu pra você... não foi por acaso.",
+   "ini": 0.353,
+   "fim": 2.88
+  },
+  {
+   "i": 1,
+   "cena": "segredo",
+   "texto": "Existe uma verdade que os governos escondem há séculos.",
+   "ini": 3.558,
+   "fim": 6.46
+  },
+  {
+   "i": 2,
+   "cena": "apagaram",
+   "texto": "Eles apagaram os registros. Mudaram os mapas. Silenciaram quem chegou perto.",
+   "ini": 7.225,
+   "fim": 13.32
+  },
+  {
+   "i": 3,
+   "cena": "simbolos",
+   "texto": "Mas os símbolos ficaram. Nas moedas. Nos prédios. Nas músicas que você escuta.",
+   "ini": 13.999,
+   "fim": 20.62
+  },
+  {
+   "i": 4,
+   "cena": "olho",
+   "texto": "Repara: o olho que tudo vê. O triângulo. O número que se repete.",
+   "ini": 21.189,
+   "fim": 26.76
+  },
+  {
+   "i": 5,
+   "cena": "mensagem",
+   "texto": "Isso não é coincidência. É uma mensagem.",
+   "ini": 26.76,
+   "fim": 30.18
+  },
+  {
+   "i": 6,
+   "cena": "geracao",
+   "texto": "E ela foi escrita pra você. A nova geração.",
+   "ini": 30.742,
+   "fim": 33.88
+  },
+  {
+   "i": 7,
+   "cena": "alem",
+   "texto": "Existem coisas além do imaginável. Coisas que estão esperando a gente acordar.",
+   "ini": 34.518,
+   "fim": 39.32
+  },
+  {
+   "i": 8,
+   "cena": "breve",
+   "texto": "Em breve, tudo vai ser revelado.",
+   "ini": 39.912,
+   "fim": 42.1
+  },
+  {
+   "i": 9,
+   "cena": "coragem",
+   "texto": "Mas só pra quem tiver coragem de saber a verdade.",
+   "ini": 42.539,
+   "fim": 45.0
+  },
+  {
+   "i": 10,
+   "cena": "comenta",
+   "texto": "Se você está pronto... comenta: pela nova geração.",
+   "ini": 45.986,
+   "fim": 48.86
+  },
+  {
+   "i": 11,
+   "cena": "ordem",
+   "texto": "Segue o Tio Arle. E faça parte da Ordem.",
+   "ini": 49.48,
+   "fim": 52.78
+  }
+ ]
+}
