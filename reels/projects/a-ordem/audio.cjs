@@ -53,9 +53,9 @@ async function main() {
     const j = JSON.parse(meas.slice(meas.lastIndexOf('{'), meas.lastIndexOf('}') + 1));
     const ln = `loudnorm=I=-14.5:TP=-1.5:LRA=11:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true`;
     const out = path.join(OUT, 'final', `${NAME}-${label}.mp4`);
-    ff(['-i', video, '-i', VOICE, '-i', sfx, '-filter_complex', `${mix},${ln},aresample=48000[a]`, '-map', '0:v', '-map', '[a]',
+    ff(['-i', video, '-i', VOICE, '-i', sfx, '-filter_complex', `${mix},${ln},alimiter=limit=0.7:attack=1:release=60:level=false,aresample=48000[a]`, '-map', '0:v', '-map', '[a]',
       '-c:v', 'libx264', '-preset', 'slow', '-crf', '22', '-maxrate', '12M', '-bufsize', '24M', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
-      '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out]);
+      '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart', out]);
     const chk = ff(['-i', out, '-af', 'ebur128=peak=true', '-f', 'null', '-']);
     const I = chk.match(/I:\s+(-?[\d.]+) LUFS/g).pop(), P = chk.match(/Peak:\s+(-?[\d.]+) dBFS/g).pop();
     console.log(`${label}: ${path.relative(ROOT, out)}  ${I}  ${P}`);
