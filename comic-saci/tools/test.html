@@ -1,0 +1,10 @@
+<!doctype html><html><body style="margin:0"><canvas id="c" width="1920" height="1080"></canvas>
+<script src="../src/core.js"></script><script src="../src/saci.js"></script>
+<script>
+const ctx=document.getElementById('c').getContext('2d');
+ctx.fillStyle='#d8dde6';ctx.fillRect(0,0,1920,1080);
+const P=[{x:260,y:620,s:2.6},{x:760,y:700,s:2.6,thigh:0.9,knee:1.6,lean:0.5,armF:[-0.6,1.2],armB:[0.8,0.4],squash:0.6,expr:'grit'},
+{x:1260,y:560,s:2.6,thigh:0.3,knee:0.1,lean:-0.1,armF:[-2.6,0.1],armB:[0.9,0.6],handF:'fist',capeWind:1,capeFlap:1,expr:'determined',cap:0.8},
+{x:1700,y:620,s:2.6,expr:'wink',armF:[-2.4,1.9],handF:'cap',head:0.1,turn:1,face:-1}];
+P.forEach(p=>A.SACI.draw(ctx,p));
+</script></body></html>

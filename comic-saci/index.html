@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Capitão Saci</title>
+<style>html,body{margin:0;background:#222;color:#ddd;font:14px sans-serif}#w{max-width:1280px;margin:10px auto}canvas{width:100%;display:block}</style></head>
+<body><div id="w"><canvas id="c" width="1920" height="1080"></canvas><input id="s" type="range" min="0" max="494" value="0" style="width:100%"><span id="i"></span></div>
+<script src="src/core.js"></script><script src="src/saci.js"></script><script src="src/world.js"></script>
+<script src="src/shots.js"></script><script src="src/main.js"></script>
+<script>
+const c = document.getElementById('c').getContext('2d'), s = document.getElementById('s');
+s.max = Math.round(A.DURATION * 24) - 1;
+const draw = (f) => { document.getElementById('i').textContent = A.renderFrame(c, f) + ' · ' + (f / 24).toFixed(2) + 's'; };
+s.oninput = () => draw(+s.value);
+if (!/render/.test(location.hash)) draw(0);
+</script></body></html>
