@@ -1,0 +1,304 @@
+{
+ "cell_w": 64,
+ "cell_h": 52,
+ "pivot": [
+  32,
+  47
+ ],
+ "columns": 8,
+ "tick_rate_hz": 60,
+ "states": {
+  "idle": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 0,
+     "dur": 12
+    },
+    {
+     "cell": 1,
+     "dur": 9
+    },
+    {
+     "cell": 2,
+     "dur": 12
+    },
+    {
+     "cell": 3,
+     "dur": 9
+    }
+   ]
+  },
+  "ready": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 4,
+     "dur": 10
+    },
+    {
+     "cell": 5,
+     "dur": 8
+    }
+   ]
+  },
+  "crouch": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 6,
+     "dur": 6
+    }
+   ]
+  },
+  "jump": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 7,
+     "dur": 6
+    },
+    {
+     "cell": 8,
+     "dur": 99
+    }
+   ]
+  },
+  "land": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 9,
+     "dur": 4
+    },
+    {
+     "cell": 10,
+     "dur": 5
+    },
+    {
+     "cell": 11,
+     "dur": 99
+    }
+   ]
+  },
+  "run": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 12,
+     "dur": 4
+    },
+    {
+     "cell": 13,
+     "dur": 4
+    },
+    {
+     "cell": 14,
+     "dur": 4
+    },
+    {
+     "cell": 15,
+     "dur": 4
+    },
+    {
+     "cell": 16,
+     "dur": 4
+    },
+    {
+     "cell": 17,
+     "dur": 4
+    }
+   ]
+  },
+  "dash": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 18,
+     "dur": 2
+    },
+    {
+     "cell": 19,
+     "dur": 2
+    },
+    {
+     "cell": 20,
+     "dur": 2
+    },
+    {
+     "cell": 21,
+     "dur": 2
+    }
+   ]
+  },
+  "skid": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 22,
+     "dur": 5
+    },
+    {
+     "cell": 23,
+     "dur": 5
+    }
+   ]
+  },
+  "charge": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 24,
+     "dur": 5
+    },
+    {
+     "cell": 25,
+     "dur": 5
+    }
+   ]
+  },
+  "zap": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 26,
+     "dur": 3
+    },
+    {
+     "cell": 27,
+     "dur": 3
+    }
+   ]
+  },
+  "throw": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 28,
+     "dur": 8
+    },
+    {
+     "cell": 29,
+     "dur": 4
+    },
+    {
+     "cell": 30,
+     "dur": 99
+    }
+   ]
+  },
+  "hurt": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 31,
+     "dur": 5
+    },
+    {
+     "cell": 32,
+     "dur": 3
+    },
+    {
+     "cell": 33,
+     "dur": 3
+    },
+    {
+     "cell": 34,
+     "dur": 3
+    },
+    {
+     "cell": 35,
+     "dur": 3
+    },
+    {
+     "cell": 36,
+     "dur": 3
+    },
+    {
+     "cell": 37,
+     "dur": 3
+    },
+    {
+     "cell": 38,
+     "dur": 3
+    },
+    {
+     "cell": 39,
+     "dur": 3
+    },
+    {
+     "cell": 40,
+     "dur": 99
+    }
+   ]
+  },
+  "getup": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 41,
+     "dur": 14
+    },
+    {
+     "cell": 42,
+     "dur": 10
+    },
+    {
+     "cell": 43,
+     "dur": 99
+    }
+   ]
+  },
+  "volt": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 44,
+     "dur": 3
+    },
+    {
+     "cell": 45,
+     "dur": 3
+    },
+    {
+     "cell": 46,
+     "dur": 3
+    },
+    {
+     "cell": 47,
+     "dur": 3
+    }
+   ]
+  },
+  "voltLeap": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 48,
+     "dur": 99
+    }
+   ]
+  },
+  "victory": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 49,
+     "dur": 9
+    },
+    {
+     "cell": 50,
+     "dur": 7
+    },
+    {
+     "cell": 51,
+     "dur": 9
+    },
+    {
+     "cell": 52,
+     "dur": 7
+    }
+   ]
+  }
+ }
+}

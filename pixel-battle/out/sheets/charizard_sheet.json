@@ -1,0 +1,278 @@
+{
+ "cell_w": 136,
+ "cell_h": 120,
+ "pivot": [
+  68,
+  112
+ ],
+ "columns": 8,
+ "tick_rate_hz": 60,
+ "states": {
+  "idle": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 0,
+     "dur": 10
+    },
+    {
+     "cell": 1,
+     "dur": 8
+    },
+    {
+     "cell": 2,
+     "dur": 10
+    },
+    {
+     "cell": 3,
+     "dur": 8
+    }
+   ]
+  },
+  "fly": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 4,
+     "dur": 5
+    },
+    {
+     "cell": 5,
+     "dur": 4
+    },
+    {
+     "cell": 6,
+     "dur": 4
+    },
+    {
+     "cell": 7,
+     "dur": 5
+    },
+    {
+     "cell": 8,
+     "dur": 4
+    },
+    {
+     "cell": 9,
+     "dur": 4
+    }
+   ]
+  },
+  "land": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 10,
+     "dur": 5
+    },
+    {
+     "cell": 11,
+     "dur": 6
+    },
+    {
+     "cell": 12,
+     "dur": 99
+    }
+   ]
+  },
+  "roar": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 13,
+     "dur": 8
+    },
+    {
+     "cell": 14,
+     "dur": 4
+    },
+    {
+     "cell": 15,
+     "dur": 4
+    }
+   ]
+  },
+  "roarHold": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 16,
+     "dur": 3
+    },
+    {
+     "cell": 17,
+     "dur": 3
+    },
+    {
+     "cell": 18,
+     "dur": 3
+    },
+    {
+     "cell": 19,
+     "dur": 3
+    }
+   ]
+  },
+  "breathPrep": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 20,
+     "dur": 8
+    },
+    {
+     "cell": 21,
+     "dur": 99
+    }
+   ]
+  },
+  "breath": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 22,
+     "dur": 3
+    },
+    {
+     "cell": 23,
+     "dur": 3
+    },
+    {
+     "cell": 24,
+     "dur": 3
+    },
+    {
+     "cell": 25,
+     "dur": 3
+    }
+   ]
+  },
+  "flyBreath": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 26,
+     "dur": 4
+    },
+    {
+     "cell": 27,
+     "dur": 4
+    },
+    {
+     "cell": 28,
+     "dur": 4
+    },
+    {
+     "cell": 29,
+     "dur": 4
+    }
+   ]
+  },
+  "clawUp": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 30,
+     "dur": 99
+    }
+   ]
+  },
+  "clawSwipe": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 31,
+     "dur": 3
+    },
+    {
+     "cell": 32,
+     "dur": 99
+    }
+   ]
+  },
+  "dive": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 33,
+     "dur": 3
+    },
+    {
+     "cell": 34,
+     "dur": 3
+    },
+    {
+     "cell": 35,
+     "dur": 3
+    },
+    {
+     "cell": 36,
+     "dur": 3
+    }
+   ]
+  },
+  "hurt": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 37,
+     "dur": 4
+    },
+    {
+     "cell": 38,
+     "dur": 6
+    },
+    {
+     "cell": 39,
+     "dur": 99
+    }
+   ]
+  },
+  "ko": {
+   "loop": false,
+   "frames": [
+    {
+     "cell": 40,
+     "dur": 10
+    },
+    {
+     "cell": 41,
+     "dur": 8
+    },
+    {
+     "cell": 42,
+     "dur": 6
+    },
+    {
+     "cell": 43,
+     "dur": 5
+    },
+    {
+     "cell": 44,
+     "dur": 99
+    }
+   ]
+  },
+  "koLie": {
+   "loop": true,
+   "frames": [
+    {
+     "cell": 45,
+     "dur": 9
+    },
+    {
+     "cell": 46,
+     "dur": 9
+    },
+    {
+     "cell": 47,
+     "dur": 9
+    },
+    {
+     "cell": 48,
+     "dur": 9
+    }
+   ]
+  }
+ }
+}
