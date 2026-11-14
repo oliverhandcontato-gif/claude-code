@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#888}</style></head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script src="../src/util.js"></script><script src="../src/config.js"></script><script src="../src/brush.js"></script>
+<script src="../src/rig.js"></script><script src="../src/body.js"></script><script src="../src/head.js"></script><script src="../src/character.js"></script><script src="../src/poses.js"></script><script src="../src/camera.js"></script><script src="../src/env.js"></script><script src="../src/fx.js"></script>
+<script>
+window.runTest = (mode) => {
+  const ctx = document.getElementById('c').getContext('2d');
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.fillStyle = '#c9d3e0'; ctx.fillRect(0,0,1920,1080);
+  const spec = A.C.aomine('touou', {chain: A.PAL.chain && {base:'#e2b84a', hi:'#fff2b0'}});
+  const pose = {};
+  if (mode === 'turn') {
+    [0, 35, -35, 90, 160].forEach((yaw, i) => {
+      A.C.draw(ctx, spec, {root:{pos:[0,0,0], yaw}}, null, {x: 220 + i*370, y: 1040, scale: 4.9, pivotY: 0}, {mouth:'smirk'});
+    });
+  } else if (mode === 'poses') {
+    const names = window.NAMES || ['idle','dribbleLow','panther','defense','lunge','shootSet','shootRelease','formless','dunkCrouch','dunkRise','dunkSlam','hang','sitFloor','lieBack','bench','beckon','chainGrab','yawn','teikoHold','pointUp'];
+    names.forEach((n, i) => {
+      const col = i % 7, row = Math.floor(i / 7);
+      const yaw = window.YAW == null ? 25 : window.YAW;
+      const pose = A.P.finish(A.R.over(A.P[n], {root: {yaw}}));
+      A.C.draw(ctx, spec, pose, null, {x: 140 + col*270, y: 345 + row*360, scale: 1.55, pivotY: 0}, {mouth: 'neutral'});
+      ctx.fillStyle='#000'; ctx.font='16px sans-serif'; ctx.fillText(n, 90 + col*270, 365 + row*360);
+    });
+  } else if (mode === 'face') {
+    [0, 30, -45].forEach((yaw, i) => { if (window.BIG) { if (i) return; }
+      A.C.draw(ctx, spec, {root:{pos:[0,0,0], yaw}, head:[5,0,0]}, null, window.BIG ? {x: 960, y: 520, scale: 34, pivotY: 170} : {x: 330 + i*620, y: 560, scale: 13, pivotY: 165}, {mouth: i==1?'smirk':'neutral', browAngle: 0.6, lid: 0.85, gaze:[0.3,0]});
+    });
+  }
+};
+</script></body></html>

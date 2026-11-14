@@ -1,0 +1,7 @@
+node_modules
+audio/sep/
+audio/*.wav
+audio/mono.f32
+out/chunks/
+out/frames/
+out/render.log

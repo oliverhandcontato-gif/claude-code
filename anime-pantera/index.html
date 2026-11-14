@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Pantera — animação</title>
+<style>
+  html,body{margin:0;background:#0b0c10;color:#ddd;font:14px system-ui,sans-serif}
+  #wrap{max-width:1280px;margin:12px auto;padding:0 12px}
+  canvas{width:100%;height:auto;background:#000;display:block}
+  #bar{display:flex;gap:10px;align-items:center;margin-top:8px}
+  input[type=range]{flex:1}
+</style></head><body>
+<div id="wrap">
+  <canvas id="c" width="1920" height="1080"></canvas>
+  <div id="bar"><button id="play">▶</button><input id="seek" type="range" min="0" max="5359" value="0"><span id="info"></span></div>
+  <audio id="aud" src="assets/pantera.mp3" preload="auto"></audio>
+</div>
+<script src="src/util.js"></script>
+<script src="src/config.js"></script>
+<script src="src/brush.js"></script>
+<script src="src/rig.js"></script>
+<script src="src/body.js"></script>
+<script src="src/head.js"></script>
+<script src="src/character.js"></script>
+<script src="src/poses.js"></script>
+<script src="src/camera.js"></script>
+<script src="src/env.js"></script>
+<script src="src/fx.js"></script>
+<script src="audio/data.js"></script>
+<script src="src/main.js"></script>
+<script src="src/shots_intro.js"></script>
+<script src="src/shots_chorus.js"></script>
+<script src="src/shots_verse2.js"></script>
+<script>
+  // Preview player (renders live; exact output is produced by tools/render.mjs).
+  const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+  const seek = document.getElementById('seek'), info = document.getElementById('info'), aud = document.getElementById('aud');
+  const total = Math.round(A.CFG.duration * A.CFG.fps);
+  seek.max = total - 1;
+  window.draw = (f) => { const n = A.renderFrame(ctx, f); info.textContent = (f / A.CFG.fps).toFixed(2) + 's · ' + n; };
+  let playing = false;
+  document.getElementById('play').onclick = () => { playing = !playing; if (playing) { aud.currentTime = seek.value / A.CFG.fps; aud.play(); loop(); } else aud.pause(); };
+  function loop() { if (!playing) return; const f = Math.floor(aud.currentTime * A.CFG.fps); seek.value = f; draw(f); requestAnimationFrame(loop); }
+  seek.oninput = () => draw(+seek.value);
+  if (!/render/.test(location.hash)) draw(0);
+</script>
+</body></html>
